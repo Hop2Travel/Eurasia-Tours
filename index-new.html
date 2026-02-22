@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eurasia Tours - Timeless Journeys</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F8F7F4',       // 核心背景色：奶油白
+                        brand: {
+                            DEFAULT: '#2C3E40', // 核心主色：深岩灰 (替代原来的红色)
+                            light: '#475456',
+                            dark: '#1A2628'
+                        },
+                        gold: '#C5A675',        // 点缀：哑光金
+                        warm: '#8C857B',        // 暖灰文字
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'elegant': '0 4px 20px -2px rgba(44, 62, 64, 0.1)',
+                        'elegant-lg': '0 10px 40px -4px rgba(44, 62, 64, 0.15)',
+                        'elegant-xl': '0 20px 60px -8px rgba(44, 62, 64, 0.2)',
+                    },
+                    transitionTimingFunction: {
+                        'elegant': 'cubic-bezier(0.4, 0, 0.2, 1)', // 高级缓动曲线
+                    },
+                    letterSpacing: {
+                        'widest': '0.2em', // 极宽字间距
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 页面基础 */
+        body {
+            background-color: #F8F7F4;
+            color: #2C3E40;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 核心：磨砂颗粒质感 (Grain Overlay) */
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.035; /* 调整透明度控制质感强弱 */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* 3D 卡片效果 */
+        .perspective-1000 { perspective: 1000px; }
+        .preserve-3d { transform-style: preserve-3d; }
+        
+        /* 文字阴影 */
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .text-shadow-lg { text-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+
+        /* 图片 Ken Burns 缓慢缩放效果 */
+        @keyframes ken-burns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .animate-ken-burns {
+            animation: ken-burns 10s ease-out forwards;
+        }
+
+        /* 隐藏滚动条但保留功能 */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-cream text-brand antialiased selection:bg-gold/30 selection:text-brand">
+
+<div id="app" class="relative overflow-x-hidden">
+    <div class="grain-overlay"></div>
+
+    <header :class="['fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-elegant', 
+        isScrolled ? 'bg-cream/95 backdrop-blur-md shadow-elegant py-4' : 'bg-transparent py-6 md:py-8']">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between">
+                <a href="index-en.html" class="group relative z-50 flex items-center gap-1">
+                    <span :class="['font-serif text-2xl md:text-3xl font-medium tracking-tight transition-colors duration-500', isScrolled ? 'text-brand' : 'text-cream']">
+                        Eurasia
+                    </span>
+                    <span :class="['font-serif text-2xl md:text-3xl italic tracking-tight transition-colors duration-500', isScrolled ? 'text-gold' : 'text-cream/80']">
+                        Tours
+                    </span>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 xl:gap-12">
+                    <div v-for="link in navLinks" :key="link.name" class="relative group"
+                         @mouseenter="link.subLinks ? activeDropdown = link.name : null"
+                         @mouseleave="activeDropdown = null">
+                        
+                        <a :href="link.url" 
+                           :class="['flex items-center gap-1 text-[11px] font-sans font-medium uppercase tracking-[0.2em] transition-colors duration-300', 
+                           isScrolled ? 'text-brand/70 hover:text-brand' : 'text-cream/80 hover:text-cream']">
+                            {{ link.name }}
+                            <i v-if="link.subLinks" class="fas fa-chevron-down text-[9px] ml-1 opacity-50"></i>
+                            <span :class="['absolute -bottom-2 left-0 h-px bg-gold transition-all duration-500 ease-elegant w-0 group-hover:w-full']"></span>
+                        </a>
+
+                        <div v-if="link.subLinks && activeDropdown === link.name" 
+                             class="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-56 bg-cream shadow-elegant-xl border border-brand/5 p-0 overflow-hidden animate-[fadeInUp_0.4s_ease-out]">
+                             <div class="px-5 py-3 text-[10px] text-gold uppercase tracking-[0.25em] border-b border-brand/5 bg-brand/5">Select Region</div>
+                             <a v-for="sub in link.subLinks" :key="sub.name" :href="sub.url"
+                                class="block px-5 py-4 text-sm font-serif text-brand/70 hover:text-brand hover:bg-brand/5 hover:pl-7 transition-all duration-300">
+                                {{ sub.name }}
+                             </a>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 border-l" :class="isScrolled ? 'border-brand/10' : 'border-white/20'"
+                         @mouseenter="isLangOpen = true" @mouseleave="isLangOpen = false">
+                        <button :class="['flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.2em] transition-colors', isScrolled ? 'text-brand' : 'text-cream']">
+                            <i class="fas fa-globe text-sm opacity-70"></i> {{ currentLang }}
+                        </button>
+                        <div v-if="isLangOpen" class="absolute top-full right-0 mt-6 w-32 bg-cream shadow-elegant-xl py-2">
+                            <button v-for="lang in ['English', '中文', 'Française']" 
+                                    @click="switchLang(lang)"
+                                    class="block w-full text-left px-5 py-2 text-xs text-brand/60 hover:text-brand hover:bg-brand/5 transition-colors">
+                                {{ lang }}
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+
+                <button class="lg:hidden z-50 text-2xl" @click="isMobileMenuOpen = !isMobileMenuOpen">
+                    <i :class="['fas transition-colors duration-300', isMobileMenuOpen ? 'fa-times text-cream' : (isScrolled ? 'fa-bars text-brand' : 'fa-bars text-cream')]"></i>
+                </button>
+            </div>
+        </div>
+
+        <transition enter-active-class="transition duration-500 ease-elegant" enter-from-class="opacity-0 translate-y-4" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-300" leave-from-class="opacity-100" leave-to-class="opacity-0">
+            <div v-if="isMobileMenuOpen" class="fixed inset-0 bg-brand z-40 flex flex-col items-center justify-center gap-8">
+                <a v-for="link in navLinks" :key="link.name" :href="link.url" 
+                   class="font-serif text-3xl text-cream/90 hover:text-gold transition-colors duration-300">
+                   {{ link.name }}
+                </a>
+            </div>
+        </transition>
+    </header>
+
+    <main>
+        <section class="relative h-screen w-full overflow-hidden bg-brand">
+            <transition-group>
+                <div v-for="(img, index) in heroImages" :key="img" v-show="currentHeroIndex === index"
+                     class="absolute inset-0 transition-opacity duration-[2000ms] ease-linear">
+                    <div class="absolute inset-0 bg-cover bg-center animate-ken-burns"
+                         :style="{ backgroundImage: 'url(' + img + ')' }"></div>
+                </div>
+            </transition-group>
+
+            <div class="absolute inset-0 bg-gradient-to-b from-brand/50 via-brand/10 to-brand/60 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-black/20"></div>
+
+            <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pt-10">
+                <div class="max-w-4xl mx-auto animate-[fadeInUp_1s_ease-out_0.2s_forwards] opacity-0">
+                    
+                    <div class="flex items-center justify-center gap-6 mb-8 opacity-80">
+                        <span class="h-px w-8 md:w-16 bg-cream/40"></span>
+                        <span class="text-cream text-[10px] md:text-xs font-sans font-medium uppercase tracking-[0.3em]">
+                            Eurasia Tours · Since 2000
+                        </span>
+                        <span class="h-px w-8 md:w-16 bg-cream/40"></span>
+                    </div>
+                    
+                    <h1 class="mb-8 md:mb-10">
+                        <span class="block text-5xl md:text-7xl lg:text-8xl font-serif text-cream mb-2 md:mb-4 text-shadow-sm tracking-tight">
+                            Timeless Journeys,
+                        </span>
+                        <span class="block text-5xl md:text-7xl lg:text-8xl font-serif text-gold italic font-light tracking-tight">
+                            Boundless Horizons
+                        </span>
+                    </h1>
+                    
+                    <p class="text-base md:text-lg text-cream/80 max-w-xl mx-auto mb-12 font-light leading-relaxed tracking-wide">
+                        From the historic canals of Amsterdam to the mystic temples of Kyoto. 
+                        Experience the ultimate elegance of global travel.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="#tours" class="group relative px-8 py-4 bg-brand-dark/40 border border-cream/30 text-cream text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-sm transition-all duration-500 hover:bg-cream hover:text-brand overflow-hidden">
+                            <span class="relative z-10 flex items-center gap-2">
+                                Explore Journeys
+                                <i class="fas fa-chevron-right text-[10px] transition-transform group-hover:translate-x-1"></i>
+                            </span>
+                        </a>
+                        <a href="custom-en.html" class="group px-8 py-4 text-cream text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:text-gold">
+                            Tailor-made
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-4">
+                <button v-for="(img, index) in heroImages" :key="index" @click="currentHeroIndex = index"
+                        class="h-px transition-all duration-500 ease-out py-2 group"
+                        :class="currentHeroIndex === index ? 'w-12' : 'w-6 opacity-50 hover:opacity-100'">
+                    <span class="block h-0.5 w-full transition-colors duration-500" 
+                          :class="currentHeroIndex === index ? 'bg-gold' : 'bg-cream'"></span>
+                </button>
+            </div>
+            
+            <div class="absolute bottom-12 right-12 z-20 hidden md:flex flex-col items-center gap-4 text-cream/40 animate-pulse">
+                <span class="text-[10px] uppercase tracking-[0.3em] -rotate-90 origin-center translate-y-8">Scroll</span>
+                <div class="w-px h-20 bg-gradient-to-b from-cream/0 via-cream/50 to-cream/0"></div>
+            </div>
+        </section>
+
+        <section class="relative z-20 -mt-24 px-4 md:px-8 max-w-7xl mx-auto">
+            <div class="bg-cream shadow-elegant-xl border-t border-white/50">
+                <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand/5">
+                    <div v-for="(val, idx) in values" :key="idx" class="p-10 lg:p-14 text-center group hover:bg-white/50 transition-colors duration-700">
+                        <div class="relative w-16 h-16 mx-auto flex items-center justify-center mb-6">
+                            <div class="absolute inset-0 bg-brand/5 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-elegant"></div>
+                            <i :class="[val.icon, 'text-2xl text-gold/80 relative z-10 transition-transform duration-500 group-hover:-translate-y-1']"></i>
+                        </div>
+                        <h3 class="font-serif text-xl text-brand mb-4">{{ val.title }}</h3>
+                        <p class="text-sm text-warm font-light leading-relaxed max-w-xs mx-auto">{{ val.desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tours" class="py-32 bg-cream">
+            <div class="container mx-auto px-6 lg:px-16">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                    <div>
+                        <span class="text-gold text-[10px] font-bold uppercase tracking-[0.25em] block mb-4">Our Collection</span>
+                        <h2 class="text-4xl md:text-5xl font-serif text-brand">Featured Itineraries</h2>
+                    </div>
+                    <a href="destination-main-en.html" class="group flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-brand/60 hover:text-brand transition-colors pb-2 border-b border-transparent hover:border-brand">
+                        View All Tours
+                        <i class="fas fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform duration-500"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
+                    <div v-for="(tour, idx) in tours" :key="tour.title" 
+                         class="group cursor-pointer" @click="goToPage(tour.url)">
+                        
+                        <div class="relative aspect-[4/3] overflow-hidden mb-8 shadow-sm transition-all duration-700 ease-elegant group-hover:shadow-elegant-lg group-hover:-translate-y-2">
+                            <img :src="tour.image" :alt="tour.title" class="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110">
+                            <div class="absolute inset-0 bg-brand/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            
+                            <div class="absolute top-4 right-4 bg-cream/95 backdrop-blur px-4 py-2 flex items-center gap-2 shadow-sm">
+                                <i class="far fa-clock text-[10px] text-gold"></i>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-brand">{{ tour.days }} Days</span>
+                            </div>
+                        </div>
+
+                        <div class="pr-4">
+                            <h3 class="font-serif text-2xl text-brand mb-4 leading-tight group-hover:text-gold transition-colors duration-300">{{ tour.title }}</h3>
+                            <p class="text-warm font-light text-sm leading-relaxed mb-6 line-clamp-2">{{ tour.desc }}</p>
+                            
+                            <div class="flex items-center gap-4 pt-6 border-t border-brand/5">
+                                <div class="flex-1">
+                                    <span class="text-[10px] text-brand/40 uppercase tracking-[0.2em] block mb-1">From</span>
+                                    <span class="text-xl font-serif text-brand">{{ tour.price }}</span>
+                                </div>
+                                <span class="w-10 h-10 border border-brand/10 flex items-center justify-center rounded-full text-brand/40 group-hover:bg-brand group-hover:text-cream group-hover:border-transparent transition-all duration-500">
+                                    <i class="fas fa-arrow-right text-xs"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 bg-brand text-cream relative overflow-hidden">
+            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#F8F7F4 1px, transparent 1px); background-size: 30px 30px;"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-24">
+                    <span class="text-gold text-[10px] font-bold uppercase tracking-[0.25em] block mb-4">Inspiration</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-cream mb-8">Digital Brochures</h2>
+                    <p class="text-cream/60 font-light leading-relaxed">
+                        Curated travel guides for your next adventure. Browse our collection of hand-picked experiences.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto px-4">
+                    <div v-for="(item, idx) in brochures" :key="idx" 
+                         class="group perspective-1000 cursor-pointer" @click="openBrochure(item)">
+                        <div class="relative aspect-[3/4] bg-brand-dark transition-all duration-700 ease-elegant preserve-3d group-hover:rotate-y-3 group-hover:scale-105 group-hover:shadow-2xl">
+                            <img :src="item.image" class="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-700">
+                            
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-90"></div>
+                            
+                            <div class="absolute bottom-0 left-0 w-full p-8 translate-z-20">
+                                <span class="text-[10px] text-gold uppercase tracking-[0.2em] font-bold mb-3 block">{{ item.region }}</span>
+                                <h3 class="text-2xl font-serif text-cream mb-6 leading-tight">{{ item.title }}</h3>
+                                <div class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-cream/70 border-b border-white/20 pb-1 group-hover:text-white group-hover:border-white transition-all">
+                                    <i class="fas fa-book-open"></i> Read Online
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-dark text-cream/60 pt-24 pb-10 border-t border-white/5">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+                <div class="space-y-6">
+                    <div class="inline-block">
+                        <span class="font-serif text-2xl text-cream">Eurasia</span><span class="font-serif text-2xl italic text-gold"> Tours</span>
+                    </div>
+                    <p class="text-sm font-light leading-relaxed opacity-80">
+                        Bridging cultures through bespoke journeys since 2000.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-gold hover:text-brand-dark hover:border-gold transition-all duration-300"><i class="fab fa-weixin"></i></a>
+                        <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-gold hover:text-brand-dark hover:border-gold transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 border border-white/10 flex items-center justify-center rounded-full hover:bg-gold hover:text-brand-dark hover:border-gold transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div v-for="col in footerCols" :key="col.title">
+                    <h4 class="font-serif text-lg text-cream mb-6">{{ col.title }}</h4>
+                    <ul class="space-y-4 text-sm font-light">
+                        <li v-for="item in col.items" class="flex items-start gap-3">
+                            <i :class="[item.icon, 'text-gold/70 mt-1']"></i>
+                            <span>{{ item.text }}</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg text-cream mb-6">Stay Inspired</h4>
+                    <form @submit.prevent class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="bg-white/5 border border-white/10 px-4 py-3 text-sm text-cream placeholder-cream/30 focus:outline-none focus:border-gold/50 transition-colors">
+                        <button class="bg-gold text-brand-dark px-4 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] uppercase opacity-40">
+                <p>&copy; 2026 Eurasia Tours. All Rights Reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gold transition">Privacy</a>
+                    <a href="#" class="hover:text-gold transition">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <transition enter-active-class="transition duration-500 ease-out" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="transition duration-300 ease-in" leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
+        <div v-if="isModalOpen" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-brand-dark/95 backdrop-blur-sm" @click.self="isModalOpen = false">
+            <div class="bg-cream w-full max-w-5xl h-[85vh] flex flex-col shadow-2xl relative">
+                <button @click="isModalOpen = false" class="absolute -top-12 right-0 text-cream hover:text-gold transition"><i class="fas fa-times text-2xl"></i></button>
+                <div class="flex-1 bg-brand/5">
+                    <iframe :src="activeBrochure.pdf" class="w-full h-full" frameborder="0"></iframe>
+                </div>
+                <div class="p-4 bg-cream flex justify-between items-center border-t border-brand/10">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand">{{ activeBrochure.title }}</span>
+                    <a :href="activeBrochure.pdf" download class="px-6 py-2 bg-brand text-cream text-xs font-bold uppercase tracking-widest hover:bg-gold transition-colors">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </transition>
+</div>
+
+<script>
+    const { createApp, ref, onMounted, onUnmounted } = Vue;
+
+    createApp({
+        setup() {
+            // State
+            const isScrolled = ref(false);
+            const isMobileMenuOpen = ref(false);
+            const activeDropdown = ref(null);
+            const isLangOpen = ref(false);
+            const currentLang = ref('English');
+            const currentHeroIndex = ref(0);
+            const isModalOpen = ref(false);
+            const activeBrochure = ref({});
+
+            // Data
+            const heroImages = [
+                'images/index/header/header-1.jpg',
+                'images/index/header/header-2.jpg',
+                'images/index/header/header-3.jpg',
+                'images/index/header/header-fr.jpg'
+            ];
+
+            const navLinks = [
+                { name: 'Home', url: 'index-en.html' },
+                { 
+                    name: 'Destinations', 
+                    url: 'destination-main-en.html',
+                    subLinks: [
+                        { name: 'Asia', url: 'destination-asia-en.html' },
+                        { name: 'Europe', url: 'destination-europe-en.html' }
+                    ]
+                },
+                { name: 'Tailor-made', url: 'custom-en.html' },
+                { name: 'Flight Services', url: 'flight-tickets-en.html' },
+                { name: 'About Us', url: 'about-en.html' },
+                { name: 'Contact', url: 'contact-en.html' }
+            ];
+
+            const values = [
+                { icon: 'fas fa-hand-holding-heart', title: 'Local Experts', desc: 'Direct access to premium resources in Paris and Asia.' },
+                { icon: 'fas fa-calendar-check', title: 'Guaranteed Departure', desc: 'Flexible scheduling with guaranteed departures for classic routes.' },
+                { icon: 'fas fa-shield-alt', title: 'Worry-free Journey', desc: 'Comprehensive service including visa, insurance, and flight logistics.' }
+            ];
+
+            const tours = [
+                { 
+                    title: 'Fragrant Europe: Benelux Tulip Season', 
+                    days: 10, price: '1,378 €', 
+                    image: 'images/index/recommend/tulip-season-netherland-belgium-luxembourg-germany-france-10-days.jpg',
+                    desc: 'Stroll through the sea of tulips in Keukenhof Gardens and explore the medieval charm of Bruges.',
+                    url: 'tulip-season-netherland-belgium-luxembourg-germany-france-10-days-en.html'
+                },
+                { 
+                    title: 'Timeless Classic: In-depth Italy', 
+                    days: 8, price: '1,598 €', 
+                    image: 'images/index/recommend/italy-indepth-tour-8-days.jpg', 
+                    desc: 'From the Eternal City of Rome to the Water City of Venice, deeply explore the art halls of Florence.',
+                    url: 'italy-indepth-tour-8-days-en.html'
+                },
+                { 
+                    title: 'European Model: France, Italy & Switzerland', 
+                    days: 10, price: '1,548 €', 
+                    image: 'images/index/recommend/france-switzerland-italy-classic-tour-10-days.jpg', 
+                    desc: 'Check in to three major European countries at once: Parisian fashion, Swiss mountains and Italian art.',
+                    url: 'france-switzerland-italy-classic-tour-10-days-en.html'
+                }
+            ];
+
+            const brochures = [
+                { region: 'Western Europe', title: 'Spring Limited: Dutch Tulips', image: 'images/index/pdf/tulip-season-netherland-belgium-luxembourg-germany-france-10-days.jpg', pdf: 'pdf/tulip-season-netherland-belgium-luxembourg-germany-france-10-days.pdf' },
+                { region: 'Eastern Europe', title: 'Bohemian Dream: Eastern Capitals', image: 'images/index/pdf/eastern-europe-dream-tour-4-country-10-days.jpg', pdf: 'pdf/eastern-europe-dream-tour-4-country-10-days.pdf' },
+                { region: 'Southern Europe', title: 'Passionate Iberia: Spain & Portugal', image: 'images/index/pdf/spain-portugal-indepth-tour-11-days.jpg', pdf: 'pdf/spain-portugal-indepth-tour-11-days.pdf' }
+            ];
+
+            const footerCols = [
+                {
+                    title: 'Accreditations',
+                    items: [
+                        { icon: 'fas fa-certificate', text: 'APST France Member' },
+                        { icon: 'fas fa-plane', text: 'IATA Accredited Agent' },
+                        { icon: 'fas fa-shield-alt', text: 'RCP Insurance Coverage' }
+                    ]
+                },
+                {
+                    title: 'Paris Headquarters',
+                    items: [
+                        { icon: 'fas fa-map-marker-alt', text: '30 Rue Ernest Renan, 75015 Paris' },
+                        { icon: 'fas fa-phone', text: '+33 (0)1 56 69 12 80' },
+                        { icon: 'fas fa-envelope', text: 'reservation@eurasiatours.fr' }
+                    ]
+                }
+            ];
+
+            // Logic
+            const handleScroll = () => { isScrolled.value = window.scrollY > 20; };
+            
+            const switchLang = (lang) => {
+                const map = { '中文': 'index-cn.html', 'English': 'index-en.html', 'Française': 'index-fr.html' };
+                if(map[lang]) window.location.href = map[lang];
+            };
+
+            const goToPage = (url) => window.location.href = url;
+            
+            const openBrochure = (item) => {
+                activeBrochure.value = item;
+                isModalOpen.value = true;
+            };
+
+            // Lifecycle
+            onMounted(() => {
+                window.addEventListener('scroll', handleScroll);
+                setInterval(() => {
+                    currentHeroIndex.value = (currentHeroIndex.value + 1) % heroImages.length;
+                }, 6000);
+            });
+
+            onUnmounted(() => {
+                window.removeEventListener('scroll', handleScroll);
+            });
+
+            return {
+                isScrolled, isMobileMenuOpen, activeDropdown, isLangOpen, currentLang,
+                currentHeroIndex, isModalOpen, activeBrochure,
+                heroImages, navLinks, values, tours, brochures, footerCols,
+                switchLang, goToPage, openBrochure
+            };
+        }
+    }).mount('#app');
+</script>
+</body>
+</html>
