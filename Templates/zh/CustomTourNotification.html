@@ -92,7 +92,6 @@
                     </td>
                 </tr>
 
-                {% if trip %}
                 <tr>
                     <td>
                         <div class="section-box">
@@ -115,63 +114,6 @@
                         </div>
                     </td>
                 </tr>
-                {% endif %}
-
-                {% if tourName %}
-                <tr>
-                    <td>
-                        <div class="section-box">
-                            <div class="section-title">🚩 线路产品预订 <span>Product Tour</span></div>
-                            <div class="data-row"><span class="label">产品名称</span><span class="value highlight">{{ tourName }}</span></div>
-                            <div class="data-row"><span class="label">出发日期</span><span class="value">{{ travelDate }}</span></div>
-                            <div class="data-row"><span class="label">出行人数</span><span class="value">{{ passengers }}</span></div>
-                            
-                            {% if selectedOptionals %}
-                            <div class="data-row"><span class="label">增值服务</span><span class="value" style="color:#d97706;">{{ selectedOptionals }}</span></div>
-                            {% endif %}
-
-                            <div class="data-row"><span class="label">预估总价</span><span class="value highlight" style="font-size:16px;">€{{ totalPrice }}</span></div>
-                            
-                            {% if remarks %}
-                            <div class="data-row" style="flex-direction: column; margin-top: 10px; background: #fafafa; padding: 10px; border-radius: 4px;">
-                                <span class="label" style="width:100%; margin-bottom: 5px;">客户备注：</span>
-                                <span class="value" style="width:100%; text-align: left; color: #555;">{{ remarks }}</span>
-                            </div>
-                            {% endif %}
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-
-                {% if flightDetails %}
-                <tr>
-                    <td>
-                        <div class="section-box">
-                            <div class="section-title">✈️ 机票询价 <span>Flight Request</span></div>
-                            <div class="data-row"><span class="label">航线</span><span class="value highlight">{{ flightDetails.route }}</span></div>
-                            <div class="data-row"><span class="label">日期范围</span><span class="value">{{ flightDetails.dates }}</span></div>
-                            <div class="data-row"><span class="label">时间弹性</span><span class="value">{{ flightDetails.flexibility }}</span></div>
-                            <div class="data-row"><span class="label">乘客人数</span><span class="value">{{ flightDetails.passengers }}</span></div>
-                            <div class="data-row"><span class="label">航司偏好</span><span class="value">{{ flightDetails.airlinePreference }}</span></div>
-                            <div class="data-row"><span class="label">舱位等级</span><span class="value">{{ flightDetails.cabinClass }}</span></div>
-                            <div class="data-row"><span class="label">直飞/转机</span><span class="value">{{ flightDetails.directFlight }}</span></div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-
-                {% if message %}
-                <tr>
-                    <td>
-                        <div class="section-box">
-                            <div class="section-title">💬 普通咨询留言 <span>General Inquiry</span></div>
-                            <div style="font-size: 14px; line-height: 1.6; color: #555; background: #fffdf5; padding: 15px; border-radius: 4px; border: 1px dashed #e0e0e0;">
-                                {{ message }}
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
 
                 <tr>
                     <td style="padding: 20px 40px;">
