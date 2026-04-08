@@ -1,0 +1,30 @@
+name: IIS Auto Deploy
+
+on:
+  push:
+    branches: [ main ]  # 当代码推送到 main 分支时触发
+
+jobs:
+  build-and-deploy:
+    # 这里的标签必须和你在服务器配置时填写的 tags 一致
+    runs-on: [self-hosted, iis-deploy] 
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Sync Files to IIS
+        shell: powershell
+        run: |
+          # 定义变量
+          $Source = "$Env:GITHUB_WORKSPACE"
+          $Destination = "F:\websites\Eurasia-Tours-Web" # IIS 物理路径
+
+          # 使用 robocopy 进行增量同步
+          # /MIR: 镜像目录（删除目标目录中源目录不存在的文件）
+          # /XF: 排除文件（如 .git, .gitignore）
+          # /XD: 排除文件夹（如 .github, .git）
+          robocopy $Source $Destination /MIR /XF .gitignore .gitattributes .DS_Store /XD .git .github Templates
+
+          # Robocopy 的退出码比较特殊，0-7 都代表成功
+          if ($LastExitCode -le 7) { exit 0 } else { exit $LastExitCode }
