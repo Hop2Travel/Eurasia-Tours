@@ -23,7 +23,7 @@ jobs:
         # 远程服务器的目标路径
         server-dir: httpdocs/
         dry-run: false
-        state-name: .ftp-deploy-sync-state.json
+        state-name: ftp-deploy-sync.json
         timeout: 300000 # 5分钟
         # 排除不需要上传的文件
         exclude: |
