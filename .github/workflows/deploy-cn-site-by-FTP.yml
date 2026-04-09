@@ -1,0 +1,34 @@
+name: IIS Auto Deploy
+
+on:
+  push:
+    branches: [ main-cn ]  # 当代码推送到 main 分支时触发
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        # 如果你的 FTP 端口不是 21，可以取消下面注释并修改
+        # port: 21
+        # 远程服务器的目标路径，例如 /wwwroot/my-site
+        server-dir: ./httpdocs
+        # 排除不需要上传的文件
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          .github/**
+          Templates/**
+          **/.DS_Store
+          .DS_Store
+          .gitignore
