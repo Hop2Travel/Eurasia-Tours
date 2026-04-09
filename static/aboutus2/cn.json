@@ -1,0 +1,161 @@
+{
+  "title": "连接五洲，礼赞文化",
+  "intro": [
+    {
+      "title": "欧美亚集团历史",
+      "content": [
+        "欧美亚旅游公司成立于2000年，是由法国旅游局（Atout France）指定的接待全球游客的专业旅行社之一。我们持有法国旅游局的授权许可证，并由GROUPAMA法国保险公司（保险编号N'AA145293）承保，拥有法国国家旅游许可证（IM075120157）。",
+        "我们公司运用欧洲旅游专业知识，充分利用中国和欧洲丰富的旅游资源，提供卓越的旅行体验。我们全年提供高端、个性化的旅游服务，包括欧洲游览、商务旅行、研学旅行、邮轮游、国际机票预订等多种服务！"
+      ]
+    },
+    {
+      "title": "我们的使命",
+      "content": [
+        "欧美亚旅游公司致力于为中国游客及全球游客提供遍及欧洲、北美和亚非地区的难忘旅行体验。我们秉承官方会议、展览、商务访问及经贸合作的传统优势，同时不断响应市场需求，推出创新且丰富多彩的服务项目。",
+        "包括：",
+        "季节性营地",
+        "自我提升静修",
+        "欧洲自驾游",
+        "骑行之旅"
+      ]
+    }
+  ],
+  "award": {
+    "title": "奖项与成就",
+    "content": "欧美亚旅游公司多年获得Petit Futé旅游指南（成立于1976年，相当于餐饮业的米其林指南）的认证。作为旅游业专业协会（APST）的成员，我们也得到了业内专业人士和客户的支持和鼓励。",
+    "logos": [
+      {
+        "logo": "/static/aboutus2/images/afr.png",
+        "width": "110"
+      },
+      {
+        "logo": "/static/aboutus2/images/groupama.png",
+        "width": "110"
+      },
+      {
+        "logo": "/static/aboutus2/images/petit.png",
+        "width": ""
+      },
+      {
+        "logo": "/static/aboutus2/images/apst.jpg",
+        "width": "130"
+      },
+      {
+        "logo": "/static/aboutus2/images/atout.jfif",
+        "width": "160"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "多样化的旅游服务",
+        "cover": "/static/aboutus2/images/3.jpg",
+        "content": "我们为法国游客组织定期和特别的团体旅游，目的地涵盖日本、越南、柬埔寨和乌兹别克斯坦等多个亚洲国家。我们专注于文化、商务、骑行、徒步旅行和学生交流活动。我们的中国旅游线路包括北京、西安、桂林和上海等标志性景点，以及云南、成都、西藏、山西、安徽、贵州和丝绸之路等地区的深度游，深受法国游客的好评。"
+      },
+      {
+        "title": "战略扩展",
+        "cover": "/static/aboutus2/images/4.jpg",
+        "content": "在2024年，欧美亚旅游公司获得了GTT国际旅行集团的战略投资，成为其首个欧洲子公司。GTT国际旅行集团成立于1984年，位于德克萨斯州达拉斯，在美国主要城市运营超过45个分支机构，拥有600多名多语言专业人士。作为北美最大的批发整合商，GTT在市场上占有35%的份额，年售出航空票务达175万张，年销售额超过20亿美元。"
+      },
+      {
+        "title": "在美国市场的增长",
+        "cover": "/static/aboutus2/images/5.jpg",
+        "content": "凭借与GTT国际旅行集团的战略合作，欧美亚旅游公司在美国市场的扩展已具备良好基础。通过利用GTT广泛的网络和市场份额，我们旨在为北美更广泛的受众提供卓越的旅游服务。这一增长将帮助我们将更多的旅行者与欧美亚旅游公司所提供的独特体验相连接，增强我们在全球旅游行业的影响力。"
+      },
+      {
+        "title": "全球旅游服务",
+        "cover": "/static/aboutus2/images/6.jpg",
+        "content": "我们机构为出境和入境游客提供全面服务。通过我们定制的观光、商务和休闲旅游，探索亚洲、北美、欧洲和北非的各大目的地。我们提供从学习和体育旅游到文化体验和季节性营地的各种服务。从2024年底开始，我们还将提供机票和邮轮的在线预订，进一步提升我们的无缝全球旅游解决方案。"
+      },
+      {
+        "title": "长期稳定的合作伙伴",
+        "cover": "/static/aboutus2/images/7.jpg",
+        "content": "自成立以来，欧美亚旅游公司与酒店、票务、邮轮和交通领域的知名企业建立了合作伙伴网络。这些合作关系使我们能够为客户提供高品质的酒店、可靠的票务服务、卓越的邮轮公司和便捷的汽车租赁服务。通过这一网络，我们能够提供量身定制的旅行体验，优先考虑便利性和客户满意度，确保每位旅行者的旅程无缝愉快。"
+      }
+    ]
+  },
+  "partner": {
+    "title": "我们的合作伙伴",
+    "logos": [
+      {
+        "logo": "/static/aboutus2/images/Four-Seasons-Logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Marriott-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/hilton-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Hyatt-Hotels-Logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Accor-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/InterContinental-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/wyndham-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/shangri_la_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/the-peninsula-hotels-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Costa-Logo.jpg",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/MSC-Cruise-Logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/royal_caribbean_group_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Princess_Cruises_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/R-C.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/R-C (1).png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/AirFrance-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/KLM-logo.jpg",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Air_China_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/china-southern.jfif",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/china-eastern.png",
+        "width": "100"
+      }
+    ]
+  }
+}

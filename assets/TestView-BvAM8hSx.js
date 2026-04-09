@@ -1,0 +1,1 @@
+import{e,y as t,M as s,h as a}from"./vendor-D4hT55FO.js";import{q as o,W as _}from"./account-D0FvObKA.js";import"./libs-Br5hO5gq.js";const c={class:"py-5 tw-mx-auto tw-w-1/2"},r={__name:"TestView",setup(n){return(p,m)=>(e(),t("div",c,[s(a(_))]))}},u=o(r,[["__scopeId","data-v-35679834"]]);export{u as default};

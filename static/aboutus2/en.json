@@ -1,0 +1,161 @@
+{
+  "title": "Connecting Continents, Celebrating Cultures.",
+  "intro": [
+    {
+      "title": "History of Eurasia Tours",
+      "content": [
+        "Eurasia Tours was founded in 2000 and is one of the professional travel agencies designated by Atout France (French Office of Tourism) to receive tourists worldwide. We are licensed by Atout France and insured by GROUPAMA FranceASSURANCES under N'AA145293, holding the French National Tourism License (IM075120157).",
+        "Our company utilizes European tourism expertise and fully leverages the rich tourism resources in China and Europe to provide exceptional travel experiences. We offer premium, personalized travel services year-round. This includes European tours, business trips, study tours, cruises, international flight bookings, and more!"
+      ]
+    },
+    {
+      "title": "Our Commitment",
+      "content": [
+        "Eurasia Tours is committed to offering unforgettable travel experiences across Europe, North America, and the Asia-Africa region, catering to the Chinese traveler and beyond. We uphold the traditional benefits of official conventions, exhibitions, business visits, and economic and trade cooperation while continuously responding to market needs with innovative and colorful service programs.",
+        "These include:",
+        "Seasonal Camps",
+        "Self-Improvement Retreats",
+        "European Road Trips",
+        "Cycling Tours"
+      ]
+    }
+  ],
+  "award": {
+    "title": "Awards and Achievements",
+    "content": "Eurasia Tours has been certified by the Petit Futé Travel Guide (founded in 1976, the equivalent of MICHELIN in the restaurant industry) for several years. We also receive support and encouragement from all professionals and customers as members of the Association Professionnelle de Solidarité du Tourisme (APST).",
+    "logos": [
+      {
+        "logo": "/static/aboutus2/images/afr.png",
+        "width": "110"
+      },
+      {
+        "logo": "/static/aboutus2/images/groupama.png",
+        "width": "110"
+      },
+      {
+        "logo": "/static/aboutus2/images/petit.png",
+        "width": ""
+      },
+      {
+        "logo": "/static/aboutus2/images/apst.jpg",
+        "width": "130"
+      },
+      {
+        "logo": "/static/aboutus2/images/atout.jfif",
+        "width": "160"
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Diverse Travel Services",
+        "cover": "/static/aboutus2/images/3.jpg",
+        "content": "We organize regular and special group tours for French tourists to various Asian countries (Japan, Vietnam, Cambodia, and Uzbekistan). We focus on cultural, business, cycling, trekking, and student exchange activities. Our tours in China cover iconic destinations like Beijing, Xi'an, Guilin, and Shanghai, as well as in-depth tours of regions such as Yunnan, Chengdu, Tibet, Shanxi, Anhui, Guizhou, and the Silk Road, which are highly praised by French tourists."
+      },
+      {
+        "title": "Strategic Expansion",
+        "cover": "/static/aboutus2/images/4.jpg",
+        "content": "In 2024, Eurasia Tours received strategic investment from GTT International Travel Group and became its first European subsidiary. Founded in 1984 in Dallas, Texas, GTT International Travel Group operates over 45 branches in major US cities and employs more than 600 multilingual professionals. As the largest wholesale consolidator with a 35% market share in North America, GTT reports annual air ticket sales of 1.75 million tickets and annual sales exceeding US$2 billion."
+      },
+      {
+        "title": "Growing in the US Market",
+        "cover": "/static/aboutus2/images/5.jpg",
+        "content": "With our strategic partnership with GTT International Travel Group, Eurasia Tours is well-positioned to expand our presence in the US market. By leveraging GTT's extensive network and market share, we aim to provide exceptional travel services to a broader audience in North America. This growth will help us connect more travelers with the unique experiences that Eurasia Tours offers, enhancing our reach and influence in the global tourism industry."
+      },
+      {
+        "title": "Global Travel Services",
+        "cover": "/static/aboutus2/images/6.jpg",
+        "content": "Our agency delivers comprehensive services for both outbound and inbound tourists. Discover destinations across Asia, North America, Europe, and Northern Africa with our custom sightseeing, business, and leisure tours. We offer everything from study and sports tours to cultural experiences and seasonal camps. Starting in late 2024, we'll also provide online bookings for airfare and cruises, further enhancing our seamless global travel solutions."
+      },
+      {
+        "title": "Long-term Stable Partners",
+        "cover": "/static/aboutus2/images/7.jpg",
+        "content": "Since its inception, Eurasia Tours has developed a network of partnerships with reputable companies in hospitality, ticketing, cruising, and transportation. These collaborations enable us to offer our clients high-quality hotels, reliable ticket services, distinguished cruise lines, and convenient car rentals. This network allows us to provide tailored travel experiences that prioritize convenience and satisfaction, ensuring a seamless and enjoyable journey for every traveler."
+      }
+    ]
+  },
+  "partner": {
+    "title": "Our Partners",
+    "logos": [
+      {
+        "logo": "/static/aboutus2/images/Four-Seasons-Logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Marriott-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/hilton-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Hyatt-Hotels-Logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Accor-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/InterContinental-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/wyndham-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/shangri_la_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/the-peninsula-hotels-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Costa-Logo.jpg",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/MSC-Cruise-Logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/royal_caribbean_group_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Princess_Cruises_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/R-C.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/R-C (1).png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/AirFrance-logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/KLM-logo.jpg",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/Air_China_logo.png",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/china-southern.jfif",
+        "width": "100"
+      },
+      {
+        "logo": "/static/aboutus2/images/china-eastern.png",
+        "width": "100"
+      }
+    ]
+  }
+}

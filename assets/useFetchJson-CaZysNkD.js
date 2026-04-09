@@ -1,0 +1,1 @@
+import{s,a as o}from"./destinations-DWBvJyik.js";const c=(t="en")=>{const e="static/aboutus2/".concat(t,".json");return s(e,{baseURL:""})},u=(t="en")=>{const e="static/terms-service/".concat(t,".json");return s(e,{baseURL:""})};function i(t){const{getLocaleCountryKey:e}=o(),n=e();function a(){return t(n)}return{fetch:a}}export{u as a,c as g,i as u};

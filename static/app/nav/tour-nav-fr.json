@@ -1,0 +1,261 @@
+{
+  "global": [
+    {
+      "global": "L'Europe",
+      "id": "EU",
+      "area": "EU",
+      "tours": []
+    },
+    {
+      "global": "Amérique du Nord",
+      "id": "NA",
+      "area": "EA,MI,AL,US,CA,HA,WE",
+      "tours": [
+        {
+          "TourID": "6ad64348-0fc6-4dd8-9564-5068b0b8e81e",
+          "TourCode": "FRSP000045",
+          "TourName": "Californie et ses Parcs : Aventures au Cœur de la Nature ",
+          "TourNumber": "7972",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/13/202501131026153893.jpg",
+          "TourDays": "12",
+          "TourPrice": "2930",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "• Découvrir 5 parcs naturels (dont Grand Canyon, Monument Valley, Bryce Canyon et Sequoia).\n• Passer 2 nuits dans les incontournables Los Angeles et Las Vegas.\n• Loger au cœur du centre-ville de San Francisco.\n• Vivre des expériences authentiques : Excursion en 4x4, dîner Navajo au pied d’une mesa, repas western.\n• Profiter des hôtels-casinos Golden Nugget à Las Vegas (mythique 4*) et Laughlin.",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null,
+          "strMddsj": "États - Unis,Los Angeles,Las Vegas"
+        },
+        {
+          "TourID": "e8c24c28-eddf-483c-a901-94dfdcd66db8",
+          "TourCode": "FRSP000047",
+          "TourName": "Costa Rica : Aventures et Trésors du Monde Tropical ",
+          "TourNumber": "7974",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/13/202501131209530727.jpg",
+          "TourDays": "13",
+          "TourPrice": "3330",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "• Visite des 3 plus beaux parcs naturels nationaux : Tortuguero， Arenal et Rincon de la Vieja\n• Hébergement dans les lodges au milieu de la nature\n• Découverte d’un pays 100% nature avec des volcans toujours actifs， des forêts tropicales habitées par des espèces animales fascinantes.\n• Randonnée et bain de boue dans le parc Rincon de la vieja",
+          "TourSpecificities": "Paysage naturel",
+          "TourComm": null,
+          "TourToCSelling": null,
+          "strMddsj": "Costa Rica"
+        }
+      ]
+    },
+    {
+      "global": "Asie",
+      "id": "AS",
+      "area": "AS",
+      "tours": [
+        {
+          "TourID": "c27c3fd1-a5ef-43fe-8c4a-96e8e1d7f0d2",
+          "TourCode": "FRSP000011",
+          "TourName": "Chine Impériale",
+          "TourNumber": "7814",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202407/26/202407260629329607.jpg",
+          "TourDays": "16",
+          "TourPrice": "2329",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "Découvrez les merveilles de la Chine avec notre voyage inoubliable à travers ce pays fascinant. De la grandeur impériale de Pékin, avec la majestueuse Grande Muraille et la Cité Interdite, aux guerriers en terre cuite de Xi'an, plongez dans l'histoire millénaire de cette civilisation. Explorez les paysages époustouflants de Guilin et les rizières en terrasses de Longsheng. Immergez-vous dans la culture dynamique de Shanghai, où tradition et modernité se rencontrent. ",
+          "TourSpecificities": "Lieux historiques,Paysage naturel",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "76f3ef44-21ef-4139-9d25-8488a60a8914",
+          "TourCode": "FRSP000020",
+          "TourName": "Lumière du Laos et Cambodge ",
+          "TourNumber": "7829",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202409/10/202409100454582163.png",
+          "TourDays": "15",
+          "TourPrice": "3195",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "• Des départs limités à 22 personnes\n• 1 trajet en train à grande vitesse et 1 vol intérieur\n• Des sites incontournables : Luang Prabang la « ville du Bouddha d’or fin », Vientiane, le plateau des Bolovens, l’archipel des 4 000 îles, les temples d’Angkor, le lac de Tonle Sap et ses villages flottants, Phnom Penh\n• Des sites naturels époustouflants : les chutes et cascades, les paysages luxuriants du Mékong, l’archipel des 4 000 îles et son labyrinthe de voies d’eau\n• Des découvertes authentiques : cérémonies traditionnelles, rencontres avec les ethnies, initiation à la cuisine et à l’artisanat, balade en cyclo-pousse et en tuk tuk",
+          "TourSpecificities": "Lieux historiques,Paysage naturel",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "ae687cde-6a89-44f5-af77-2a6cfc365fa7",
+          "TourCode": "FRSP000023",
+          "TourName": "Randonnée au cœur de la Chine : de la Grande Muraille à la rivière Li",
+          "TourNumber": "7832",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202407/26/202407260627298274.jpg",
+          "TourDays": "16",
+          "TourPrice": "2329",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "- Randonnée dans des paysages époustouflants : À travers les montagnes karstiques de Guilin, les rizières en terrasses de Ping’an et Dazhai, et sur la Grande Muraille de Chine.\n- Immersion culturelle : Découverte des villages traditionnels et des coutumes locales, notamment dans les régions Dong et Miao.\n- Sites historiques emblématiques : Visites de la Cité Interdite, du Temple du Ciel, de la Grande Muraille et du Palais d’Été à Pékin.\n- Découverte de la culture chinoise : De Shanghai à Pékin, vous serez immergé dans la vie urbaine dynamique et l’héritage culturel de la Chine.",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "058d3a2a-2097-4802-a485-baa4e94ec156",
+          "TourCode": "FRSP000015",
+          "TourName": "Les couleurs du Yunnan",
+          "TourNumber": "7820",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202407/26/202407260635126536.jpg",
+          "TourDays": "16",
+          "TourPrice": "2519",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "Découvrez le Yunnan en 16 jours à travers un itinéraire riche en couleurs et en culture. Commencez votre aventure à Kunming, la \"Ville du Printemps Éternel\", et explorez la Forêt de Pierre à Shilin. Continuez vers Luxi avant de vous émerveiller devant les rizières en terrasses de Yuanyang, un spectacle naturel à couper le souffle. Plongez dans l'histoire à Jianshui avec ses architectures anciennes. Dali et Weishan vous charmeront avec leurs vieilles villes pittoresques et leurs paysages lacustres. Visitez Shaxi, un ancien village de la route du thé, et ressentez la sérénité des prairies tibétaines à Zhongdian (Shangri-La). Terminez votre périple à Lijiang, connue pour sa vieille ville classée au patrimoine mondial de l'UNESCO. Ce circuit vous promet une immersion inoubliable au cœur des richesses culturelles et naturelles du Yunnan.",
+          "TourSpecificities": "Lieux historiques,Paysage naturel",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "f7497f5e-c56d-4d4f-a141-54c2770d35e1",
+          "TourCode": "FRSP000040",
+          "TourName": "Voyage au pays des minorités: Immersion au Guizhou et Sichuan",
+          "TourNumber": "7961",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/09/202501090632430679.jpg",
+          "TourDays": "15",
+          "TourPrice": "2129",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "Ce voyage en Chine vous emmène à la découverte de sites emblématiques et de traditions millénaires. De l’observation des pandas géants à Chengdu, aux visites des montagnes sacrées du Sichuan, en passant par des villages ethniques du Guizhou, vous vivrez une immersion totale dans la culture locale. Explorez des trésors naturels et historiques, avec des arrêts dans des villes animées et des temples anciens. Un voyage fascinant qui combine nature, histoire, et culture dans l'une des régions les plus authentiques de Chine",
+          "TourSpecificities": "Lieux historiques,Paysage naturel",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "f27b82b3-d89b-4b73-a092-b499835f408a",
+          "TourCode": "FRSP000021",
+          "TourName": "Japon : À la Découverte de l'Empire du Soleil Levant ",
+          "TourNumber": "7830",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202409/10/202409100512439995.png",
+          "TourDays": "12",
+          "TourPrice": "3985",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "Partez pour un voyage inoubliable à travers le Japon, pays des contrastes où traditions millénaires et modernité futuriste coexistent harmonieusement. Ce circuit vous fera découvrir des sites historiques, des merveilles naturelles et des métropoles vibrantes.",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "6f952436-171d-4b10-9578-3aa8f0bd8bf4",
+          "TourCode": "FRSP000012",
+          "TourName": "Merveilles du Vietnam et Cambodge ",
+          "TourNumber": "7817",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202409/10/202409100516326337.png",
+          "TourDays": "15",
+          "TourPrice": "2795",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "• Des départs limités à 20 personnes\n• 1 vol intérieur, 1 trajet en train de nuit, 1 nuit en jonque dans la mythique baie d’Halong\n• Des sites incontournables : Saigon capitale économique, les paysages luxuriants du Mékong, la réserve naturelle de Tra Su, les temples d’Angkor, la Cité impériale de Hue, Hanoi capitale millénaire, Ninh Binh et ses formations karstiques\n• Des découvertes authentiques : balades en cyclo-pousse et à vélo, navigations fluviales, initiation à la cuisine et à l’artisanat, spectacle de danses Apsara\n• Un geste pour l’environnement avec l’utilisation d’une gourde pour réduire les déchets de plastique\n\n+ Possibilité de prolonger le voyage : profitez d’un séjour dans la région de Sapa pour la découverte des minorités. Consultez le programme « Lumière du Vietnam & Cambodge + séjour à Sapa ».",
+          "TourSpecificities": "Lieux historiques,Paysage naturel",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "ec478b17-1922-436c-a3cb-38e5a988a5ba",
+          "TourCode": "FRSP000014",
+          "TourName": "Sur les Traces de la Route de la Soie 2025-2026",
+          "TourNumber": "7819",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202407/26/202407260808299214.jpg",
+          "TourDays": "16",
+          "TourPrice": "2892.6",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "Découvrez les merveilles de la légendaire Route de la Soie en Chine. Commencez votre voyage à Lanzhou， où vous pourrez admirer les paysages spectaculaires des rives du Fleuve Jaune. Continuez vers Xiahe，célèbre pour le monastère tibétain de Labrang， avant de vous émerveiller devant les montagnes colorées de Zhangye. Explorez la forteresse de Jiayuguan，porte occidentale de la Grande Muraille, puis aventurez-vous dans les dunes et les grottes de Mogao à Dunhuang. À Turfan，découvrez les anciennes ruines de Jiaohe et les vignobles luxuriants. Poursuivez vers Urumqi et le lac Karakul， entouré des montagnes célestes. Terminez votre périple à Kashgar， un carrefour culturel fascinant avec son marché dominical animé. Ce circuit vous plonge au cœur de l'histoire， de la culture et des paysages époustouflants qui ont marqué cette route mythique.",
+          "TourSpecificities": "",
+          "TourToAgentComm": "0",
+          "TourToSubagentComm": "0",
+          "TourToAgentSelling": "2892.6",
+          "TourToSubagentSelling": "2892.6"
+        },
+        {
+          "TourID": "8430ce05-8517-4e1b-b62c-1399899f1b46",
+          "TourCode": "FRSP000041",
+          "TourName": "Taïwan : À la Découverte de l'Île Perle de l'Asie",
+          "TourNumber": "7962",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/09/202501090807358608.jpg",
+          "TourDays": "9",
+          "TourPrice": "1570.39",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "- Richesse culturelle : Visites des temples historiques, du Musée du Palais national et des monuments de Taipei, ainsi que la découverte du patrimoine colonial de Tainan.\n- Nature et paysages époustouflants : Randonnées au Lac Sun Moon, exploration de la Côte Est de Taïwan et immersion dans les paysages tropicaux du Parc national de Kenting.",
+          "TourSpecificities": "",
+          "TourToAgentComm": "0",
+          "TourToSubagentComm": "0",
+          "TourToAgentSelling": "1570.39",
+          "TourToSubagentSelling": "1570.39"
+        },
+        {
+          "TourID": "7e47c833-177b-4a73-b730-794b058e9236",
+          "TourCode": "FRSP000042",
+          "TourName": "Escapade en Thaïlande : Voyage au Cœur du Siam ",
+          "TourNumber": "7964",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/10/202501101139195885.jpg",
+          "TourDays": "10",
+          "TourPrice": "1658.18",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "• 2 sites classés au patrimoine de l’UNESCO (marqués par des *)\n• 1 nuit en train pour plus de tranquillité\n• Le Triangle d’or et rencontre avec les tribus du nord\n• Les plus beaux temples du pays : Sukhothai, Doi Suthep\n• Le marché flottant de Damnoen Saduak et le marché aux fleurs de Bangkok\n• 2 dîners-spectacles de danses traditionnelles",
+          "TourSpecificities": "",
+          "TourToAgentComm": "0",
+          "TourToSubagentComm": "0",
+          "TourToAgentSelling": "1658.18",
+          "TourToSubagentSelling": "1658.18"
+        },
+        {
+          "TourID": "d6d424a6-9b73-40c1-b436-2e3af4f354fa",
+          "TourCode": "FRSP000043",
+          "TourName": "Vietnam : Immersion et Nuit en Jonque  ",
+          "TourNumber": "7969",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/11/202501111031450962.jpg",
+          "TourDays": "12",
+          "TourPrice": "2010.4",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "•Des départs limités à 20 personnes\n•1 nuitée en jonque dans la baie d’Halong\n•1 nuitée chez l’habitant dans le delta du Mékong\n•Trajets et train\n•Des sites incontournables : Hanoi capitale millénaire, Saigon capitale économique, Ninh Binh et ses formations karstiques, Hue et sa Cité impériale, Hoi An, ville classée\n•Des découvertes authentiques : rencontre avec les locaux, visite d’une école, balades en cyclo-pousse et à vélo, initiation à la cuisine et à l’artisanat\n•Un geste pour l’environnement avec l’utilisation d’une gourde pour réduire les déchets de plastique",
+          "TourSpecificities": "Lieux historiques,Paysage naturel",
+          "TourToAgentComm": "0",
+          "TourToSubagentComm": "0",
+          "TourToAgentSelling": "2010.4",
+          "TourToSubagentSelling": "2010.4"
+        }
+      ]
+    },
+    {
+      "global": "Afrique",
+      "id": "AF",
+      "area": "AF",
+      "tours": [
+        {
+          "TourID": "d1b5f857-a92a-4ba3-98da-e661926ac113",
+          "TourCode": "FRSP000046",
+          "TourName": "Kenya : À la Découverte de la Terre des Lions ",
+          "TourNumber": "7973",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/13/202501131115087657.jpg",
+          "TourDays": "10",
+          "TourPrice": "2995",
+          "TourCity": "Paris",
+          "TourType": "跟团游",
+          "TourSummary": "• Safari 4 parcs du Kenya avec 2 nuits à Masaï Mara, Naivasha, Amboseli et Tsavo\n\n• 1 couverture masaï offerte par personne\n• Le lac Naivasha lieu magique, et vue sur le mythique Kilimandjaro\n• Trajets et safaris en minibus-safari à toit ouvrant, limité à 6 personnes\n• Expériences optionnelles possibles (Crescent Island, montgolfière à Masaï Mara, village Masaï)\n• 2 nuits-plage à Mombasa sur l’océan indien en fin de safari",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        }
+      ]
+    }
+  ],
+  "theme": [
+    {
+      "global": "遊輪假期",
+      "tours": []
+    },
+    {
+      "global": "遊輪假期2",
+      "tours": []
+    }
+  ]
+}

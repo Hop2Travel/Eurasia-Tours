@@ -1,0 +1,462 @@
+{
+  "global": [
+    {
+      "global": "欧洲",
+      "area": "EU",
+      "tours": [
+        {
+          "TourID": "951267dd-4224-4e0f-b1b1-aedcf761227e",
+          "TourCode": "FRSP000001",
+          "TourName": "法意瑞11天9晚[FRIT11]",
+          "TourNumber": "7746",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202403/24/202403242223400983.jpg",
+          "TourDays": "11",
+          "TourPrice": "2111.14",
+          "TourCity": "巴黎",
+          "TourType": "跟团游",
+          "TourSummary": "轻奢精品小团，尊享品质体验\n行程亮点：\n-\t限定至25人舒适小团游\n-\t巴黎出发，罗马结束，拒绝长途大巴车\n-\t全程入住优质四星级酒店\n-\t团费包含行程中重要景点入内参观门票\n-\t巴黎，从埃菲尔铁塔的壮丽景观开始，感受卢浮宫的艺术气息\n-\t凡尔赛，探索其宏伟的宫殿和精致的花园\n-\t米兰的时尚大道和哥特式大教堂等待您的探访\n-\t卢塞恩，您将步入时间的回廊\n-\t科莫湖，体验意大利湖区的宁静与浪漫\n-\t威尼斯的水道和历史建筑展现独特的意大利风情\n-\t五渔村的五彩小屋和海景让人流连忘返\n-\t佛罗伦萨的文艺复兴艺术和历史遗迹等您探索\n-\t罗马的古罗马遗迹将为您的旅程画上圆满句号",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "2111.14",
+          "Dates": [
+            "2024-08-06",
+            "2024-07-16",
+            "2024-10-15",
+            "2024-09-17",
+            "2024-08-27"
+          ]
+        },
+        {
+          "TourID": "79d13a27-d762-4fb7-a588-66344c2c2986",
+          "TourCode": "FRSP000030",
+          "TourName": "郁金香花季|荷比卢德法10天9晚深度游[FRSP000030]",
+          "TourNumber": "7851",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202409/26/202409260531265039.jpg",
+          "TourDays": "10",
+          "TourPrice": "1927",
+          "TourCity": "巴黎",
+          "TourType": "跟团游",
+          "TourSummary": "限定精品舒适小团游\n全程入住优质四星级酒店\n团费包含行程中重要景点入内参观门票\n巴黎—脚步丈量全景citytours\n布鲁塞尔—历史与现代交织“欧洲的首都”\n安特卫普—“钻石之都”重要的港口和文化中心\n波恩—着名文化遗址 贝多芬的故乡\n科隆—莱茵河畔看世界文化遗产\n库肯霍夫花园—“欧洲的花园”赏郁金香(仅限3月28日、4月11日、5月1日团期)\n",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "beaccfb6-efdc-4a85-b0c2-e37945c83e8f",
+          "TourCode": "FRSP000032",
+          "TourName": "纵情东欧四国魅力之旅10天9晚 [FRSP000032]",
+          "TourNumber": "7854",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202409/18/202409181007025058.jpg",
+          "TourDays": "10",
+          "TourPrice": "2111.14",
+          "TourCity": "布拉格",
+          "TourType": "跟团游",
+          "TourSummary": "探音乐巨匠遗踪 享精神文化之旅\n乐声与景色交辉 美食与文化碰撞\n千塔之城布拉格，赏中世纪风情和哥特式建筑\n搭游船穿越布拉格市中心，赏伏尔塔瓦河美景\n克鲁姆洛夫置身童话世界，俯瞰伏尔塔瓦河\n欧洲古典音乐的发源地，音乐之都维也纳\n莫扎特的故乡萨尔茨堡，感受世界多元音乐\n斯洛伐克首都布拉迪斯拉发，历史与现代的完美融合\n多瑙河上的明珠布达佩斯，享受温泉惬意时刻\n世界闻名湖畔小镇哈尔施塔特，风景如画\n",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "51b7bc37-b9c8-4c83-a4bb-81f2d84780d7",
+          "TourCode": "FRSP000033",
+          "TourName": "法国深度游|薰衣草花季团|11天10晚 [FRSP000033]",
+          "TourNumber": "7858",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202409/26/202409260529039575.jpg",
+          "TourDays": "11",
+          "TourPrice": "1926.6",
+          "TourCity": "巴黎",
+          "TourType": "跟团游",
+          "TourSummary": "限定精品舒适小团游\n全程入住优质四星级酒店\n赏薰衣草美景，游时尚之都\n团费包含行程中重要景点入内参观门票\n\n巴黎—世界时尚之都\n里昂—法国米其林“美食之都”\n瓦伦索勒—体验薰衣草田园风光的理想之地\n阿维尼翁—文化遗产“教皇新城”\n阿尔勒—梵高《向日葵》灵感发源地\n圣十字湖—清澈的湖水和周围壮丽的自然风光\n尼斯—蔚蓝海岸、海滨度假之城\n格拉斯—“香水之都”悠久的香水制造历史\n戛纳—以国际电影节和奢华的生活方式而闻名\n摩纳哥—世界上面积最小的奢华国家\n安纳西—“阿尔卑斯的威尼斯”充满中世纪魅力\n",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "70461378-7df3-4cad-a424-18cc18a665bc",
+          "TourCode": "FRSP000048",
+          "TourName": "法国诺曼底深度7日游[FRSP000048]",
+          "TourNumber": "7976",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/16/202501161057362650.jpg",
+          "TourDays": "7",
+          "TourPrice": "1372.98",
+          "TourCity": "巴黎",
+          "TourType": "跟团游",
+          "TourSummary": "《中餐厅》+《花儿与少年》热门综艺同款录制地\n周杰伦MV同款取景地\n重游名人画家故居|莫奈与梵高\n诺曼底登陆|参观美军公墓与纪念馆\n含所有景点入内门票\n全程豪华专车\n中英文双语导游陪同\n周六出发，周六返回",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "83c9ba34-35bb-43fc-a008-8c831ed6a3f9",
+          "TourCode": "FRSP000049",
+          "TourName": "法国古堡美酒之旅7天6晚[FRSP000049]",
+          "TourNumber": "7977",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202501/16/202501161126121964.jpg",
+          "TourDays": "7",
+          "TourPrice": "1373",
+          "TourCity": "巴黎",
+          "TourType": "跟团游",
+          "TourSummary": "周六出发，周六返回\n含所有景点入内参观门票|含行程内免费接送机服务\n巴黎|浪漫之都City Walk\n波尔多|葡萄酒爱好者天堂，体验传统酿酒文化\n阿卡雄|欧洲最高沙丘，迷人海滨风光\n香波堡|卢瓦尔河谷地区文艺复兴代表建筑\n罗卡马杜尔|历史悠久的悬崖小镇，具有独特的宗教意义\n多姆火山|最着名的活火山群之一，登山远足爱好者天堂\n马孔|勃艮第葡萄酒产区，特色白葡萄酒",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "f56e1ac0-2175-460b-9bfc-a51986382bdd",
+          "TourCode": "FRSP000027",
+          "TourName": "体验德国与瑞士双重魅力10天9晚[FRSP000027]",
+          "TourNumber": "7848",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202409/04/202409040900451544.jpg",
+          "TourDays": "10",
+          "TourPrice": "2757",
+          "TourCity": "法兰克福",
+          "TourType": "跟团游",
+          "TourSummary": "法兰克福进出，往返机票价格优惠\n童话中的新天鹅堡，感受国王的奢华梦想\n苏黎世，富有魅力的老城区以及充满活力的文化和夜生活\n卢塞恩，阿尔卑斯山脚下乘船探索卢塞恩湖区\n伊瑟尔特瓦尔德，韩剧《爱的迫降》取景地\n少女峰，置身群峰之间足踏千年冰河\n洛桑，国际奥林匹克委员会总部所在地\n巴登巴登，德国温泉之都放松疗养\n海德堡，城市、城堡、河流与环城山峦融为一体\n金色列车，全景观光最佳观赏位",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        },
+        {
+          "TourID": "99ed6bd7-ac11-4c93-868f-c04b11b1e664",
+          "TourCode": "FRSP000028",
+          "TourName": "意瑞法12天11晚轻奢游 [FRSP000028]",
+          "TourNumber": "7849",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202407/03/202407030930165601.jpg",
+          "TourDays": "12",
+          "TourPrice": "2849",
+          "TourCity": "罗马",
+          "TourType": "跟团游",
+          "TourSummary": "限定精品舒适小团游\n全程入住优质四星级酒店，巴黎段升级五星级酒店\n品古都文化，赏湖光山色，游时尚之都\n团费包含行程中重要景点入内参观门票\n\n巴黎—世界时尚之都\n第戎—法国勃艮第红酒产区首府\n铁力士雪山—无与伦比的阿尔卑斯山脉风光\n卢塞恩—花桥，水塔，天鹅湖\n比萨—意大利的建筑奇迹比萨斜塔\n威尼斯—观赏水城独特的水上景观\n五渔村—壮丽的海岸线和彩色的房屋\n佛罗伦萨—文艺复兴的摇篮\n梵蒂冈—世界之最教皇国\n罗马—永恒之城的辉煌与风采\n白露里治奥—宫崎骏的天空之城原型\n",
+          "TourSpecificities": "",
+          "TourComm": null,
+          "TourToCSelling": null
+        }
+      ]
+    },
+    {
+      "global": "北美洲",
+      "area": "EA,MI,AL,US,CA,WE",
+      "tours": [
+        {
+          "TourID": "6f0d5e0f-7889-40a4-860a-051a83fbaead",
+          "TourCode": "TMSP000009",
+          "TourName": "盐湖城进出+大提顿国家公园+黄石国家公园 4日游 【EW-Y4】",
+          "TourNumber": "7436",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202308/18/202308182355051943.jpg",
+          "TourDays": "4",
+          "TourPrice": "437.93",
+          "TourCity": "盐湖城",
+          "TourType": "跟团游",
+          "TourSummary": "行程特色：\n空降盐湖城，最短平快的方式游览黄石！\n三天黄石公园，保证游览15大景点！",
+          "TourSpecificities": "",
+          "TourComm": "100",
+          "TourToCSelling": "537.93"
+        },
+        {
+          "TourID": "41a4167f-761f-4faa-b4e3-288901f2daef",
+          "TourCode": "TMSP000058",
+          "TourName": "美东6天豪华游（NYC机场接机， BOS机场送机）[EW-EC6]",
+          "TourNumber": "7485",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202308/04/202308041557510182.JPG",
+          "TourDays": "6",
+          "TourPrice": "535.74",
+          "TourCity": "纽约",
+          "TourType": "跟团游",
+          "TourSummary": "天马15年以上美东经验导游\n全程四星级酒店\n浓缩经典美东名城精华景点\n深度体验美国文化历史\n尼亚加拉瀑布体验深度游\n亲临世界名校—哈佛大学、麻省理工学院\n品尝舌尖上的美食风味，波士顿龙虾。",
+          "TourSpecificities": "",
+          "TourComm": "100",
+          "TourToCSelling": "635.74"
+        },
+        {
+          "TourID": "79bf10fd-7242-4aff-9020-068d2fddfb11",
+          "TourCode": "TMSP000162",
+          "TourName": "拉斯维加斯+下羚羊彩穴+拱门国家公园+盐湖城+黄石国家公园+大提顿国家公园+布莱斯峡谷国家公园+西峡谷 8日游【EW-YM8】",
+          "TourNumber": "7589",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202308/18/202308182355051943.jpg",
+          "TourDays": "8",
+          "TourPrice": "694.7",
+          "TourCity": "拉斯维加斯",
+          "TourType": "跟团游",
+          "TourSummary": "大黄石生态圈加西南巨环完美呈现！\n六大国家公园，两大世界级摄影圣地！\n入住湖景木屋，轻松玩遍景点，保证停留黄石公园10大景点！",
+          "TourSpecificities": "",
+          "TourComm": "240",
+          "TourToCSelling": "934.7"
+        },
+        {
+          "TourID": "114d5f8d-e4a9-41a1-a35f-1e7fc18769f2",
+          "TourCode": "TMSP000022",
+          "TourName": "纽约+费城+华府+尼亚加拉瀑布+波士顿 4日游 [EW-NY4]",
+          "TourNumber": "7449",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202308/07/202308071027412215.jpg",
+          "TourDays": "4",
+          "TourPrice": "202.07",
+          "TourCity": "纽约",
+          "TourType": "跟团游",
+          "TourSummary": "2024 买二送一/送二\n[安心出行]专业司导贴心服务，游玩更放心。\n[精选美东]浓缩美东名城精华景点，感受两个首都的魅力，深度体验美国历史文化。\n[自然奇迹]尼亚加拉瀑布体验深度活动，感受大瀑布的磅礴气势。\n[世界名校]亲临世界名校—哈佛大学，感受名校的别样风采。\n[吃货福音]品尝舌尖上的美食风味，打卡波士顿昆西市场，体验地道龙虾餐。",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "202.07"
+        },
+        {
+          "TourID": "73147248-a36b-4152-af97-8ffb5b7b6fd5",
+          "TourCode": "TMSP000049",
+          "TourName": "纽约网红地标打卡一日游 [EW-NR1]",
+          "TourNumber": "7476",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202308/04/202308041624500339.jpg",
+          "TourDays": "1",
+          "TourPrice": "113.49",
+          "TourCity": "纽约",
+          "TourType": "跟团游",
+          "TourSummary": "【安全出行】全程车辆定时消毒，专业司导贴心服务，游玩更放心。\n【网红玩法】打卡超火网红地、品尝特色网红美食、全景视角带您玩转特色纽约。",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "113.49"
+        },
+        {
+          "TourID": "2d03a65f-2f63-46c3-83b3-2393a8ff702b",
+          "TourCode": "TMSP000121",
+          "TourName": "6天美东常规团 （NYC机场接, BOS机场送机）[EW-AP6]",
+          "TourNumber": "7548",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202308/05/202308050856108630.jpg",
+          "TourDays": "6",
+          "TourPrice": "220.86",
+          "TourCity": "纽约",
+          "TourType": "跟团游",
+          "TourSummary": "【玩转纽约】一天纽约市区游把主要地标一网打尽，全景视角探索大苹果。\n【精选美东】浓缩美东名城精华景点，感受两个首都的魅力，深度体验美国历史文化。\n【自然奇迹】尼亚加拉瀑布体验深度活动，感受大瀑布的磅礴气势，特别安排一晚入住瀑布景区酒店。\n【世界名校】亲临世界名校—哈佛大学，感受名校的别样风采。\n【吃货福音】品尝舌尖上的美食风味，打卡波士顿昆西市场，体验地道龙虾餐。",
+          "TourSpecificities": "",
+          "TourComm": "115",
+          "TourToCSelling": "335.86"
+        },
+        {
+          "TourID": "5955ef1b-f537-4f71-bfa8-ed5fa3bb4389",
+          "TourCode": "CASP000030",
+          "TourName": "落基山脈傑士柏4大國家公園8日遊 [卡加利進出] (周四）[GSCRWD8G-24]",
+          "TourNumber": "7638",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202309/26/202309260307361255.jpg",
+          "TourDays": "8",
+          "TourPrice": "1096.17",
+          "TourCity": "卡加利",
+          "TourType": "跟团游",
+          "TourSummary": "落基山脈全覽",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "1096.17"
+        },
+        {
+          "TourID": "d327de95-e19a-4400-af77-e7ee7573e22a",
+          "TourCode": "TMSP000185",
+          "TourName": "6天加西温哥华洛矶山夏季探索游【EW-ROCKY6】",
+          "TourNumber": "7766",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202404/12/202404121126015289.jpeg",
+          "TourDays": "6",
+          "TourPrice": "780.32",
+          "TourCity": "温哥华",
+          "TourType": "跟团游",
+          "TourSummary": "精选组合灵活搭配，行程丰富，满足不同旅客需要。\n免费贴心温哥华机场接送 (上午9点 - 晚上9点)，中午12时前抵达更可获送免费温哥华市重点观光游或名牌折扣购物中心购物游。\n自由选择探索加西旅游热点: (A) 全球最宜居城市 - 温哥华、(B) 卑诗省省府 - 维多利亚市、(C) 滑雪和度假胜地 - 威士拿…\n畅游加西4个著名国家公园: 班芙、贾斯珀、冰河、优鹤。\n近距离探索露易斯湖、梦莲湖、沛托湖，漫步湖畔并欣赏碧绿的湖泊、高耸的山脉、壮丽的冰川… 尤如进入人间仙境！\n享受非一般的旅游体验: 乘缆车登上硫磺山山顶，于高空俯瞰迷人的班芙小镇、弓河山谷及群山美景； 乘坐特製巨型雪车登上世界最大的冰原遗迹 - 哥伦比亚冰原； 登上最火的冰河天空步道欣赏贾斯珀国家公园内的冰川和雪山群峰…\n参观基隆那著名酒庄，一嚐世界闻名的加拿大葡萄酒及正宗冰酒。前往花旗蔘城 - 甘露市，了解花旗蔘种植和加工过程及选蔘的方法，品嚐正宗优质的花旗蔘茶。\n入住班芙市内酒店，方便团友自由漫步于充满欧陆风情的班芙大道，尽情享受吃喝和搜购纪念品的乐趣。\n经验丰富的导游全程提供中/英文详尽的讲解和周到的",
+          "TourSpecificities": "",
+          "TourComm": "135",
+          "TourToCSelling": "915.32"
+        },
+        {
+          "TourID": "4b687649-d358-42be-a955-67c0d21df143",
+          "TourCode": "CASP000002",
+          "TourName": "加东六天深度精华游 (含接送机套餐)[GNCEC06]",
+          "TourNumber": "7610",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202402/23/202402230230063660.jpg",
+          "TourDays": "6",
+          "TourPrice": "524.09",
+          "TourCity": "多伦多",
+          "TourType": "跟团游",
+          "TourSummary": "◇ 独家：免费升级翠湖山Fairmont酒店\n◇ 独家: 游览“东部小班芙”～翠湖山庄度假村\n◇ 独家: 三城住宿-城市和独特山庄体验：一晚翠湖山庄度假村，一晚蒙特利尔，一晚魁北克城\n◇ 独家: 再现十八世纪维多利亚民风民俗的Upper Canada Villiage\n◇ 特色：秀丽独特的自然景观：翠湖山庄度假村\n◇ 特色：更多时间驻足魁北克老城，寻找韩剧《鬼怪》的拍摄足迹，与电视中的画面不期而遇\n◇ 特色：一次深度尽览加东精华：渥太华、蒙特利尔、魁北克、翠湖山庄\n◇ 特色：西式海鮮自助晚餐 “农家乐” 楓糖餐，浪漫法式特色晚餐\n◇ 特色：乘坐“吹号手”景观船穿越氤氲水雾，靠近马蹄形峭壁的边缘，听瀑声如雷、观水势如雪奔泻。\n◇ 特色：小酌一杯加拿大最负盛名的冰酒，细品冰酒独有的甜美与醇香。",
+          "TourSpecificities": "",
+          "TourComm": "0.00",
+          "TourToCSelling": "524.09"
+        }
+      ]
+    },
+    {
+      "global": "亚洲",
+      "area": "AS",
+      "tours": [
+        {
+          "TourID": "eb0204f5-ab84-4fce-9328-93c6d3c5864b",
+          "TourCode": "TMSP000160",
+          "TourName": "甘孜州, 阿坝州, 凉山州（甘阿凉）三州14日游【EW-CTU14】",
+          "TourNumber": "7587",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202310/17/202310171628402033.jpg",
+          "TourDays": "14",
+          "TourPrice": "2305.83",
+          "TourCity": "成都,西昌,亚丁",
+          "TourType": "跟团游",
+          "TourSummary": "全景四川奢华纯玩游， 世界遗产的瑰宝，羌族+藏族+彝族\n凉山州: 邛海湿地公园；螺髻山悬崖温泉\n甘孜州: 最后一片净土——稻亚风景区；摄影天堂——新都桥\n阿坝州: 世界自然遗产，国家5A景区——九寨沟、黄龙\n成  都: 必打卡点 锦里古街、宽窄巷子、熊猫乐园\n成都段全面升级国际五星酒店\n都江堰特别赠送一晚温泉体验\n特色美食：川菜，汽锅鱼，西昌火盆烧烤，特色藏家宴，养生汤锅",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "2305.83",
+          "Dates": [
+            "2024-09-08"
+          ]
+        },
+        {
+          "TourID": "7df7f2ab-2e7d-467a-a1d5-dba90aabe6cd",
+          "TourCode": "TMSP000140",
+          "TourName": "大美新疆， 南北疆风光15天 【EW-URC15】",
+          "TourNumber": "7567",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202310/18/202310181432074965.jpg",
+          "TourDays": "15",
+          "TourPrice": "2005.83",
+          "TourCity": "乌鲁木齐",
+          "TourType": "跟团游",
+          "TourSummary": "★天山天池：欣赏壮丽的高山湖泊美景，感受大自然的鬼斧神工\n★感受中国少数民族风情：维吾尔族，哈萨克族，柯尔克孜族\n★喀纳斯：感受阿尔泰山的神秘与宁静\n★漫步在禾木村的小路上，体验世外桃源般的宁静生活\n★探访喀什古城，感受浓厚的民族文化底蕴\n★品尝美味的地方美食，体验浓郁的民族风情",
+          "TourSpecificities": "",
+          "TourComm": "300",
+          "TourToCSelling": "2305.83",
+          "Dates": [
+            "2024-10-07"
+          ]
+        },
+        {
+          "TourID": "fdea130e-26f8-4de0-b175-4efff85f7eee",
+          "TourCode": "TMSP000075",
+          "TourName": "台湾环岛之旅15天 [EW-TWN15]",
+          "TourNumber": "7502",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202310/10/202310101237472854.jpg",
+          "TourDays": "15",
+          "TourPrice": "2035.18",
+          "TourCity": "台湾",
+          "TourType": "跟团游",
+          "TourSummary": "★台北，台中，嘉义，台南，高雄，南投，桃园\n★带你从北到南感受台湾环岛旅行\n★台湾最大帘幕瀑布观光，俯瞰高雄市美丽海景与市景，游遍沿边美景\n★探寻传统建筑和寺庙古迹，三面临海垦丁公园观光。五大夜市品尝台湾独特美食。\n★全程精品商务酒店\n★陆地头等舱大巴",
+          "TourSpecificities": "",
+          "TourComm": "350",
+          "TourToCSelling": "2385.18",
+          "Dates": [
+            "2024-10-20"
+          ]
+        },
+        {
+          "TourID": "bd5da06f-17b7-48d1-973b-f1c9cb051d19",
+          "TourCode": "SP000489",
+          "TourName": "1日花蓮太魯閣(大理石)峽谷觀光(含火車搭乘體驗) (2024~2025) [24MV-TW1E24]",
+          "TourNumber": "7644",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202307/06/202307061353548120.jpg",
+          "TourDays": "1",
+          "TourPrice": "115.34",
+          "TourCity": "台北,花蓮",
+          "TourType": "跟团游",
+          "TourSummary": "探索世界最大的大理石峽谷 – 太魯閣峽谷，感受大自然的鬼斧神工\n漫步於步道之中，欣賞兩岸大理石地形因河流的沖蝕形成的壯麗景色\n搭乘火車，輕鬆地欣賞東海岸沿途的優美風光\n走訪花蓮著名七星潭，親眼見證全世界最大海洋─太平洋\n1人成行，保證出發",
+          "TourSpecificities": "",
+          "TourComm": "0.00",
+          "TourToCSelling": "115.34"
+        },
+        {
+          "TourID": "e62a6c4a-ba5d-433e-a6c0-0de888a194af",
+          "TourCode": "SP000537",
+          "TourName": "邂逅首爾 悠享日本 溫泉美食11日9晚 [24MVSS-CTKJ11]",
+          "TourNumber": "7692",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202309/07/202309070037202598.jpg",
+          "TourDays": "11",
+          "TourPrice": "1417.67",
+          "TourCity": "首尔",
+          "TourType": "跟团游",
+          "TourSummary": "閃亮推薦：\n★ 著名韓劇《冬季戀歌》的拍攝地--南怡島\n★ 韓國最富盛名的國家公園，風景如詩如畫--雪嶽山國家公園\n★ 韓國歷史和文化的象徵，最大最古老的宮殿--景福宮\n★ 潮流服裝“不夜城”--東大門\n★ 韓國“流行聖地”，購物達人的天堂--明洞\n★ 日本最具代表性的繁華商圈，世界三大繁華購物街之一的銀座\n★ 東京必打卡之地，日本和淺草地區的象徵--淺草寺\n★ 東瀛“聖山”，日本的象徵--富士山\n★ “日本九寨溝”--忍野八海\n★ 世界文化遺產，以倒映在鏡湖池中的景觀聞名的金閣寺\n★ 有“梅花鹿公園”之稱的奈良公園\n★ 大阪時尚潮流美食地標--心齋橋\n★ 特別安排韩国江原道及日本富士山地區溫泉酒店，浸泡温泉，舒緩精神，放鬆身心！（請自備泳衣）\n★ 全程安排五花舒適酒店\n精選美饌：  \n★ 石鍋拌飯、韓式風味、烤五花肉、人參雞風味\n★ 日式鰻魚飯、寿喜烧風味、和風湯豆腐、天婦羅風味\n細意安排：\n★ 不安排指定購物店，無自費活動專案，讓您旅遊更舒心！",
+          "TourSpecificities": "",
+          "TourComm": "150",
+          "TourToCSelling": "1567.67"
+        },
+        {
+          "TourID": "c708685a-99d1-42fe-a2fe-84c304ea9302",
+          "TourCode": "SP000571",
+          "TourName": "韓國首爾、江原道6天4晚[24MVSS-CTKA06]",
+          "TourNumber": "7726",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202309/06/202309060223408894.jpg",
+          "TourDays": "6",
+          "TourPrice": "821.78",
+          "TourCity": "仁川",
+          "TourType": "跟团游",
+          "TourSummary": "閃亮推薦：\n★ 著名韓劇《冬季戀歌》的拍攝地--南怡島\n★ 韓國最富盛名的國家公園，風景如詩如畫--雪嶽山國家公園\n★ 韓國歷史和文化的象徵，最大最古老的宮殿--景福宮\n★ 潮流服裝“不夜城”--東大門\n★ 韓國“流行聖地”，購物達人的天堂--明洞\n★ 特別安排入住一晚溫泉酒店，浸泡温泉，舒緩精神，放鬆身心！（請自備泳衣）\n★ 全程安排五花舒適酒店\n精選美饌：  \n★ 石鍋拌飯、韓式風味、烤五花肉、人參雞風味\n細意安排：\n★ 不安排指定購物店，無自費活動專案，讓您旅遊更舒心！\n★ 禮品饋贈：每人每天1瓶礦泉水",
+          "TourSpecificities": "",
+          "TourComm": "100",
+          "TourToCSelling": "921.78"
+        }
+      ]
+    },
+    {
+      "global": "非洲",
+      "area": "AF",
+      "tours": [
+        {
+          "TourID": "5239e515-3a2f-4193-8352-d5031af37021",
+          "TourCode": "TMSP000018",
+          "TourName": "肯尼亚激情狂野超值8天之旅【EW-K048]",
+          "TourNumber": "7445",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202307/07/202307071336501889.jpg",
+          "TourDays": "8",
+          "TourPrice": "1780.81",
+          "TourCity": "内罗毕",
+          "TourType": "跟团游",
+          "TourSummary": "马塞马拉-今色黄昏，七彩晚霞，震撼人心的动物大迁徙\n埃尔门泰塔湖-赴一场粉红湖之约，纳瓦沙湖-凉风阵阵\n金合欢树下充满生机的人间仙境\n美国‘国家地理’杂志评选出的人生必游的50个地方中最受欢迎的旅行目的地",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "1780.81"
+        },
+        {
+          "TourID": "7f8c5244-89b3-48ac-9a71-d082843a4c69",
+          "TourCode": "TMSP000015",
+          "TourName": "肯尼亚&坦桑尼亚9天激情东非之旅【EW-KT049]",
+          "TourNumber": "7442",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202307/29/202307290209125642.jpg",
+          "TourDays": "9",
+          "TourPrice": "4152.15",
+          "TourCity": "肯尼亚",
+          "TourType": "跟团游",
+          "TourSummary": "马拉马拉和塞伦盖蒂草原上的金色黄昏，七彩晚霞\n世界第八大奇跡-“非洲的伊甸园”恩戈罗恩戈罗火山\n奥 佩吉塔-最大的黑犀牛保护区\n金合欢树下充满生机的人间仙境\n美国《国家地理》杂志评选出的人生必游的50个地方中最受欢迎的旅行目的地\n2人起纯玩团\n打卡四大国家公园+1 大湖泊",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "4152.15"
+        },
+        {
+          "TourID": "9f1fc58d-f8b2-4bc7-8d07-a46ca81e310e",
+          "TourCode": "TMSP000016",
+          "TourName": "肯尼亚激情狂野Safari奇妙8天之旅[EW-TK7]",
+          "TourNumber": "7443",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202307/29/202307290208536735.jpg",
+          "TourDays": "8",
+          "TourPrice": "2666.6",
+          "TourCity": "肯尼亚",
+          "TourType": "跟团游",
+          "TourSummary": "今色黄昏，七彩晚霞，震撼人心的动物大迁徙- 马塞马拉\n非洲度假胜地之一，大象的天堂- 安博塞利\n凉风阵阵，生机勃勃- 纳瓦沙湖\n金合欢树下充满生机的人间仙境\n世界50强 - 百兽宴",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "2666.6"
+        },
+        {
+          "TourID": "e28a9713-5628-49ca-8b88-dd6bbb53784a",
+          "TourCode": "TMSP000191",
+          "TourName": "摩洛哥沙漠11天【EW-CMN1202】",
+          "TourNumber": "7772",
+          "TourImage": "https://erp.eworldtours.com//upload/res/202404/30/202404301530102134.jpg",
+          "TourDays": "11",
+          "TourPrice": "2203.41",
+          "TourCity": "摩洛哥",
+          "TourType": "跟团游",
+          "TourSummary": "★全程四星-五星饭店住宿（其中沙漠是豪华帐篷，舍夫沙万是特色民宿饭店，瓦尔札札特是精品四星饭店）\n★行程所列的早餐/午餐/晚餐，含特色当地餐饮-Dada摩式风情当地餐\n★景点门票（哈桑二世清真寺，巴西亚皇宫，马约尔花园，瓦尔札特电影城，沃吕比利斯，非洲洞，骑骆驼）",
+          "TourSpecificities": "",
+          "TourComm": "0",
+          "TourToCSelling": "2203.41",
+          "Dates": [
+            "2024-12-02"
+          ]
+        }
+      ]
+    }
+  ],
+  "theme": [
+    {
+      "global": "遊輪假期",
+      "tours": []
+    },
+    {
+      "global": "遊輪假期2",
+      "tours": []
+    }
+  ]
+}

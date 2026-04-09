@@ -1,0 +1,228 @@
+{
+  "banners": [
+    {
+      "id": "beaccfb6-efdc-4a85-b0c2-e37945c83e8f",
+      "img": "/static/home/banners/en/202409270116216681.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "fdb13350-b863-4565-b32e-fe342df33e2a",
+      "img": "/static/home/banners/en/202405070137430575.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "51b7bc37-b9c8-4c83-a4bb-81f2d84780d7",
+      "img": "/static/home/banners/en/202409270129121840.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "79d13a27-d762-4fb7-a588-66344c2c2986",
+      "img": "/static/home/banners/en/202409270229275409.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    }
+  ],
+  "exploreSlides": [
+    {
+      "Name": "EU",
+      "NameCN": "Europe",
+      "Code": "10",
+      "Line": "Avignon,Paris,Bordeaux,Nice,Toulouse,Cologne,Brussels,Luxembourg,Frankfurt,Dusseldorf,Amsterdam,Austria,Germany,Hallstatt,Czech Republic,Switzerland,Slovakia,Hungary,Prague,Denmark,Norway,Sweden,Pisa,Dijon,Vatican City,Roma,Milan,Venice,Barcelona,Girona,Madrid,Lisbon,toledo,chateauroux,Zaragoza,Versailles,Florence,Nancy,Strasbourg,Vienna,United Kingdom",
+      "img": "/static/home/exploreCovers/Europe_600x340.jpg"
+    },
+    {
+      "Name": "EA",
+      "NameCN": "East Coast USA",
+      "Code": "1",
+      "Line": "Washington DC,Niagara Falls,New York,Boston,Philadelphia,New Haven,Denver,Yellowstone National Park,Salt Lake City,Antelope Canyon,Las Vegas,Terrace Bay",
+      "img": "/static/home/exploreCovers/USA_600x340.jpg"
+    },
+    {
+      "Name": "MI",
+      "NameCN": "Miami, USA",
+      "Code": "13",
+      "Line": "Miami,Orlando,Las Vegas,Antelope Canyon,Salt Lake City,Yellowstone National Park",
+      "img": "/static/home/exploreCovers/southern-united-states.jpg"
+    },
+    {
+      "Name": "AL",
+      "NameCN": "Alaska",
+      "Code": "14",
+      "Line": "",
+      "img": "/static/home/exploreCovers/Alaska.jpg"
+    },
+    {
+      "Name": "US",
+      "NameCN": "East Coast USA and Canada",
+      "Code": "2",
+      "Line": "Niagara Falls,Toronto,Quebec,Boston,New York,Washington DC,OTTAWA,Montreal,Philadelphia",
+      "img": "/static/home/exploreCovers/ESC.jpg"
+    },
+    {
+      "Name": "CA",
+      "NameCN": "Canada",
+      "Code": "3",
+      "Line": "Rocky Mount,Toronto,Quebec,OTTAWA,Montreal,Thousand Islands,Niagara Falls（Canada side）,Calgary,Peggy’s Cove,PEI",
+      "img": "/static/home/exploreCovers/Canada_600x340.jpg"
+    },
+    {
+      "Name": "HA",
+      "NameCN": "Hawaii",
+      "Code": "4",
+      "Line": "Honolulu",
+      "img": "/static/home/exploreCovers/hawaii.jpg"
+    },
+    {
+      "Name": "WE",
+      "NameCN": "West Coast USA",
+      "Code": "5",
+      "Line": "Los Angeles,Las Vegas,San Francisco,Salt Lake City,Yellowstone National Park,Antelope Canyon,Grand Canyon",
+      "img": "/static/home/exploreCovers/West-America.jpg"
+    },
+    {
+      "Name": "A1",
+      "NameCN": "China",
+      "Code": "20",
+      "Line": "Bangkok,South Korea,Maldives,Taipei,Phuket,Chengdu,Kuala Lumpur,Hong Kong,Macau,Hanoi,Dubai,Manila,Hualien,Chiang Mai,Ho Chi Minh City,Siem Reap,Shenzhen,Singapore,Terrace Bay,Phu Quoc,Urumqi,Japan,Guangzhou,Fuoshan, Jiufen, Pingxi",
+      "img": "/static/home/exploreCovers/China_600x340.jpg"
+    },
+    {
+      "Name": "A9",
+      "NameCN": "Japan",
+      "Code": "28",
+      "Line": "Inchon,Seoul,Busan,Jeju,Osaka,Kyoto,Kobe,Nara,Tokyo,Fukuoka,Kumamoto,Miyazaki,Oita,Hakone,Nagoya,Kanazawa,Okinawa",
+      "img": "/static/home/exploreCovers/Japan_600x340.jpg"
+    },
+    {
+      "Name": "AF",
+      "NameCN": "Africa",
+      "Code": "8",
+      "Line": "Kenya,Tanzania,Nairobi",
+      "img": "/static/home/exploreCovers/Africa_600x340.jpg"
+    },
+    {
+      "Name": "SO",
+      "NameCN": "South America",
+      "Code": "7",
+      "Line": "Cuba,Havana,Varadero,Peru,Cusco,Mexico City,Cancun",
+      "img": "/static/home/exploreCovers/South-America.jpg"
+    }
+  ],
+  "exploreSlides_0701": [
+    {
+      "Name": "Europe",
+      "NameCN": "Europe",
+      "Code": "",
+      "Line": "Budapest;Denmark;France;Frankfurt;Madrid;Paris;United Kingdom",
+      "img": "/static/exploreCovers/Europe_600x340.jpg"
+    },
+    {
+      "Name": "USA",
+      "NameCN": "United States of America",
+      "Code": "",
+      "Line": "Boston;Denver;Las Vegas;Los Angeles;Los Angeles,Las Vegas;Los Angeles,San Francisco;Miami;New York;New York,Niagara Falls;Orlando;Philadelphia;Salt Lake City;San Francisco,Los Angeles;Washington DC",
+      "img": "/static/exploreCovers/USA_600x340.jpg"
+    },
+    {
+      "Name": "CAN",
+      "NameCN": "Canada",
+      "Code": "",
+      "Line": "Calgary;Toronto;Vancouver",
+      "img": "/static/exploreCovers/Canada_600x340.jpg"
+    },
+    {
+      "Name": "CHN",
+      "NameCN": "China",
+      "Code": "",
+      "Line": "Hong Kong;Chengdu,Xichang,Aden;Urumqi",
+      "img": "/static/exploreCovers/China_600x340.jpg"
+    },
+    {
+      "Name": "TW",
+      "NameCN": "Taipei",
+      "Code": "",
+      "Line": "Taipei;Taipei,Hualien;Terrace Bay",
+      "img": "/static/exploreCovers/Taiwan_600x340.jpg"
+    },
+    {
+      "Name": "JPN",
+      "NameCN": "Japan",
+      "Code": "",
+      "Line": "Tokyo;Fukuoka;Japan;Okinawa;Osaka;Osaka,Kyoto,Kobe,Nara",
+      "img": "/static/exploreCovers/Japan_600x340.jpg"
+    },
+    {
+      "Name": "KOR",
+      "NameCN": "South Korea",
+      "Code": "",
+      "Line": "Inchon,Seoul;Busan;Seoul;Jeju;South Korea",
+      "img": "/static/exploreCovers/Korea_600x340.jpg"
+    },
+    {
+      "Name": "MYS",
+      "NameCN": "Malaysia",
+      "Code": "",
+      "Line": "Kuala Lumpur",
+      "img": "/static/exploreCovers/Malaysia_600x340.jpg"
+    },
+    {
+      "Name": "AED",
+      "NameCN": "Singapore",
+      "Code": "",
+      "Line": "Singapore",
+      "img": "/static/exploreCovers/Singapore_600x340.jpg"
+    },
+    {
+      "Name": "Africa",
+      "NameCN": "Africa",
+      "Code": "",
+      "Line": "Kenya;Nairobi",
+      "img": "/static/exploreCovers/Africa_600x340.jpg"
+    }
+  ],
+  "specialSlides": [
+    {
+      "TourID": "ef9d2876-a7b4-47a4-b7a8-a4b244254f95",
+      "TourCode": "TMSP000169",
+      "TourName": "Denver+ Crazy Horse+ Mount Rushmore+ Yellowstone National Park+ Grand Teton National Park+ Salt Lake City 6-day【 EW-MA6】",
+      "TourNumber": "7596",
+      "TourImage": "https://erp.eworldtours.com/upload/res/202308/18/202308182355051943.jpg",
+      "TourDays": "6",
+      "TourPrice": "808.0",
+      "TourCity": "丹佛",
+      "TourType": "跟团游",
+      "TourSummary": "The wooden houses in yellowstone Scenic Area are upgraded for free (please pay attention to the relevant cancellation and change policies), first come first served!<br/>Three visits to yellowstone, deep and leisurely, guaranteed to visit the 15 major attractions in Yellowstone!<br/>The Great Yellowstone Ecosystem and the Presidential Rock are perfectly combined to travel through history and pursue the American spirit."
+    },
+    {
+      "TourID": "ae7b0be5-b801-4368-9788-c0fe6d1a7154",
+      "TourCode": "TMSP000173",
+      "TourName": "Iceland and Greenland 12 Days Cruise [EW-ATLAS12]",
+      "TourNumber": "7600",
+      "TourImage": "https://erp.eworldtours.com/upload/res/202311/09/202311091101115290.png",
+      "TourDays": "12",
+      "TourPrice": "9199.0",
+      "TourCity": "雷克雅未克,冰岛",
+      "TourType": "跟团游",
+      "TourSummary": "Atlas Ocean Voyages is a world leader in the small cruise sector, featuring some of the most intimate yacht-style ships at sea. Combining relaxed luxury with highly personalized service and destination immersion, they offer a high-quality travel experience for seasoned adventurers. Each voyage includes amenities such as gourmet cuisine from around the world, unlimited wine, cocktails, and beer.<br/>World Navigator, the newly launched expedition cruise ship, features a brand-new hybrid propulsion system. It made its maiden voyage in 2022. One of its most notable features is the ability to cruise quietly at 5 knots using the electric propulsion system, allowing for more opportunities to observe polar marine wildlife up close."
+    },
+    {
+      "TourID": "40382d96-4c5e-48c4-9623-5524c1d32dc2",
+      "TourCode": "FRSP000003",
+      "TourName": "France, Germany, Autria & Czech 11 days 9 nights [FRDE11]",
+      "TourNumber": "7749",
+      "TourImage": "https://erp.eworldtours.com/upload/res/202403/24/202403242224018797.jpg",
+      "TourDays": "11",
+      "TourPrice": "2111.14",
+      "TourCity": "巴黎",
+      "TourType": "跟团游",
+      "TourSummary": "LUXURY BOUTIQUE SMALL GROUP, ENJOY A PREMIUM EXPERIENCE.\nHighlights of the Itinerary：<br/>- Limited to 25 people for a comfortable small group tour.<br/>- Depart from Paris, end in Prague, say no to long-distance coach travel.<br/>- Accommodation in high-quality four-star hotels throughout the journey.<br/>- Tour fee includes tickets for important attractions included in the itinerary.<br/>- Experience the romantic banks of the Seine River, visiting the Eiffel Tower and the Louvre.<br/>- Konstanz, explore its historic streets and the beautiful Lake Constance.<br/>- The fairytale Neuschwanstein Castle, experience King Ludwig II‘s luxurious dream.<br/>- Salzburg, step into Mozart‘s birthplace, visit the historic concert halls and the magnificent Salzburg Fortress."
+    }
+  ]
+}

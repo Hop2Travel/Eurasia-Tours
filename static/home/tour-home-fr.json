@@ -1,0 +1,96 @@
+{
+  "banners": [
+    {
+      "id": "c27c3fd1-a5ef-43fe-8c4a-96e8e1d7f0d2",
+      "img": "/static/home/banners/fr/1.png",
+      "title": "Chine Impériale",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "058d3a2a-2097-4802-a485-baa4e94ec156",
+      "img": "/static/home/banners/fr/2.png",
+      "title": "Les couleurs du Yunnan",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "f27b82b3-d89b-4b73-a092-b499835f408a",
+      "img": "/static/home/banners/fr/3.png",
+      "title": "Japon : À la Découverte de l'Empire du Soleil Levant",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "d6d424a6-9b73-40c1-b436-2e3af4f354fa",
+      "img": "/static/home/banners/fr/4.png",
+      "title": "Vietnam : Immersion et Nuit en Jonque",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "7e47c833-177b-4a73-b730-794b058e9236",
+      "img": "/static/home/banners/fr/5.png",
+      "title": "Escapade en Thaïlande : Voyage au Cœur du Siam",
+      "desc": "",
+      "link": "detail"
+    }
+  ],
+  "exploreSlides": [
+    {
+      "Name": "20",
+      "NameCN": "Chine",
+      "Code": "20",
+      "Line": "Hanoi,Hue,Ho Chi Minh Ville,Phnom Penh,Siem Reap,Pékin,Datong,Guilin,Pingyao,Shanghai,Suzhou,Xi'an,Yangshuo,Chine,Xining,Lhassa,Kunming,La ville Dali,Lijiang,Shangri - la",
+      "img": "/static/home/exploreCovers/China_600x340.jpg"
+    },
+    {
+      "Name": "39",
+      "NameCN": "Japon et Corée du Sud",
+      "Code": "39",
+      "Line": "",
+      "img": "/static/home/exploreCovers/Japan_600x340.jpg"
+    },
+    {
+      "Name": "22",
+      "NameCN": "Vietnam",
+      "Code": "22",
+      "Line": "",
+      "img": "/static/home/exploreCovers/Vietnam.jpg"
+    },
+    {
+      "Name": "24",
+      "NameCN": "Laos",
+      "Code": "24",
+      "Line": "",
+      "img": "/static/home/exploreCovers/Laos.jpg"
+    },
+    {
+      "Name": "23",
+      "NameCN": "Cambodge",
+      "Code": "23",
+      "Line": "",
+      "img": "/static/home/exploreCovers/Cambodge.jpg"
+    }
+  ],
+  "specialSlides": [
+    {
+      "TourID": "c27c3fd1-a5ef-43fe-8c4a-96e8e1d7f0d2",
+      "TourName": "Chine Impériale",
+      "TourImage": "/static/home/special/01-0703.png",
+      "TourSummary": "Découvrez la Chine impériale en 16 jours ! De Shanghai à Pékin, explorez des trésors culturels et naturels uniques : la modernité de Shanghai, les paysages époustouflants de Guilin et Pingan,la tranquillité de Yangshuo, l'histoire de Xian et Pingyao, les merveilles de Datong et la grandeur de Pékin. Une aventure inoubliable vous attend！"
+    },
+    {
+      "TourID": "ec478b17-1922-436c-a3cb-38e5a988a5ba",
+      "TourName": "Route de la soie – sur les traces de Marco Polo",
+      "TourImage": "/static/home/special/03-0703.png",
+      "TourSummary": "Découvrez la Route de la soie en 16 jours ! Explorez lanzhou, traversée du Fleuve Jaune où vous admirez le paysage typique du plateau de lœss, le fleuve à couleur cuivre et les falaises agrémentées de collines jaunâtres. Zhangye, visite du fabuleux Parc géologique national Danxia - les montagnes arc-en-ciel. Route pour Jiayuguan, étape majeure de la Route de la Soie. Visite du Fort Jiayuguan construit sous les Ming en 1 372 qui marque la fin symbolique de la Grande Muraille. Route pour Dunhuang, des grottes de Mogao, Kashgar, Urumqi, Turfan..."
+    },
+    {
+      "TourID": "ae687cde-6a89-44f5-af77-2a6cfc365fa7",
+      "TourName": "Randonnée au cœur de la Chine : de la Grande Muraille à la rivière Li",
+      "TourImage": "/static/home/special/202407260627298274.jpg",
+      "TourSummary": "Randonnée dans des paysages époustouflants : À travers les montagnes karstiques de Guilin, les rizières en terrasses de Ping’an et Dazhai, et sur la Grande Muraille de Chine. - Immersion culturelle : Découverte des villages traditionnels et des coutumes locales, notamment dans les régions Dong et Miao. - Sites historiques emblématiques : Visites de la Cité Interdite, du Temple du Ciel, de la Grande Muraille et du Palais d’Été à Pékin. - Découverte de la culture chinoise : De Shanghai à Pékin, vous serez immergé dans la vie urbaine dynamique et l’héritage culturel de la Chine."
+    }
+  ]
+}

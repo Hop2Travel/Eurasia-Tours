@@ -1,0 +1,59 @@
+{
+  "title": "Présentation d'Eurasia Tours",
+  "content": [
+    {
+      "subTitle": "Présentation",
+      "type": "h2",
+      "content": [
+        "Eurasia Tours, fondée en 2000, est l'une des agences de voyage professionnelles désignées par Atout France pour accueillir les touristes chinois. Nous sommes agréés par Atout France pour l'accueil des touristes chinois, assurés par GROUPAMA FranceASSURANCES sous le numéro AA145293 et titulaires de la Licence Nationale de Tourisme (IM075120157).",
+        "Notre société hérite du concept avancé du marché touristique international mature de l'Europe, exploite pleinement les avantages politiques, commerciaux et culturels des ressources touristiques de la Chine et de l'Europe, et fournit tout au long de l'année des voyages en Europe, des visites d'affaires, des expositions, des voyages d'études et des échanges, des voyages occasionnels, des croisières et des billets d'avion internationaux, ainsi que d'autres services personnalisés de haut niveau.",
+        "Nous nous engageons à fournir des voyages en Europe pour relier le service au sol à divers types d'organisations, ainsi qu'à l'Amérique du Nord et à la région Asie-Afrique de la diaspora chinoise. Sur la base du maintien des avantages traditionnels des conventions et expositions officielles, des visites d'affaires, de la coopération économique et commerciale, notre société a constamment répondu aux besoins du marché en lançant de nouveaux programmes de services colorés, tels que des circuits spéciaux d'entraide, des camps d'hiver/d'été, des circuits de conduite autonome en Europe, des circuits à bicyclette, etc.",
+        "Nous organisons également des voyages de groupe réguliers et spéciaux pour les touristes français dans les pays asiatiques (tels que le Japon, le Vietnam, le Cambodge, l'Ouzbékistan, etc.) pour des activités culturelles, d'affaires, de cyclisme, de trekking et d'échange d'étudiants. Il existe plus de 30 itinéraires réguliers pour les groupes. Les circuits en Chine comprennent Pékin, Xi'an, Guilin et Shanghai, ainsi que des circuits approfondis dans des régions spéciales telles que le Yunnan, Chengdu, le Tibet, Shanxi, Anhui, Guizhou et la Route de la Soie, qui sont très appréciés des touristes français.",
+        "En 2024, Eurasia Tours a fait l'objet d'un investissement stratégique de la part de GTT International Travel Group et est devenue la première filiale européenne de GTT. GTT a été fondé en 1984 à Dallas, au Texas, et possède plus de 45 succursales situées dans les principales villes des États-Unis. GTT compte plus de 600 employés multilingues et une équipe de gestion professionnelle. GTT est le plus grand agent de billetterie aérienne de première classe, le plus grand centre de vente en gros et la plus grande compagnie aérienne transpacifique d'Amérique du Nord, avec une part de marché de 35 % en Amérique du Nord : les ventes annuelles de billets d'avion s'élèvent à 1,75 million de billets et le chiffre d'affaires annuel à plus de 2 milliards de dollars américains.",
+        "GTT International Travel Group possède des succursales en Asie tels que Shanghai, Pékin, Wuhan, Guangzhou, Taipei, Hong Kong, Ho Chi Minh Ville, Delhi et Manille. "
+      ]
+    },
+    {
+      "subTitle": "Présentation de l'entreprise",
+      "type": "h2"
+    },
+    {
+      "subTitle": "Service de sortie",
+      "type": "li",
+      "content": [
+        "Les destinations couvrent l'Asie, l'Amérique du Nord et d'autres régions ; ",
+        "Organisation de divers voyages touristiques : voyages d'études, voyages d'affaires, voyages sportifs spéciaux..."
+      ]
+    },
+    {
+      "subTitle": "Service d'entrée",
+      "type": "li",
+      "content": [
+        "Les destinations couvrent l'Europe, l'Afrique et d'autres régions ;",
+        "Outre les programmes traditionnels tels que les conventions et expositions officielles, les visites d'affaires, la coopération économique et commerciale, nous proposons également des circuits de loisirs et de vacances, des visites approfondies, des circuits spécialisés, des camps d'hiver/d'été, des circuits de conduite autonome en Europe, des circuits de cyclisme et d'autres programmes sportifs ;",
+        "À partir de 2024, nous proposons également des voyages en Europe pour les touristes de divers pays, y compris l'Amérique du Nord et l'Asie du Sud-Est."
+      ]
+    },
+    {
+      "subTitle": "Services d'avion et de croisières",
+      "type": "li",
+      "content": ["Les services sont en ligne à partir de 2024."]
+    },
+    {
+      "subTitle": "Distinctions et réalisations",
+      "type": "h2",
+      "content": [
+        "Eurasia Tours est certifié par le Guide du Petit Futé (fondé en 1976, l'équivalent de MICHELIN dans la restauration) depuis plusieurs années.",
+        "Association Professionnelle de Solidarité du Tourisme (APST), Eurasia Tours accepte l'encadrement et l'encouragement de tous les professionnels et de nos clients."
+      ]
+    },
+    {
+      "subTitle": "Partenaire stable à long terme de notre société",
+      "type": "h2",
+      "content": [
+        "Depuis sa création, Eurasia Tours a mis en place un réseau de partenaires large et stable, travaillant en étroite collaboration avec un certain nombre d'entreprises partenaires exceptionnelles. Ces entreprises partenaires couvrent un large éventail de domaines, y compris, mais sans s'y limiter, toutes sortes d'hôtels haut de gamme, de sociétés de billetterie, de compagnies de croisières, de concessionnaires automobiles, etc. (sans se limiter aux marques suivantes)"
+      ],
+      "images": ["/static/aboutus/partner.png"]
+    }
+  ]
+}

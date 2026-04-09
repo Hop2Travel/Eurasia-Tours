@@ -1,0 +1,228 @@
+{
+  "banners": [
+    {
+      "id": "beaccfb6-efdc-4a85-b0c2-e37945c83e8f",
+      "img": "/static/home/banners/cn/202409270117318945.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "fdb13350-b863-4565-b32e-fe342df33e2a",
+      "img": "/static/home/banners/cn/202405070136399792.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "51b7bc37-b9c8-4c83-a4bb-81f2d84780d7",
+      "img": "/static/home/banners/cn/202409270129345434.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    },
+    {
+      "id": "79d13a27-d762-4fb7-a588-66344c2c2986",
+      "img": "/static/home/banners/cn/202409270229572158.jpg",
+      "title": "",
+      "desc": "",
+      "link": "detail"
+    }
+  ],
+  "exploreSlides": [
+    {
+      "Name": "EU",
+      "NameCN": "歐洲",
+      "Code": "10",
+      "Line": "奥地利,德国,哈尔施塔特,捷克共和国,瑞士,斯洛伐克,匈牙利,布拉格,巴黎,比萨,第戎,梵蒂冈,罗马,米兰,威尼斯,科隆,布鲁塞尔,卢森堡,法兰克福,阿维尼翁,波尔多,尼斯,图卢兹,英国,南希,斯特拉斯堡,维也纳,巴塞罗那,赫罗纳,马德里,里斯本,托雷多,沙托鲁,萨拉戈萨,凡尔赛宫,佛罗伦萨,丹麦,挪威,瑞典",
+      "img": "/static/home/exploreCovers/Europe_600x340.jpg"
+    },
+    {
+      "Name": "EA",
+      "NameCN": "美東",
+      "Code": "1",
+      "Line": "纽黑文,波士顿,华盛顿 DC,费城,纽约,尼亚加拉大瀑布,黄石国家公园,羚羊彩穴,拉斯维加斯,盐湖城,台湾,丹佛,上海",
+      "img": "/static/home/exploreCovers/USA_600x340.jpg"
+    },
+    {
+      "Name": "MI",
+      "NameCN": "美南",
+      "Code": "13",
+      "Line": "奥兰多,迈阿密,拉斯维加斯,羚羊彩穴,盐湖城,黄石国家公园",
+      "img": "/static/home/exploreCovers/southern-united-states.jpg"
+    },
+    {
+      "Name": "AL",
+      "NameCN": "阿拉斯加",
+      "Code": "14",
+      "Line": "",
+      "img": "/static/home/exploreCovers/Alaska.jpg"
+    },
+    {
+      "Name": "US",
+      "NameCN": "美加東",
+      "Code": "2",
+      "Line": "尼亚加拉大瀑布,多伦多,魁北克,波士顿,纽约,华盛顿 DC,渥太华,蒙特利尔,费城",
+      "img": "/static/home/exploreCovers/ESC.jpg"
+    },
+    {
+      "Name": "CA",
+      "NameCN": "加拿大",
+      "Code": "3",
+      "Line": "卡加利,洛基山/威尔逊,多伦多,魁北克,渥太华,蒙特利尔,千岛湖,尼亚加拉瀑布（加境）,佩琪湾,爱德华王子岛",
+      "img": "/static/home/exploreCovers/Canada_600x340.jpg"
+    },
+    {
+      "Name": "HA",
+      "NameCN": "夏威夷",
+      "Code": "4",
+      "Line": "檀香山",
+      "img": "/static/home/exploreCovers/hawaii.jpg"
+    },
+    {
+      "Name": "WE",
+      "NameCN": "美西",
+      "Code": "5",
+      "Line": "盐湖城,黄石国家公园,洛杉矶,拉斯维加斯,旧金山,羚羊彩穴,大峡谷",
+      "img": "/static/home/exploreCovers/West-America.jpg"
+    },
+    {
+      "Name": "A1",
+      "NameCN": "中國",
+      "Code": "20",
+      "Line": "台北,成都,花莲,韩国,台湾,九份,平溪,香港,澳门,乌鲁木齐,深圳,马尔代夫,日本,曼谷,广州,佛山",
+      "img": "/static/home/exploreCovers/China_600x340.jpg"
+    },
+    {
+      "Name": "A9",
+      "NameCN": "日本",
+      "Code": "28",
+      "Line": "大阪,奈良,名古屋,东京,仁川,首尔,冲绳岛,金泽,京都,神户,福冈,熊本,宫崎,大分",
+      "img": "/static/home/exploreCovers/Japan_600x340.jpg"
+    },
+    {
+      "Name": "AF",
+      "NameCN": "非洲",
+      "Code": "8",
+      "Line": "内罗毕,肯尼亚,坦桑尼亚联合共和国,摩洛哥",
+      "img": "/static/home/exploreCovers/Africa_600x340.jpg"
+    },
+    {
+      "Name": "SO",
+      "NameCN": "南美洲",
+      "Code": "7",
+      "Line": "哈瓦那,巴拉德罗,古巴,墨西哥城,坎昆",
+      "img": "/static/home/exploreCovers/South-America.jpg"
+    }
+  ],
+  "exploreSlides_0701": [
+    {
+      "Name": "Europe",
+      "NameCN": "歐洲",
+      "Code": "",
+      "Line": "丹麥;巴黎;布達佩斯;法國;英國;雷克雅未克,冰島;馬德里",
+      "img": "/static/exploreCovers/Europe_600x340.jpg"
+    },
+    {
+      "Name": "USA",
+      "NameCN": "美國",
+      "Code": "",
+      "Line": "丹佛;華盛頓 DC;奧蘭多;拉斯維加斯;舊金山,洛杉磯;法蘭克福;波士頓;洛杉磯;洛杉磯,拉斯維加斯;洛杉磯,舊金山;鹽湖城;紐約;紐約,尼亞加拉大瀑布;費城;邁阿密",
+      "img": "/static/exploreCovers/USA_600x340.jpg"
+    },
+    {
+      "Name": "CAN",
+      "NameCN": "加拿大",
+      "Code": "",
+      "Line": "卡加利;多倫多;溫哥華",
+      "img": "/static/exploreCovers/Canada_600x340.jpg"
+    },
+    {
+      "Name": "CHN",
+      "NameCN": "中國",
+      "Code": "",
+      "Line": "香港;麗江,香格里拉;烏魯木齊;北京;南寧;廣州;成都;成都,西昌,亞丁;武漢;長沙",
+      "img": "/static/exploreCovers/China_600x340.jpg"
+    },
+    {
+      "Name": "TW",
+      "NameCN": "臺灣",
+      "Code": "",
+      "Line": "臺北;臺北,花蓮;臺灣",
+      "img": "/static/exploreCovers/Taiwan_600x340.jpg"
+    },
+    {
+      "Name": "JPN",
+      "NameCN": "日本",
+      "Code": "",
+      "Line": "東京;沖繩島;大阪;大阪,京都,神戶,奈良;日本;福岡",
+      "img": "/static/exploreCovers/Japan_600x340.jpg"
+    },
+    {
+      "Name": "KOR",
+      "NameCN": "韓國",
+      "Code": "",
+      "Line": "仁川;仁川,首爾;濟州島;釜山;韓國;首爾",
+      "img": "/static/exploreCovers/Korea_600x340.jpg"
+    },
+    {
+      "Name": "MYS",
+      "NameCN": "馬來西亞",
+      "Code": "",
+      "Line": "吉隆坡;馬來西亞",
+      "img": "/static/exploreCovers/Malaysia_600x340.jpg"
+    },
+    {
+      "Name": "AED",
+      "NameCN": "新加坡",
+      "Code": "",
+      "Line": "新加坡",
+      "img": "/static/exploreCovers/Singapore_600x340.jpg"
+    },
+    {
+      "Name": "Africa",
+      "NameCN": "非洲",
+      "Code": "",
+      "Line": "內羅畢;肯尼亞;開羅,埃及;乞力馬扎羅山;毛里求斯;摩洛哥",
+      "img": "/static/exploreCovers/Africa_600x340.jpg"
+    }
+  ],
+  "specialSlides": [
+    {
+      "TourID": "ef9d2876-a7b4-47a4-b7a8-a4b244254f95",
+      "TourCode": "TMSP000169",
+      "TourName": "丹佛+疯马巨石+总统山+黄石国家公园+大提顿国家公园+盐湖城 6日游【 EW-MA6】",
+      "TourNumber": "7596",
+      "TourImage": "https://erp.eworldtours.com/upload/res/202308/18/202308182355051943.jpg",
+      "TourDays": "6",
+      "TourPrice": "808.0",
+      "TourCity": "丹佛",
+      "TourType": "跟团游",
+      "TourSummary": "黄石景区木屋免费升级（请留意相关退改政策），先到先得！<br/>三进黄石，深度悠闲，保证游览黄石15大景点！<br/>大黄石生态圈与总统巨石完美组合，穿越历史，追寻美国精神。"
+    },
+    {
+      "TourID": "ae7b0be5-b801-4368-9788-c0fe6d1a7154",
+      "TourCode": "TMSP000173",
+      "TourName": "冰岛和格林兰岛游轮12天 【EW-ATLAS12】",
+      "TourNumber": "7600",
+      "TourImage": "https://erp.eworldtours.com/upload/res/202311/09/202311091101115290.png",
+      "TourDays": "12",
+      "TourPrice": "9199.0",
+      "TourCity": "雷克雅未克,冰岛",
+      "TourType": "跟团游",
+      "TourSummary": "Atlas Ocean Voyages 是小型游轮领域的世界领先者，拥有一些海上最私密的游艇式船舶。将休闲奢华与高度个性化的服务和目的地沉浸感相结合，为经验丰富的冒险家提供高品质的旅行体验。每趟航行都提供来自世界各地的美食、无限量的葡萄酒、鸡尾酒和啤酒等便利设施。<br/>World Navigator 世界领航者号- 是新近推出的具有全新混合动力驱动的探险游轮。2022年首航。其最突出的特点是可用安静的电力推进系统维特5海里/小时的速度巡航，这样你能有更多机会近距离观察极地海洋野生动物。它最突出的特点是安静的电力推进系统维特可以以5节的速度巡航，这样你就有更多机会近距离观察极地海洋野生动物。"
+    },
+    {
+      "TourID": "40382d96-4c5e-48c4-9623-5524c1d32dc2",
+      "TourCode": "FRSP000003",
+      "TourName": "法德奥捷11日9晚[FRDE11]",
+      "TourNumber": "7749",
+      "TourImage": "https://erp.eworldtours.com/upload/res/202403/24/202403242224018797.jpg",
+      "TourDays": "11",
+      "TourPrice": "2111.14",
+      "TourCity": "巴黎",
+      "TourType": "跟团游",
+      "TourSummary": "轻奢精品小团，尊享品质体验<br/>行程亮点：<br/>- 限定至25人舒适小团游<br/>- 巴黎出发，布拉格结束，拒绝长途大巴车<br/>- 全程入住优质四星级酒店<br/>-团费包含行程中重要景点入内参观门票<br/>- 体验浪漫的塞纳河畔，游览埃菲尔铁塔和卢浮宫<br/>- 康斯坦茨，探索历史悠久的街道和美丽的博登湖<br/>- 童话中的新天鹅堡，感受路德维希二世国王的奢华梦想<br/>- 萨尔茨堡，走进莫扎特的故乡，探访历史悠久的音乐厅和壮丽的萨尔茨堡要塞<br/>- 哈尔施塔特，欣赏阿尔卑斯山下的宁静湖泊和迷人的木屋<br/>- 维也纳，探索华丽的皇宫和优雅的音乐会<br/>- CK小镇享受宁静的乡村生活<br/>- 布拉格的哥特式建筑和千年老桥将带您穿越时光"
+    }
+  ]
+}
