@@ -1,4 +1,4 @@
-name: IIS Auto Deploy
+name: FTP Auto Deploy
 
 on:
   push:
@@ -12,27 +12,13 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v4
 
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        # 如果你的 FTP 端口不是 21，可以取消下面注释并修改
-        # port: 21
-        # 远程服务器的目标路径
-        server-dir: httpdocs/
-        dry-run: false
-        state-name: ftp-deploy-sync.json
-        log-level: verbose
-        timeout: 300000 # 5分钟
-        # 排除不需要上传的文件
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          .github/**
-          Templates/**
-          **/.DS_Store
-          .DS_Store
-          .gitignore
+    - name: Sync via LFTP
+      run: |
+        sudo apt-get install lftp
+        lftp -e "
+        set ftp:passive-mode off; 
+        set ftp:ssl-allow no;
+        open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }};
+        mirror -R ./ ./httpdocs --reverse --delete --verbose --exclude .git/ --exclude .github/ --exclude Templates/;
+        quit
+        "
