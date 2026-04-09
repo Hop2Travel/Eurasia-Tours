@@ -21,7 +21,9 @@ jobs:
         # 如果你的 FTP 端口不是 21，可以取消下面注释并修改
         # port: 21
         # 远程服务器的目标路径，例如 /wwwroot/my-site
-        server-dir: ./httpdocs
+        server-dir: ./httpdocs/
+        # 确保每次都是增量同步
+        dry-run: false
         # 排除不需要上传的文件
         exclude: |
           **/.git*
