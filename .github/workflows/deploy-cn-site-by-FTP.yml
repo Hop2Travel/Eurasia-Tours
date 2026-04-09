@@ -12,13 +12,13 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v4
 
-    - name: Sync via LFTP
+    - name: Sync via LFTP # 首次部署可能会更新所有内容，大约 2 小时
       run: |
         sudo apt-get install lftp
         lftp -e "
         set ftp:passive-mode off; 
         set ftp:ssl-allow no;
         open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }};
-        mirror -R ./ ./httpdocs --reverse --delete --verbose --exclude .git/ --exclude .github/ --exclude Templates/;
+        mirror -R ./ ./httpdocs --ignore-time --parallel=2 --reverse --delete --verbose --exclude .git/ --exclude .github/ --exclude Templates/;
         quit
         "
