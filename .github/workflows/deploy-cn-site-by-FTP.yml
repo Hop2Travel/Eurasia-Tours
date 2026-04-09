@@ -20,10 +20,12 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         # 如果你的 FTP 端口不是 21，可以取消下面注释并修改
         # port: 21
-        # 远程服务器的目标路径，例如 /wwwroot/my-site
-        server-dir: ./httpdocs/
+        # 远程服务器的目标路径
+        server-dir: httpdocs/
         # 确保每次都是增量同步
-        dry-run: false
+        dry-run: true
+        state-name: .ftp-deploy-sync-state.json
+        timeout: 300000 # 5分钟
         # 排除不需要上传的文件
         exclude: |
           **/.git*
