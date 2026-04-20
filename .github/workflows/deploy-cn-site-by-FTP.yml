@@ -2,7 +2,7 @@ name: IIS Auto Deploy
 
 on:
   push:
-    branches: [ main-cn ]  # 当代码推送到 main 分支时触发
+    branches: [ main-cn-isjfkskjfu ]  # 当代码推送到 main 分支时触发
 
 jobs:
   web-deploy:
