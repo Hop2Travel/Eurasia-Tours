@@ -12,7 +12,9 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chine Impériale 16 Jours - Eurasia Tours</title>
+    
+    <title>Chine Impériale : Circuit Incontournable, Sites UNESCO & Première Découverte</title>
+    <meta name="description" content="Le voyage organisé francophone idéal pour les premiers voyageurs. Un itinéraire classique en train à grande vitesse mêlant sites UNESCO (Muraille, Armée de terre cuite), villes impériales et paysages karstiques.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -30,7 +32,6 @@
         
         .nav-link-spacing { letter-spacing: 0.05em; }
 
-        /* 动画类 */
         .mobile-menu-enter-active, .mobile-menu-leave-active { transition: opacity 0.3s ease, transform 0.3s ease; }
         .mobile-menu-enter-from, .mobile-menu-leave-to { opacity: 0; transform: translateY(-10px); }
         
@@ -38,11 +39,9 @@
         .dropdown-leave-active { transition: opacity 0.15s ease-in, transform 0.15s ease-in; }
         .dropdown-enter-from, .dropdown-leave-to { opacity: 0; transform: translateY(10px) scale(0.98); }
         
-        /* 轮播图渐变 */
         .carousel-enter-active, .carousel-leave-active { transition: opacity 1s ease; }
         .carousel-enter-from, .carousel-leave-to { opacity: 0; }
 
-        /* 时间轴线 */
         .timeline-line {
             position: absolute;
             left: 15px;
@@ -53,7 +52,6 @@
         }
         .last-item .timeline-line { display: none; }
         
-        /* 表单高亮动画 */
         @keyframes highlightPulse {
             0% { box-shadow: 0 0 0 0 rgba(185, 28, 28, 0); border-color: #e5e7eb; }
             50% { box-shadow: 0 0 20px 0 rgba(185, 28, 28, 0.3); border-color: #b91c1c; background-color: #fff1f2; }
@@ -77,7 +75,6 @@
         .fade-in { animation: fadeIn 0.8s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* 自定义滚动条样式 */
         .custom-scrollbar {
             scrollbar-width: thin;
             scrollbar-color: #d1d5db transparent;
@@ -102,7 +99,7 @@
                 <div class="flex items-center justify-between w-full lg:w-auto">
                     <a href="index-fr.html" class="flex items-center group">
                         <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
-                             alt="Logo" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
+                             alt="Eurasia Tours - Agence de voyage organisé Chine francophone" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
                     </a>
                     <button class="lg:hidden relative z-50 text-2xl p-2 text-gray-700 focus:outline-none cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen">
                         <i class="fas" :class="isMobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
@@ -217,7 +214,7 @@
                      v-show="currentHeroIndex === index"
                      class="absolute inset-0 w-full h-full will-change-opacity">
                     <img :src="img" 
-                         alt="Hero Background" 
+                         alt="Chine Impériale : Circuit Chine incontournable et sites UNESCO" 
                          class="w-full h-full object-cover opacity-90 transition-transform duration-[5000ms] ease-linear transform scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 </div>
@@ -375,7 +372,7 @@
                                 "Un circuit incontournable en Chine, de Shanghai à Pékin via Xi’an et Guilin, alliant modernité et héritage impérial."
                             </p>
                             <p class="text-sm">
-                                Ce voyage vous emmène à travers les contrastes fascinants de la Chine. De l'effervescence moderne de Shanghai aux paysages karstiques féériques de Guilin et Yangshuo, en passant par l'authenticité des villages Zhuang et Dong. Vous découvrirez ensuite l'histoire millénaire à Xi'an et Pingyao, avant d'explorer les merveilles architecturales de Datong et les trésors impériaux de Pékin.
+                                Idéal pour les <b>premiers voyageurs</b>, ce <b>voyage organisé francophone</b> est le <b>circuit Chine incontournable</b> pour une <b>première découverte</b>. Ce voyage vous emmène à travers les contrastes fascinants de la Chine, entre <b>nature et culture</b>. De l'effervescence moderne de Shanghai aux <b>paysages karstiques</b> féériques de Guilin et Yangshuo lors d'une <b>croisière sur la rivière Li</b>, en passant par l'authenticité des <b>villages ethnie Dong</b> et Zhuang (<b>rizière Longji Ping'an</b>). Vous découvrirez ensuite l'histoire des dynasties dans les <b>villes impériales</b> de Xi'an et Pingyao en voyageant confortablement en <b>train à grande vitesse Chine</b>, avant d'explorer les merveilles architecturales de Datong et les célèbres <b>sites UNESCO</b> de Pékin. Un <b>itinéraire Chine 2 semaines classique</b> inoubliable.
                             </p>
                         </div>
                         
@@ -394,7 +391,7 @@
                             Carte de l'itinéraire
                         </h2>
                         <div class="bg-white p-2 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                            <img src="images/chine-imperiale/map.jpg" alt="Route Map" class="w-full h-auto object-cover rounded-xl hover:scale-[1.01] transition-transform duration-500">
+                            <img src="images/chine-imperiale/map.jpg" alt="Itinéraire Chine 2 semaines classique : circuit Shanghai Pékin Guilin Xi'an" class="w-full h-auto object-cover rounded-xl hover:scale-[1.01] transition-transform duration-500">
                         </div>
                     </section>
 
@@ -435,7 +432,7 @@
                                         <div v-html="day.content"></div>
                                         
                                         <div class="mt-4 rounded-xl overflow-hidden h-48 md:h-64 w-full relative bg-gray-100 flex items-center justify-center group/img">
-                                            <img :src="day.image" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" alt="Day Image">
+                                            <img :src="day.image" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" :alt="day.title + ' - Voyage organisé Chine francophone, sites UNESCO et villes impériales'">
                                         </div>
                                         
                                         <div class="flex flex-wrap gap-2 mt-4">
@@ -599,7 +596,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                 <div class="space-y-6">
                     <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
-                         alt="Eurasia Tours Logo" class="h-10 w-auto object-contain opacity-90 mix-blend-screen">
+                         alt="Logo" class="h-10 w-auto object-contain opacity-90 mix-blend-screen">
                     <p class="text-sm leading-relaxed">Depuis 2000, Eurasia Tours s'engage à offrir aux voyageurs du monde entier une expérience de voyage authentique en Europe et en Asie. Nous ne sommes pas seulement une agence, mais votre guide culturel.</p>
                 </div>
                 <div>
@@ -665,7 +662,6 @@
 
     createApp({
         setup() {
-            // Header Logic (Matched to FR template)
             const isMobileMenuOpen = ref(false);
             const isDestDropdownOpen = ref(false);
             const isLangDropdownOpen = ref(false);
@@ -709,7 +705,6 @@
                 { name: 'Blog', url: 'blog-fr.html' }
             ];
 
-            // Page Logic
             const activeSection = ref('dates');
             const subMenu = [
                 { name: 'Dates & Prix', id: 'dates' },
@@ -719,7 +714,6 @@
                 { name: 'Inclus / Non Inclus', id: 'includes' },
             ];
             
-            // Carousel Logic
             const currentHeroIndex = ref(0);
             const heroImages = [
                 'images/chine-imperiale/header.jpg'
@@ -728,42 +722,28 @@
             const nextSlide = () => { currentHeroIndex.value = (currentHeroIndex.value + 1) % heroImages.length; };
             const prevSlide = () => { currentHeroIndex.value = (currentHeroIndex.value - 1 + heroImages.length) % heroImages.length; };
 
-            // ============ Data Logic (Chine Impériale Tour Content) ============
+            // === 核心数据部分：增加大量世界遗产/经典长尾词 ===
             const tour = reactive({
-                title: 'Chine Impériale',
+                title: 'Chine Impériale : Circuit Incontournable & Sites UNESCO',
                 route: 'Shanghai - Suzhou - Guilin - Yangshuo - Ping’an - Chengyang - Xi’an - Pingyao - Datong - Pékin',
+                
+                // SEO 优化：在原有列表中自然补全地标与体验词
                 highlights: [
-                    'Shanghai - Le Bund et modernité',
+                    'Shanghai - Le Bund et modernité de la ville',
                     'Suzhou - La Venise de l\'Orient',
-                    'Croisière sur la rivière Li - Paysages karstiques',
-                    'Villages ethniques Zhuang et Dong - Immersion culturelle',
-                    'Armée en terre cuite de Xi\'an - UNESCO',
-                    'Pingyao - Ville fortifiée traditionnelle',
-                    'Datong - Monastère suspendu & Grottes de Yungang',
-                    'Pékin - Grande Muraille & Cité Interdite'
+                    'Croisière sur la rivière Li - Paysages karstiques Guilin',
+                    'Villages ethnie Dong Chengyang et Zhuang - Immersion culturelle',
+                    'Armée de terre cuite de Xi\'an - Site UNESCO',
+                    'Pingyao ville ancienne UNESCO - Fortification traditionnelle',
+                    'Datong - Monastère suspendu & Grottes de Yungang UNESCO',
+                    'Pékin - Grande Muraille Juyongguan & Cité Interdite'
                 ],
                 singleSupplement: '350 €',
                 
                 dates: [
-                    { 
-                           start: '16/05/2026', 
-                           end: '31/05/2026', 
-                           price: '2 654 €', 
-                           status: 'guaranteed' 
-                     },
-                    { 
-                           start: '29/08/2026', 
-                           end: '13/09/2026', 
-                           price: '2 840 €', 
-                           status: 'available' 
-                     },
-                    { 
-                           start: '06/11/2026', 
-                           end: '21/11/2026', 
-                           price: '2 790 €', 
-                           status: 'available' 
-                     },
-
+                    { start: '16/05/2026', end: '31/05/2026', price: '2 654 €', status: 'guaranteed' },
+                    { start: '29/08/2026', end: '13/09/2026', price: '2 840 €', status: 'available' },
+                    { start: '06/11/2026', end: '21/11/2026', price: '2 790 €', status: 'available' },
                 ],
                 
                 includes: [
@@ -779,6 +759,7 @@
                     'Repas typiques : banquet de raviolis à Xi\'an, canard laqué à Pékin',
                     'L\'assurance voyageur : assistance, frais médicaux et hospitalisation'
                 ],
+                
                 excludes: [
                     'Les frais de visa (exempté pour français < 30 jours en 2026)',
                     'La garantie d\'annulation (3.4 % du montant total)',
@@ -787,7 +768,7 @@
                     'Les dépenses personnelles'
                 ],
 
-                // Itinerary Data
+                // 每日行程：内容 100% 还原原始文件，一个字不差
                 daysData: [
                     { 
                         day: 1, 
@@ -952,20 +933,14 @@
                 ]
             });
 
-            // ============ Form Logic ============
+            // ============ Form Logic (完整保留) ============
             const formHighlight = ref(false);
             const isSubmitted = ref(false);
             const attemptedSubmit = ref(false);
             const isSending = ref(false);
 
             const formData = reactive({
-                name: '',
-                countryCode: '+33',
-                phone: '',
-                email: '',
-                date: '',
-                passengers: 2,
-                remarks: ''
+                name: '', countryCode: '+33', phone: '', email: '', date: '', passengers: 2, remarks: ''
             });
 
             const phoneError = computed(() => {
@@ -1022,7 +997,6 @@
 
                 isSending.value = true;
                 
-                // Construct Payload
                 const payload = {
                     tourName: tour.title,
                     language: currentLang.value,
@@ -1036,8 +1010,7 @@
                 };
 
                 try {
-                    // Post to backend server
-                        const response = await fetch('https://service.eurasia-tours.fr/sendmail/TourOrderRequest', {
+                    const response = await fetch('https://service.eurasia-tours.fr/sendmail/TourOrderRequest', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -1066,7 +1039,6 @@
                 formData.remarks = '';
             };
 
-            // Toggle Logic
             const isAllExpanded = ref(false);
             const toggleDay = (index) => {
                 tour.daysData[index].isOpen = !tour.daysData[index].isOpen;
@@ -1078,7 +1050,6 @@
                 });
             };
 
-            // Scroll Handling
             const handleScroll = () => {
                 const scrollPosition = window.scrollY + 250;
                 subMenu.forEach(section => {
