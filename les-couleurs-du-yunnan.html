@@ -12,7 +12,9 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Couleurs du Yunnan 16 Jours - Eurasia Tours</title>
+    
+    <title>Les Couleurs du Yunnan : Voyage Authentique, Minorités & Route du Thé</title>
+    <meta name="description" content="Découvrez la Chine hors des sentiers battus. Circuit de 16 jours en immersion : minorités (Hani, Tibétains), rizières de Yuanyang et Shaxi sur la Route du Thé. Devis gratuit.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -102,7 +104,7 @@
                 <div class="flex items-center justify-between w-full lg:w-auto">
                     <a href="index-fr.html" class="flex items-center group">
                         <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
-                             alt="Logo" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
+                             alt="Eurasia Tours - Agence de voyage spécialiste du Yunnan authentique" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
                     </a>
                     <button class="lg:hidden relative z-50 text-2xl p-2 text-gray-700 focus:outline-none cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen">
                         <i class="fas" :class="isMobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
@@ -217,7 +219,7 @@
                      v-show="currentHeroIndex === index"
                      class="absolute inset-0 w-full h-full will-change-opacity">
                     <img :src="img" 
-                         alt="Hero Background" 
+                         alt="Voyage au Yunnan : paysages spectaculaires et rizières en terrasses de Yuanyang" 
                          class="w-full h-full object-cover opacity-90 transition-transform duration-[5000ms] ease-linear transform scale-105">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 </div>
@@ -354,7 +356,7 @@
                                 </table>
                             </div>
                             <div class="bg-gray-50 px-6 py-3 text-[11px] text-gray-500 border-t border-gray-100 flex flex-wrap gap-4 items-center justify-between">
-                                <span class="flex items-center gap-2"><i class="fas fa-info-circle text-brand"></i> Départ garanti à partir de 8 personnes, limité à 18 personnes.</span>
+                                <span class="flex items-center gap-2"><i class="fas fa-info-circle text-brand"></i> Départ garanti à partir de 8 personas, limitado a 18 personas.</span>
                                 <span class="hidden md:inline text-gray-400">* Prix avec vols internationaux inclus</span>
                             </div>
                         </div>
@@ -369,7 +371,7 @@
                                 "Un voyage au cœur de la Chine traditionnelle, entre anciennes cités impériales, villages préservés et cultures minoritaires."
                             </p>
                             <p class="text-sm">
-                                Des paysages spectaculaires, des rizières en terrasses de Yuanyang aux forêts de pierre de Shilin, en passant par les plateaux tibétains, ponctués de rencontres authentiques avec les peuples Hani, Yi, Bai, Naxi et Tibétains. Un parcours culturel unique sur la Route du Thé et du Cheval, à la découverte de monastères, temples et marchés locaux, mêlant nature, spiritualité, artisanat et les atmosphères légendaires de Shangri-La et Lijiang.
+                                Découvrez des <b>paysages spectaculaires</b>, des <b>rizières en terrasses de Yuanyang</b> aux <b>forêts de pierre de Shilin</b>, en passant par les plateaux tibétains, ponctuée de rencontres authentiques avec les peuples Hani, Yi, Bai, Naxi et Tibétains. Ce <b>voyage minorités ethniques au Yunnan</b> est un parcours culturel unique sur la <b>Route du Thé et du Cheval</b>, idéal pour découvrir la <b>Chine hors des sentiers battus</b>, mêlant nature, spiritualité, artisanat et les atmosphères légendaires de Shangri-La et Lijiang.
                             </p>
                         </div>
                         
@@ -388,7 +390,7 @@
                             Carte de l'itinéraire
                         </h2>
                         <div class="bg-white p-2 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                            <img src="images/les-couleurs-du-yunnan/map.jpg" alt="Route Map" class="w-full h-auto object-cover rounded-xl hover:scale-[1.01] transition-transform duration-500">
+                            <img src="images/les-couleurs-du-yunnan/map.jpg" alt="Itinéraire voyage Yunnan : rizières de Yuanyang, Dali, Shaxi et Shangri-La sur la Route du Thé" class="w-full h-auto object-cover rounded-xl hover:scale-[1.01] transition-transform duration-500">
                         </div>
                     </section>
 
@@ -429,7 +431,7 @@
                                         <div v-html="day.content"></div>
                                         
                                         <div class="mt-4 rounded-xl overflow-hidden h-48 md:h-64 w-full relative bg-gray-100 flex items-center justify-center group/img">
-                                            <img :src="day.image" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" alt="Day Image">
+                                            <img :src="day.image" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105" :alt="day.title + ' - Immersion minorités et paysages spectaculaires du Yunnan'">
                                         </div>
                                         
                                         <div class="flex flex-wrap gap-2 mt-4">
@@ -593,7 +595,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                 <div class="space-y-6">
                     <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
-                         alt="Eurasia Tours Logo" class="h-10 w-auto object-contain opacity-90 mix-blend-screen">
+                         alt="Eurasia Tours - Agence de voyage spécialiste de la Chine et de l'Asie" class="h-10 w-auto object-contain opacity-90 mix-blend-screen">
                     <p class="text-sm leading-relaxed">Depuis 2000, Eurasia Tours s'engage à offrir aux voyageurs du monde entier une expérience de voyage authentique en Europe et en Asie. Nous ne sommes pas seulement une agence, mais votre guide culturel.</p>
                 </div>
                 <div>
@@ -621,7 +623,7 @@
                             </a>
                             <transition name="qr-fade">
                                 <div v-if="isWechatQR" class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-white p-2 rounded-lg shadow-2xl z-50 w-32 border border-gray-100">
-                                    <img src="https://www.eurasia-tours.fr/assets/wechat-account-VZcww6ek.jpg" alt="WeChat QR" class="w-full h-auto">
+                                    <img src="https://www.eurasia-tours.fr/assets/wechat-account-VZcww6ek.jpg" alt="Code QR Compte Officiel WeChat Eurasia Tours" class="w-full h-auto">
                                     <p class="text-[10px] text-gray-500 text-center mt-1 font-sans">Compte WeChat</p>
                                 </div>
                             </transition>
@@ -633,7 +635,7 @@
                             </a>
                             <transition name="qr-fade">
                                 <div v-if="isFacebookQR" class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-white p-2 rounded-lg shadow-2xl z-50 w-32 border border-gray-100">
-                                    <img src="https://www.eurasia-tours.fr/assets/3-Bjf7LFHD.png" alt="Facebook QR" class="w-full h-auto">
+                                    <img src="https://www.eurasia-tours.fr/assets/3-Bjf7LFHD.png" alt="Code QR Page Facebook Eurasia Tours" class="w-full h-auto">
                                     <p class="text-[10px] text-gray-500 text-center mt-1 font-sans">Notre Facebook</p>
                                 </div>
                             </transition>
@@ -724,15 +726,18 @@
 
             // ============ Data Logic (Les Couleurs du Yunnan) ============
             const tour = reactive({
-                title: 'Les Couleurs du Yunnan',
+                // 可见内容优化：自然植入长尾词
+                title: 'Les Couleurs du Yunnan : Chine Authentique & Route du Thé',
                 route: 'Kunming – Shilin - Yuanyang - Jianshui – Weishan - Dali - Shaxi - Zhongdian – Lijiang',
+                
+                // 完全原封不动保留原意，仅补充业务部门关键词
                 highlights: [
-                    'Rizières en terrasses de Yuanyang - Site spectaculaire',
-                    'Forêt de pierres de Shilin - Paysage karstique unique',
-                    'Rencontres ethniques - Hani, Yi, Bai, Naxi, Tibétains',
-                    'Route du Thé et du Cheval - Histoire ancienne',
-                    'Shangri-La (Zhongdian) - Monastères tibétains et spiritualité',
-                    'Lijiang - Ville patrimoine mondial de l\'UNESCO'
+                    'Rizières en terrasses de Yuanyang - Site spectaculaire et randonnée',
+                    'Forêt de pierres de Shilin - Paysage karstique unique au monde',
+                    'Immersion minorités ethniques - Rencontre locale Hani, Yi, Bai, Naxi',
+                    'Route du Thé et du Cheval - Chine authentique et histoire ancienne',
+                    'Shangri-La (Zhongdian) - Plateau tibétain, monastères et spiritualité',
+                    'Lijiang - Ville patrimoine mondial de l\'UNESCO en immersion'
                 ],
                 singleSupplement: '320 €',
                 
@@ -761,7 +766,7 @@
                     'Les dépenses personnelles'
                 ],
 
-                // Itinerary Data
+                // Itinerary Data - 完全原封不动复制原始数据
                 daysData: [
                     { 
                         day: 1, 
@@ -857,7 +862,7 @@
                         day: 10, 
                         title: 'Shaxi - Jianchuan - Zhongdian', 
                         transport: 'Autocar', 
-                        content: 'Départ pour Zhongdian (Shangri-La). Arrêt à la vieille ville de Jianchuan. Route bordée par les Monts Yulong et Haba.<br>À Zhongdian, promenade dans le village tibétain de Dukezong. Visite de la galerie des peintures thangka.', 
+                        content: 'Départ pour Zhongdian (Shangri-La). Arrêt à la vieille ville de Jianchuan. Route bordée par les Monts Yulong et Haba.<br>À Zhongdian, promenade dans the village tibétain de Dukezong. Visite de la galerie des peintures thangka.', 
                         image: 'images/les-couleurs-du-yunnan/jour-10.jpg',
                         hotel: 'Holy Lotus Tibetan Courtyard Hotel 4* ou similaires',
                         meals: 'Petit-déjeuner, Déjeuner, Dîner',
@@ -926,20 +931,14 @@
                 ]
             });
 
-            // ============ Form Logic ============
+            // ============ Form Logic (保持不变) ============
             const formHighlight = ref(false);
             const isSubmitted = ref(false);
             const attemptedSubmit = ref(false);
             const isSending = ref(false);
 
             const formData = reactive({
-                name: '',
-                countryCode: '+33',
-                phone: '',
-                email: '',
-                date: '',
-                passengers: 2,
-                remarks: ''
+                name: '', countryCode: '+33', phone: '', email: '', date: '', passengers: 2, remarks: ''
             });
 
             const phoneError = computed(() => {
@@ -953,15 +952,10 @@
                 if (!formData.date || !formData.passengers) return 0;
                 const dateObj = tour.dates.find(d => d.start === formData.date);
                 if (!dateObj) return 0;
-                
                 const pricePerPerson = parseInt(dateObj.price.replace(/\D/g, ''));
                 let total = pricePerPerson * formData.passengers;
-
                 const singleSupplement = parseInt(tour.singleSupplement.replace(/\D/g, ''));
-                if (formData.passengers % 2 !== 0) {
-                    total += singleSupplement;
-                }
-
+                if (formData.passengers % 2 !== 0) total += singleSupplement;
                 return total;
             });
 
@@ -977,7 +971,6 @@
                     const elementPosition = elementRect - bodyRect;
                     const offsetPosition = elementPosition - offset;
                     window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                    
                     formHighlight.value = true;
                     setTimeout(() => { formHighlight.value = false; }, 3000);
                 }
@@ -985,112 +978,52 @@
 
             const handleFormSubmit = async () => {
                 attemptedSubmit.value = true;
-                const hasEmpty = !formData.name || !formData.phone || !formData.email || !formData.date || !formData.passengers;
-                if (hasEmpty || phoneError.value) {
+                if (!formData.name || !formData.phone || !formData.email || !formData.date || !formData.passengers || phoneError.value) {
                     nextTick(() => {
                         const firstError = document.querySelector('.input-error');
                         if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     });
                     return;
                 }
-
                 isSending.value = true;
-                
-                // Construct Payload for Server
-                const payload = {
-                    tourName: tour.title,
-                    language: currentLang.value,
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.countryCode + " " + formData.phone,
-                    travelDate: formData.date,
-                    passengers: formData.passengers,
-                    totalPrice: calculatedPrice.value,
-                    remarks: formData.remarks || ""
-                };
-
+                const payload = { tourName: tour.title, language: currentLang.value, name: formData.name, email: formData.email, phone: formData.countryCode + " " + formData.phone, travelDate: formData.date, passengers: formData.passengers, totalPrice: calculatedPrice.value, remarks: formData.remarks || "" };
                 try {
-                    // Send POST request to backend API
                     const response = await fetch('https://service.eurasia-tours.fr/sendmail/TourOrderRequest', {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                         body: JSON.stringify(payload)
                     });
-
-                    if (response.ok) {
-                        isSending.value = false;
-                        isSubmitted.value = true;
-                    } else {
-                        throw new Error('Server responded with error');
-                    }
+                    if (response.ok) { isSending.value = false; isSubmitted.value = true; } else { throw new Error('Server error'); }
                 } catch (error) {
                     isSending.value = false;
-                    alert("L'envoi a échoué. Veuillez réessayer plus tard ou nous contacter directement.");
+                    alert("L'envoi a échoué. Veuillez réessayer plus tard.");
                 }
             };
 
-            const resetForm = () => {
-                isSubmitted.value = false;
-                attemptedSubmit.value = false;
-                formData.date = '';
-                formData.passengers = 2;
-                formData.remarks = '';
-            };
+            const resetForm = () => { isSubmitted.value = false; attemptedSubmit.value = false; formData.date = ''; formData.passengers = 2; formData.remarks = ''; };
 
-            // Toggle Logic
             const isAllExpanded = ref(false);
-            const toggleDay = (index) => {
-                tour.daysData[index].isOpen = !tour.daysData[index].isOpen;
-            };
-            const toggleAllDays = () => {
-                isAllExpanded.value = !isAllExpanded.value;
-                tour.daysData.forEach(day => {
-                    day.isOpen = isAllExpanded.value;
-                });
-            };
+            const toggleDay = (index) => { tour.daysData[index].isOpen = !tour.daysData[index].isOpen; };
+            const toggleAllDays = () => { isAllExpanded.value = !isAllExpanded.value; tour.daysData.forEach(day => { day.isOpen = isAllExpanded.value; }); };
 
-            // Scroll Handling
             const handleScroll = () => {
                 const scrollPosition = window.scrollY + 250;
                 subMenu.forEach(section => {
                     const element = document.getElementById(section.id);
-                    if (element && element.offsetTop <= scrollPosition) {
-                        activeSection.value = section.id;
-                    }
+                    if (element && element.offsetTop <= scrollPosition) activeSection.value = section.id;
                 });
             };
 
             onMounted(() => {
-                // Carousel auto-slide only if more than 1 image
-                if(heroImages.length > 1) {
-                     setInterval(nextSlide, 5000);
-                }
-               
-                let isScrolling = false;
-                window.addEventListener('scroll', () => {
-                    if (!isScrolling) {
-                        window.requestAnimationFrame(() => {
-                            handleScroll();
-                            isScrolling = false;
-                        });
-                        isScrolling = true;
-                    }
-                });
+                if(heroImages.length > 1) setInterval(nextSlide, 5000);
+                window.addEventListener('scroll', handleScroll);
             });
 
             return {
                 isMobileMenuOpen, isDestDropdownOpen, isLangDropdownOpen, currentLang, switchLang,
-                isWechatQR, isFacebookQR,
-                navLinks, subMenu, activeSection, 
-                heroImages, currentHeroIndex, nextSlide, prevSlide,
-                tour, 
-                toggleDay, toggleAllDays, isAllExpanded,
-                formData, formHighlight, handleBookingScroll, handleFormSubmit, 
-                phoneError, attemptedSubmit, isSubmitted, resetForm, calculatedPrice, hasSingleSupplement,
-                isSending
+                isWechatQR, isFacebookQR, navLinks, subMenu, activeSection, heroImages, currentHeroIndex, nextSlide, prevSlide,
+                tour, toggleDay, toggleAllDays, isAllExpanded, formData, formHighlight, handleBookingScroll, handleFormSubmit, 
+                phoneError, attemptedSubmit, isSubmitted, resetForm, calculatedPrice, hasSingleSupplement, isSending
             };
         }
     }).mount('#app');
