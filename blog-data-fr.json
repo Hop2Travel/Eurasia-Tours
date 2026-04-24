@@ -7,5 +7,14 @@
     "topic": "Conseils Pratiques",
     "likes": "Nouveau",
     "link": "article/blog-voyage-chine-sans-visa-2026.html"
+  },
+  {
+    "id": "temoignage-voyage-scolaire-chine",
+    "title": "Retour d'expérience : Un voyage scolaire inoubliable en Chine",
+    "desc": "Découvrez le témoignage du Collège Notre Dame suite à leur voyage scolaire en Chine organisé par Eurasia Tours : Grande Muraille, Pandas, Maglev et immersion culturelle.",
+    "image": "images/blog/school-trip.jpg",
+    "topic": "Témoignage Client",
+    "likes": "Nouveau",
+    "link": "article/blog-temoignage-voyage-scolaire-chine.html"
   }
 ]
