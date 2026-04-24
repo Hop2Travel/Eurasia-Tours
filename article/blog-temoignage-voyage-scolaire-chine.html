@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SQ5YGXMS2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9SQ5YGXMS2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Voyager en Chine sans visa en 2026 : Le guide complet pour les Français | Eurasia Tours</title>
+    <meta name="description" content="Découvrez les conditions pour profiter des 15 jours sans visa en Chine et pourquoi un voyage organisé francophone est la meilleure option pour votre premier séjour.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; }
+        .text-brand { color: #b91c1c; }
+        .bg-brand { background-color: #b91c1c; }
+        .border-brand { border-color: #b91c1c; }
+        .hover-border-brand:hover { border-color: #b91c1c; }
+        .hover\:bg-brand:hover { background-color: #991b1b; }
+        
+        .nav-link-spacing { letter-spacing: 0.05em; }
+
+        .mobile-menu-enter-active, .mobile-menu-leave-active { transition: opacity 0.3s ease, transform 0.3s ease; }
+        .mobile-menu-enter-from, .mobile-menu-leave-to { opacity: 0; transform: translateY(-10px); }
+        
+        .dropdown-enter-active { transition: opacity 0.2s ease-out, transform 0.2s ease-out; }
+        .dropdown-leave-active { transition: opacity 0.15s ease-in, transform 0.15s ease-in; }
+        .dropdown-enter-from, .dropdown-leave-to { opacity: 0; transform: translateY(10px) scale(0.98); }
+        
+        .qr-fade-enter-active, .qr-fade-leave-active { transition: all 0.3s ease-out; }
+        .qr-fade-enter-from, .qr-fade-leave-to { opacity: 0; transform: translateY(10px); }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #d1d5db; border-radius: 20px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background-color: #9ca3af; }
+
+        [v-cloak] { display: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+<div id="app" v-cloak>
+    <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between py-2 lg:h-24">
+                <div class="flex items-center justify-between w-full lg:w-auto">
+                    <a href="../index-fr.html" class="flex items-center group">
+                        <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
+                             alt="Logo Eurasia Tours" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
+                    </a>
+                    <button class="lg:hidden relative z-50 text-2xl p-2 text-gray-700 focus:outline-none cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen">
+                        <i class="fas" :class="isMobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+                    </button>
+                </div>
+
+                <nav class="hidden lg:flex flex-1 items-center justify-end ml-4 max-w-7xl gap-4 xl:gap-6">
+                    <div v-for="link in navLinks" :key="link.name" class="relative group py-8"
+                         @mouseenter="link.name === 'Nos destinations' ? isDestDropdownOpen = true : null"
+                         @mouseleave="isDestDropdownOpen = false">
+                        
+                        <a :href="link.url" 
+                           class="nav-link-spacing relative py-3 px-1 text-xs xl:text-sm font-bold uppercase transition-all flex items-center gap-1 whitespace-nowrap"
+                           :class="link.current ? 'text-brand' : 'text-gray-700 hover:text-brand'">
+                            {{ link.name }}
+                            <i v-if="link.subLinks" class="fas fa-angle-down text-xs transition-transform duration-300" :class="{'rotate-180': link.name === 'Nos destinations' && isDestDropdownOpen}"></i>
+                            
+                            <span class="absolute bottom-1 left-0 h-0.5 bg-brand transition-all duration-300"
+                                  :class="link.current ? 'w-full' : 'w-0 group-hover:w-full'"></span>
+                        </a>
+
+                        <transition name="dropdown">
+                            <div v-if="link.name === 'Nos destinations' && isDestDropdownOpen" 
+                                 class="absolute top-full left-1/2 -translate-x-1/2 w-[240px] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-xl border border-gray-100 p-3 overflow-hidden mt-[-5px]">
+                                <div class="px-4 pb-2 mb-2 border-b border-gray-50 text-[10px] uppercase tracking-[0.1em] text-gray-400 font-bold">Pays Populaires</div>
+                                <ul class="space-y-1">
+                                    <li v-for="sub in link.subLinks" :key="sub.name">
+                                        <a :href="sub.url" class="flex items-center gap-3 px-4 py-3 text-base font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all group/item border-l-2 border-transparent hover:border-brand">
+                                            <i class="fas fa-map-pin text-[10px] text-brand opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></i>
+                                            {{ sub.name }}
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="mt-3 pt-2 border-t border-gray-50">
+                                    <a href="../destination-main-fr.html" class="flex items-center justify-center gap-2 px-4 py-2 text-[13px] font-bold text-brand hover:underline">Toutes les destinations <i class="fas fa-arrow-right text-[10px]"></i></a>
+                                </div>
+                            </div>
+                        </transition>
+                    </div>
+
+                    <div class="relative group py-8 pl-4 ml-2"
+                         @mouseenter="isLangDropdownOpen = true"
+                         @mouseleave="isLangDropdownOpen = false">
+                        
+                        <span class="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-px bg-gray-200"></span>
+
+                        <a href="#" class="nav-link-spacing relative py-3 px-1 text-xs xl:text-sm font-bold uppercase text-gray-700 hover:text-brand transition-all flex items-center gap-2 whitespace-nowrap">
+                            <i class="fas fa-globe text-lg"></i>
+                            {{ currentLang }}
+                            <i class="fas fa-angle-down text-xs transition-transform duration-300" :class="{'rotate-180': isLangDropdownOpen}"></i>
+                        </a>
+                        <transition name="dropdown">
+                            <div v-if="isLangDropdownOpen" 
+                                 class="absolute top-full right-0 w-[140px] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-xl border border-gray-100 p-2 overflow-hidden mt-[-5px]">
+                                <ul class="space-y-1">
+                                    <li>
+                                        <a href="#" @click.prevent="switchLang('中文')" class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all" :class="{'bg-red-50 text-brand': currentLang === '中文'}">中文 <i v-if="currentLang === '中文'" class="fas fa-check text-xs"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @click.prevent="switchLang('English')" class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all" :class="{'bg-red-50 text-brand': currentLang === 'English'}">English <i v-if="currentLang === 'English'" class="fas fa-check text-xs"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" @click.prevent="switchLang('Français')" class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all" :class="{'bg-red-50 text-brand': currentLang === 'Français'}">Français <i v-if="currentLang === 'Français'" class="fas fa-check text-xs"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </transition>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <transition name="mobile-menu">
+            <nav v-if="isMobileMenuOpen" class="lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 py-6 pb-10 shadow-xl overflow-y-auto max-h-[80vh]">
+                <div class="flex flex-col items-center gap-6">
+                    <a v-for="link in navLinks" :key="link.name" :href="link.url" class="text-xl font-bold py-2 uppercase tracking-widest transition" :class="link.current ? 'text-brand' : 'text-gray-800 hover:text-brand'" @click="isMobileMenuOpen = false">{{ link.name }}</a>
+                    <a href="../contact-fr.html" class="bg-brand text-white px-10 py-3 rounded-full font-bold shadow-lg mt-4" @click="isMobileMenuOpen = false">Demandez un devis</a>
+                </div>
+            </nav>
+        </transition>
+    </header>
+
+    <main class="pt-32 pb-24 min-h-screen bg-gray-50/20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 bg-white rounded-[40px] shadow-sm border border-gray-100 p-8 md:p-12">
+                
+                <div class="flex-1">
+                    <div class="mb-10">
+                        <div class="flex items-center gap-4 text-brand font-bold text-xs uppercase tracking-[0.3em] mb-6">
+                            <span class="px-3 py-1 bg-red-50 rounded-full"># Témoignage Client</span>
+                        </div>
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-[1.2] mb-8">Retour d'expérience : Un voyage scolaire inoubliable en Chine</h1>
+                        
+                        <img src="../images/blog/school-trip.jpg" alt="Voyage scolaire en Chine avec Eurasia Tours" class="w-full h-auto rounded-3xl shadow-lg border border-gray-200 mb-12">                        
+                        <div class="prose prose-lg max-w-none text-gray-600 leading-[1.8] space-y-6 text-justify font-light">
+                            <p>Chez Eurasia Tours, notre plus grande fierté est la satisfaction de nos voyageurs. Nous avons récemment eu le plaisir d'organiser un <strong>voyage scolaire en Chine</strong> pour les élèves de l'établissement Notre Dame de Draveil en mars 2026. Voici des extraits de leur magnifique retour d'expérience.</p>
+                            
+                            <h2>Un itinéraire riche et parfaitement structuré</h2>
+                            <p>Ce séjour sur mesure a permis aux élèves de découvrir quatre villes emblématiques : <strong>Beijing, Xi'an, Chengdu et Shanghaï</strong>. L'équipe éducative a particulièrement apprécié la diversité des moyens de transport utilisés (avion, train de nuit, TGV et Maglev), qui a rendu l'expérience encore plus enrichissante pour les jeunes.</p>
+                            
+                            <blockquote class="border-l-4 border-[#b91c1c] pl-6 py-2 italic bg-gray-50 rounded-r-lg text-gray-700">
+                                « Les visites et activités proposées ont particulièrement marqué les esprits de nos jeunes : la splendide Grande Muraille de Chine, le fascinant Musée de l'Armée des soldats en terre cuite, la rencontre inoubliable avec les pandas à Chengdu, ainsi que les impressionnants gratte-ciel de Shanghaï illuminés la nuit. »
+                            </blockquote>
+
+                            <h2>Des expériences uniques et immersives</h2>
+                            <p>Au-delà des visites classiques, notre agence s'efforce toujours d'intégrer des expériences modernes et des ateliers d'immersion culturelle. Les élèves ont ainsi pu profiter :</p>
+                            <ul>
+                                <li>D'un trajet sensationnel en <strong>train magnétique (Maglev)</strong> atteignant près de 300 km/h.</li>
+                                <li>D'une expérience innovante à bord d'une <strong>voiture autonome</strong> sans chauffeur à Shanghaï.</li>
+                                <li>D'ateliers culturels enrichissants comme la <strong>calligraphie</strong> et le Zha-ran (teinture traditionnelle).</li>
+                                <li>Du spectacle époustouflant d'acrobaties et de changement de masques de l'<strong>Opéra du Sichuan</strong>.</li>
+                            </ul>
+
+                            <h2>Une logistique irréprochable et un encadrement salué</h2>
+                            <p>Organiser un voyage de groupe en Chine demande une expertise rigoureuse. L'établissement a tenu à souligner la qualité exceptionnelle de nos prestations :</p>
+                            <blockquote class="border-l-4 border-[#b91c1c] pl-6 py-2 italic bg-gray-50 rounded-r-lg text-gray-700">
+                                « Nous souhaitons souligner la qualité exceptionnelle de l'encadrement : les guides ont fait preuve d'un grand professionnalisme, tout en étant bienveillants et attentifs... Les déplacements en car se sont déroulés dans d'excellentes conditions. Les restaurants sélectionnés étaient de grande qualité, très appréciés de tous, et les hôtels étaient accueillants et confortables. »
+                            </blockquote>
+
+                            <p>Nous remercions chaleureusement l'équipe éducative et les élèves pour leur confiance. Ce voyage restera gravé dans les mémoires comme une expérience exceptionnelle.</p>
+
+                            <div class='mt-10 p-6 bg-red-50 border-l-4 border-[#b91c1c] rounded-r-xl'>
+                                <h3 class='text-xl font-bold text-gray-900 mb-2'>Organisez votre voyage de groupe avec Eurasia Tours</h3>
+                                <p class='text-gray-700 mb-4'>Vous êtes une école, une association ou un comité d'entreprise ? Confiez-nous votre projet pour un séjour 100% sur mesure, sécurisé et sans stress.</p>
+                                <a href='../custom-fr.html' class='inline-flex items-center gap-2 text-[#b91c1c] font-bold hover:underline'>Demandez un devis personnalisé <i class='fas fa-arrow-right'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<div class="lg:w-80 hidden lg:block border-l border-gray-100 pl-12">
+                    <div class="sticky top-32">
+                        <h4 class="text-xl font-bold border-b-4 border-brand inline-block pb-2 italic uppercase tracking-widest mb-8">Circuit Recommandé</h4>
+                        <div class="bg-white rounded-[32px] overflow-hidden shadow-xl border border-red-50 group">
+                            <div class="relative h-48 overflow-hidden">
+                                <img src="../images/custom/header-fr.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Voyage Sur Mesure">
+                            </div>
+                            <div class="p-6 space-y-4 text-left">
+                                <h5 class="text-xl font-bold text-gray-900 leading-tight">Voyage Sur Mesure · Groupes</h5>
+                                <div class="pt-6 border-t border-gray-100 flex items-center justify-between">
+                                    <span class="font-black text-brand text-xl">Sur Devis</span>
+                                    <a href="../custom-fr.html" class="w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center hover:scale-110 transition shadow-md"><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:hidden pt-12 border-t border-gray-100 w-full">
+                    <h4 class="text-xl font-bold border-b-4 border-brand inline-block pb-1 italic mb-6">Circuit Recommandé</h4>
+                    <div class="bg-white rounded-[32px] overflow-hidden shadow-lg border border-red-50 mb-8 group">
+                        <img src="../images/custom/header-fr.jpg" class="w-full h-48 object-cover" alt="Voyage Sur Mesure">
+                        <div class="p-6 space-y-4">
+                            <h5 class="text-xl font-bold text-gray-900">Voyage Sur Mesure · Groupes</h5>
+                            <div class="flex items-center justify-between">
+                                <span class="font-black text-brand text-xl">Sur Devis</span>
+                                <a href="../custom-fr.html" class="w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center shadow-md"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 pt-20 pb-10 border-t-8 border-brand">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 text-left">
+                <div class="space-y-6">
+                    <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
+                         alt="Eurasia Tours Logo" class="h-10 w-auto object-contain opacity-90 mix-blend-screen">
+                    <p class="text-sm leading-relaxed">Depuis 2000, Eurasia Tours s'engage à offrir aux voyageurs du monde entier une expérience de voyage authentique en Europe et en Asie. Nous ne sommes pas seulement une agence, mais votre guide culturel.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span class="w-1 h-5 bg-brand"></span> Garanties & Certifications</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand"></i> Membre de l'APST</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand"></i> Accréditation IATA</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-shield-alt text-brand"></i> Assurance RCP incluse</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span class="w-1 h-5 bg-brand"></span> Contactez-nous</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-brand mt-1"></i> 30 Rue Ernest Renan, 75015 Paris</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-brand"></i> 01 56 69 12 80</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-brand"></i> inscription@eurasiatours.fr</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span class="w-1 h-5 bg-brand"></span> Suivez-nous & Paiement</h4>
+                    <div class="flex gap-4 mb-8">
+                        <div class="relative group" @mouseenter="isWechatQR = true" @mouseleave="isWechatQR = false">
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#07C160] transition">
+                                <i class="fab fa-weixin text-white"></i>
+                            </a>
+                            <transition name="qr-fade">
+                                <div v-if="isWechatQR" class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-white p-2 rounded-lg shadow-2xl z-50 w-32 border border-gray-100">
+                                    <img src="https://www.eurasia-tours.fr/assets/wechat-account-VZcww6ek.jpg" alt="WeChat QR" class="w-full h-auto">
+                                    <p class="text-[10px] text-gray-500 text-center mt-1 font-sans">Compte WeChat</p>
+                                </div>
+                            </transition>
+                        </div>
+
+                        <div class="relative group" @mouseenter="isFacebookQR = true" @mouseleave="isFacebookQR = false">
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#1877F2] transition">
+                                <i class="fab fa-facebook-f text-white"></i>
+                            </a>
+                            <transition name="qr-fade">
+                                <div v-if="isFacebookQR" class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-white p-2 rounded-lg shadow-2xl z-50 w-32 border border-gray-100">
+                                    <img src="https://www.eurasia-tours.fr/assets/3-Bjf7LFHD.png" alt="Facebook QR" class="w-full h-auto">
+                                    <p class="text-[10px] text-gray-500 text-center mt-1 font-sans">Notre Facebook</p>
+                                </div>
+                            </transition>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 text-3xl opacity-30">
+                        <i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-amex"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-10 text-center text-xs tracking-widest uppercase flex flex-col items-center gap-2">
+                <span>© 2026 EURASIA TOURS · TOUS DROITS RÉSERVÉS</span>
+                <a href="https://beian.miit.gov.cn/" target="_blank" class="text-gray-500 hover:text-gray-300 transition-colors normal-case tracking-normal">
+                    京ICP备11043174号-2
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const { createApp, ref } = Vue;
+    createApp({
+        setup() {
+            // Vue 中仅保留菜单和语言切换等交互逻辑，完全剥离了请求 JSON 的代码
+            const isMobileMenuOpen = ref(false);
+            const isDestDropdownOpen = ref(false);
+            const isLangDropdownOpen = ref(false);
+            const currentLang = ref('Français');
+            const isWechatQR = ref(false);
+            const isFacebookQR = ref(false);
+
+            const navLinks = [
+                { name: 'Accueil', url: '../index-fr.html' },
+                { 
+                    name: 'Nos destinations', 
+                    url: '../destination-main-fr.html', 
+                    subLinks: [
+                        { name: 'Chine', url: '../destination-chine.html' },
+                        { name: 'Vietnam', url: '../destination-vietnam.html' },
+                        { name: 'Japon', url: '../destination-japon.html' },
+                        { name: 'Coree du Sud', url: '../destination-coree-du-sud.html' },
+                        { name: 'Cambodge', url: '../destination-cambodge.html' },
+                        { name: 'Laos', url: '../destination-laos.html' },
+                        { name: 'Nepal', url: '../destination-nepal.html' },
+                        { name: 'Ouzbekistan', url: '../destination-ouzbekistan.html' },
+                        { name: 'Sri-Lanka', url: '../destination-sri-lanka.html' },
+                        { name: 'thailande', url: '../destination-thailande.html' },
+                    ] 
+                },
+                { name: 'Voyage sur mesure', url: '../custom-fr.html' },
+                { name: 'Vols', url: '../flight-tickets-fr.html'},
+                { name: 'Qui sommes-nous', url: '../about-fr.html' },
+                { name: 'Contact', url: '../contact-fr.html' },
+                { name: 'Blog', url: '../blog-fr.html', current: true }
+            ];
+
+            const switchLang = (lang) => {
+                const urlMap = {
+                    '中文': '../blog-cn.html',
+                    'English': '../blog-en.html',
+                    'Français': '../blog-fr.html'
+                };
+                if (urlMap[lang]) window.location.href = urlMap[lang];
+            };
+
+            return { 
+                isMobileMenuOpen, isDestDropdownOpen, isLangDropdownOpen, currentLang, switchLang, navLinks,
+                isWechatQR, isFacebookQR
+            }
+        }
+    }).mount('#app');
+</script>
+</body>
+</html>
