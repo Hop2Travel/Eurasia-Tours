@@ -12,9 +12,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Blog Voyage Chine & Asie : Guides, Visas et Inspiration | Eurasia Tours</title>
-    <meta name="description" content="Préparez votre voyage avec le blog Eurasia Tours. Découvrez nos guides complets sur la Chine sans visa, les circuits classiques, les ethnies du Yunnan et plus.">
+    <title>Blog - Eurasia Tours</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -44,16 +42,14 @@
         .img-container img { width: 100%; height: 100%; object-fit: contain; }
         .cover-img img { object-fit: cover; }
         
-        /* 博客网格布局：已修复为从左到右、从上到下的标准阅读顺序 */
-        .masonry-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1.5rem; }
-        @media (min-width: 640px) { .masonry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-        @media (min-width: 1024px) { .masonry-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-        @media (min-width: 1536px) { .masonry-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-        .masonry-item { margin-bottom: 0; height: 100%; }
-        .masonry-item > a { height: 100%; display: flex; flex-direction: column; }
-        .masonry-item .p-6 { flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        /* 瀑布流布局 */
+        .masonry-grid { column-count: 1; column-gap: 1.5rem; }
+        @media (min-width: 640px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        @media (min-width: 1536px) { .masonry-grid { column-count: 4; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
 
-        /* 详情页弹窗动画 - 保留原有样式类 */
+        /* 详情页弹窗动画 */
         .modal-enter-active, .modal-leave-active { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .modal-enter-from, .modal-leave-to { opacity: 0; transform: translateY(100px); }
 
@@ -74,7 +70,7 @@
                 <div class="flex items-center justify-between w-full lg:w-auto">
                     <a href="index-fr.html" class="flex items-center group">
                         <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
-                             alt="Eurasia Tours - Agence spécialiste voyage Chine francophone" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
+                             alt="Logo" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
                     </a>
                     <button class="lg:hidden relative z-50 text-2xl p-2 text-gray-700 focus:outline-none cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen">
                         <i class="fas" :class="isMobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
@@ -175,7 +171,7 @@
                         <button @click="switchLang('Français')" class="px-4 py-1 rounded-full text-sm font-bold transition" :class="currentLang === 'Français' ? 'bg-brand text-white' : 'bg-gray-100 text-gray-600'">Français</button>
                     </div>
 
-                    <a href="contact-fr.html" class="bg-brand text-white px-10 py-3 rounded-full font-bold shadow-lg mt-4" @click="isMobileMenuOpen = false">Demandez un devis</a>
+                    <a href="contact FR.html" class="bg-brand text-white px-10 py-3 rounded-full font-bold shadow-lg mt-4" @click="isMobileMenuOpen = false">Demandez un devis</a>
                 </div>
             </nav>
         </transition>
@@ -183,7 +179,7 @@
 
     <main class="pt-24 bg-gray-50/20">
         <section class="relative h-[40vh] min-h-[350px] flex items-center justify-center bg-gray-900 overflow-hidden cover-img">
-            <img src="images/blog/header.jpg" alt="Blog Eurasia Tours : Guide voyage Chine" class="absolute inset-0 w-full h-full opacity-60">
+            <img src="images/blog/header.jpg" class="absolute inset-0 w-full h-full opacity-60">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
             <div class="relative z-20 text-center px-4">
                 <h1 class="text-6xl md:text-8xl font-bold text-white mb-4 hero-text-shadow tracking-tight italic">Blog de Voyage</h1>
@@ -192,16 +188,11 @@
         </section>
 
         <section class="py-12 px-4 md:px-8 xl:px-12 w-full max-w-[1920px] mx-auto">
-            
-            <div v-if="isLoading" class="flex justify-center py-20">
-                <i class="fas fa-circle-notch fa-spin text-4xl text-brand"></i>
-            </div>
-
-            <div v-else class="masonry-grid">
-                <div v-for="(post, index) in blogPosts" :key="index" class="masonry-item">
-                    <a :href="post.link" class="block group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 text-left">
+            <div class="masonry-grid">
+                <div v-for="(post, index) in blogPosts" :key="index" class="masonry-item" @click="openPost(post)">
+                    <article class="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 cursor-pointer text-left">
                         <div class="relative overflow-hidden">
-                            <img :src="post.image" :alt="post.title + ' - Blog Eurasia Tours'" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <img :src="post.image" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute top-4 left-4 bg-black/20 backdrop-blur-md text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest"> # {{ post.topic }} </div>
                         </div>
                         <div class="p-6">
@@ -209,22 +200,76 @@
                             <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 text-justify">{{ post.desc }}</p>
                             <div class="flex items-center justify-between pt-4 border-t border-gray-50">
                                 <div class="flex items-center gap-2 text-gray-500">
-                                    <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center overflow-hidden"><img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" alt="Logo Eurasia Tours" class="w-full h-full object-contain mix-blend-multiply"></div>
+                                    <div class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center overflow-hidden"><img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" class="w-full h-full object-contain mix-blend-multiply"></div>
                                     <span class="text-[11px] font-bold">Eurasia Tours</span>
                                 </div>
-                                <div class="flex items-center gap-4 text-gray-400">
-                                    <span class="text-[10px] font-bold text-brand uppercase">Lire la suite <i class="fas fa-arrow-right ml-1"></i></span>
-                                </div>
+                                <div class="flex items-center gap-4 text-gray-400"><i class="far fa-heart"></i> <span class="text-[10px]">{{ post.likes }}</span></div>
                             </div>
                         </div>
-                    </a>
+                    </article>
                 </div>
             </div>
-            
-            <div class="text-center mt-16 mb-24" v-if="!isLoading">
+            <div class="text-center mt-16 mb-24">
                 <button class="px-12 py-4 bg-brand text-white font-bold rounded-full hover:bg-red-800 transition-all duration-300 uppercase text-xs tracking-[0.2em] shadow-xl shadow-red-100"> Charger plus d'histoires </button>
             </div>
         </section>
+
+        <transition name="modal">
+            <div v-if="activePost" class="fixed inset-0 z-[100] flex items-end justify-center px-4 pb-4 sm:pb-8 lg:px-0 text-left">
+                <div class="absolute inset-0 bg-black/60 backdrop-blur-md" @click="activePost = null"></div>
+                <div class="relative w-full max-w-6xl h-[90vh] bg-white rounded-[40px] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                    <button class="absolute top-6 right-8 z-[110] w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-xl hover:bg-brand hover:text-white transition shadow-lg" @click="activePost = null"><i class="fas fa-times"></i></button>
+
+                    <div class="flex-1 overflow-y-auto p-8 md:p-16 custom-scrollbar">
+                        <div class="max-w-3xl mx-auto space-y-12">
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4 text-brand font-bold text-xs uppercase tracking-[0.3em]"><span class="px-3 py-1 bg-red-50 rounded-full"># {{ activePost.topic }}</span><span>11 JAN 2026</span></div>
+                                <h2 class="text-4xl md:text-6xl font-bold text-gray-900 leading-[1.1]">{{ activePost.title }}</h2>
+                                <div class="h-1.5 w-20 bg-brand"></div>
+                            </div>
+                            <img :src="activePost.image" class="w-full aspect-video rounded-3xl object-cover shadow-2xl">
+                            <div class="text-lg text-gray-600 leading-[1.8] space-y-8 text-justify font-light">
+                                <p class="first-letter:text-5xl first-letter:font-bold first-letter:text-brand first-letter:mr-3 first-letter:float-left">Eurasia Tours</p>
+                                <p>{{ activePost.desc }}</p>
+                                <p>Nous détenons une licence de l'Office du Tourisme et sommes assurés par la compagnie GROUPAMA (n° de police N'AA145293). Depuis 2000, nous nous engageons à offrir aux voyageurs chinois et internationaux des expériences inoubliables en Europe, en Amérique du Nord, en Asie et en Afrique.</p>
+                                <blockquote class="border-l-8 border-brand pl-8 py-4 bg-gray-50 italic text-2xl text-gray-800 rounded-r-2xl font-serif">“Le voyage n'est pas fait pour échapper à la vie, mais pour que la vie ne nous échappe pas.”</blockquote>
+                                <p>En 2024, Eurasia Tours a reçu un investissement stratégique du groupe international GTT, devenant ainsi sa première filiale européenne. GTT, en tant que plus grand consolidateur de gros en Amérique du Nord, réalise un chiffre d'affaires annuel de plus de 2 milliards de dollars. Cette croissance nous permettra de connecter davantage de voyageurs aux expériences uniques proposées par Eurasia Tours.</p>
+                            </div>
+
+                            <div class="lg:hidden pt-12 border-t border-gray-100">
+                                <h4 class="text-xl font-bold border-b-4 border-brand inline-block pb-1 italic mb-6">Circuit Recommandé</h4>
+                                <div class="bg-white rounded-[32px] overflow-hidden shadow-xl border border-red-50 mb-8 group">
+                                    <img :src="activePost.route.image" class="w-full h-48 object-cover">
+                                    <div class="p-6 space-y-4">
+                                        <h5 class="text-xl font-bold text-gray-900">{{ activePost.route.name }}</h5>
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-2xl font-black text-brand">{{ activePost.route.price }}</span>
+                                            <a :href="activePost.route.url" class="w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center shadow-lg"><i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:block w-[400px] bg-gray-50/50 border-l border-gray-100 p-12 overflow-y-auto">
+                        <div class="sticky top-0 space-y-8">
+                            <h4 class="text-xl font-bold border-b-4 border-brand inline-block pb-2 italic uppercase tracking-widest">Circuit Recommandé</h4>
+                            <div class="bg-white rounded-[32px] overflow-hidden shadow-2xl border border-red-100 group">
+                                <div class="relative h-48 overflow-hidden"><img :src="activePost.route.image" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></div>
+                                <div class="p-8 space-y-4 text-left">
+                                    <h5 class="text-2xl font-bold text-gray-900 leading-tight">{{ activePost.route.name }}</h5>
+                                    <div class="pt-6 border-t border-gray-100 flex items-center justify-between">
+                                        <span class="text-2xl font-black text-brand">{{ activePost.route.price }}</span>
+                                        <a :href="activePost.route.url" class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center hover:scale-110 transition shadow-lg"><i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </transition>
     </main>
 
     <footer class="bg-gray-900 text-gray-400 pt-20 pb-10 border-t-8 border-brand">
@@ -294,14 +339,14 @@
 </div>
 
 <script>
-    const { createApp, ref, onMounted } = Vue;
+    const { createApp, ref } = Vue;
     createApp({
         setup() {
+            // Header Logic (Updated to match Index FR)
             const isDestDropdownOpen = ref(false);
             const isLangDropdownOpen = ref(false);
             const isMobileMenuOpen = ref(false);
-            const currentLang = ref('Français'); 
-            const isLoading = ref(true);
+            const currentLang = ref('Français'); // 设为法语
 
             const switchLang = (lang) => {
                 const urlMap = {
@@ -315,10 +360,12 @@
                 }
             };
 
+            // Footer & Page Specific Logic
             const isWechatQR = ref(false);
             const isFacebookQR = ref(false);
+            const activePost = ref(null);
             
-            // 严格还原最初代码中的导航数据（包括原有拼写）
+            // 导航数据 - 采用 Index FR 的结构，并将高亮 (current: true) 移至 "Blog"
             const navLinks = [
                 { name: 'Accueil', url: 'index-fr.html' },
                 { 
@@ -344,28 +391,67 @@
                 { name: 'Blog', url: 'blog-fr.html', current: true }
             ];
 
-            const blogPosts = ref([]);
-
-            onMounted(async () => {
-                try {
-                    const response = await fetch('blog-data-fr.json');
-                    if (response.ok) {
-                        blogPosts.value = await response.json();
-                    } else {
-                        console.error('Erreur HTTP:', response.status);
-                    }
-                } catch (error) {
-                    console.error('Erreur de chargement du JSON:', error);
-                } finally {
-                    isLoading.value = false;
+            // 博客数据 - 翻译为法语
+            const blogPosts = ref([
+                { 
+                    title: "Les plus beaux couchers de soleil à Paris", 
+                    desc: "Évitez la foule et découvrez ce banc caché sur les rives de la Seine. En tant que membre de l'APST, Eurasia Tours bénéficie du soutien de professionnels du secteur et de la confiance de nos clients.", 
+                    image: "https://www.eurasia-tours.fr/static/aboutus2/images/3.jpg", 
+                    topic: "Guide de Destination", 
+                    likes: "1.2k", 
+                    route: { name: "France Romantique · 8 Jours", image: "https://www.eurasia-tours.fr/static/aboutus2/images/3.jpg", price: "€ 1 899", url: "destination product france switzerland italy 10 days.html" } 
+                },
+                { 
+                    title: "Guide Global du Voyage d'Affaires 2026", 
+                    desc: "Explorer l'amélioration des services aériens transfrontaliers après un investissement stratégique. Grâce à notre partenariat avec le groupe GTT, Eurasia Tours étend sa présence sur le marché américain.", 
+                    image: "https://www.eurasia-tours.fr/static/aboutus2/images/4.jpg", 
+                    topic: "Expansion Stratégique", 
+                    likes: "856", 
+                    route: { name: "Élite Affaires · Offre Spéciale", image: "https://www.eurasia-tours.fr/static/aboutus2/images/4.jpg", price: "€ 2 599", url: "tickets FR.html" } 
+                },
+                { 
+                    title: "Voyage Culturel : Sur la Route de la Soie", 
+                    desc: "De Xi'an à l'Asie centrale, ressentez le pouls d'une civilisation millénaire. Nos circuits en Chine incluent Pékin, Xi'an, Guilin, Shanghai et des voyages approfondis au Yunnan, Tibet, etc.", 
+                    image: "https://www.eurasia-tours.fr/static/aboutus2/images/5.jpg", 
+                    topic: "Échange Culturel", 
+                    likes: "2.4k", 
+                    route: { name: "Route de la Soie · Exploration Profonde", image: "https://www.eurasia-tours.fr/static/aboutus2/images/5.jpg", price: "€ 3 199", url: "destination product chine imperiale.html" } 
+                },
+                { 
+                    title: "Road Trip Europe : Traversée des Alpes", 
+                    desc: "Plus qu'une destination, c'est le paysage en chemin qui compte. Explorez l'Europe, l'Asie et l'Afrique du Nord avec nos services allant du tourisme sportif aux colonies de vacances.", 
+                    image: "https://www.eurasia-tours.fr/static/aboutus2/images/6.jpg", 
+                    topic: "Voyage Profond", 
+                    likes: "1.1k", 
+                    route: { name: "Tour des Alpes · Circuit en Boucle", image: "https://www.eurasia-tours.fr/static/aboutus2/images/6.jpg", price: "€ 2 799", url: "custom FR.html" } 
+                },
+                { 
+                    title: "Exploration Gastronomique en Asie", 
+                    desc: "Du Pho de Hanoi au Hotpot de Chengdu, un voyage pour vos papilles. Depuis sa création, Eurasia Tours a établi un réseau de partenaires hôteliers et aériens pour assurer un voyage sans encombre.", 
+                    image: "https://www.eurasia-tours.fr/static/aboutus2/images/7.jpg", 
+                    topic: "Expérience Locale", 
+                    likes: "943", 
+                    route: { name: "Saveurs d'Asie · 10 Jours", image: "https://www.eurasia-tours.fr/static/aboutus2/images/7.jpg", price: "€ 1 699", url: "destination product chine imperiale.html" } 
+                },
+                { 
+                    title: "Voyage d'Étude : Au cœur des Musées", 
+                    desc: "Visites approfondies des meilleures galeries d'art européennes maintenant disponibles. Nous proposons des services allant du voyage éducatif aux camps saisonniers.", 
+                    image: "https://www.eurasia-tours.fr/assets/2-GO12BKkz.jpg", 
+                    topic: "Voyage Éducatif", 
+                    likes: "3.1k", 
+                    route: { name: "Lumière de l'Art · Camp d'Étude", image: "https://www.eurasia-tours.fr/assets/2-GO12BKkz.jpg", price: "€ 2 299", url: "destination product france switzerland italy 10 days.html" } 
                 }
-            });
+            ]);
 
+            const openPost = (post) => { activePost.value = post; document.body.style.overflow = 'hidden'; };
             return { 
+                // Header exports
                 isDestDropdownOpen, isLangDropdownOpen, isMobileMenuOpen, currentLang, switchLang, navLinks,
-                isWechatQR, isFacebookQR, blogPosts, isLoading
+                // Page exports
+                isWechatQR, isFacebookQR, blogPosts, activePost, openPost 
             }
-        }
+        },
+        watch: { activePost(val) { if (!val) document.body.style.overflow = ''; } }
     }).mount('#app');
 </script>
 </body>

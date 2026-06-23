@@ -1,0 +1,47 @@
+[
+  {
+    "id": "voyage-chine-sans-visa-2026",
+    "title": "Voyager en Chine sans visa en 2026 : Le guide complet pour les Français",
+    "desc": "Découvrez les conditions pour profiter des 15 jours sans visa et pourquoi un voyage organisé francophone est la meilleure option pour votre premier séjour.",
+    "image": "images/chine-imperiale/header.jpg",
+    "topic": "Conseils Pratiques",
+    "likes": "Nouveau",
+    "link": "article/blog-voyage-chine-sans-visa-2026.html"
+  },
+  {
+    "id": "premier-voyage-chine-itineraire",
+    "title": "Premier voyage en Chine : L'itinéraire classique incontournable de 2 semaines",
+    "desc": "Pourquoi Pékin, Xi'an, Guilin et Shanghai sont les étapes obligatoires pour les premiers voyageurs. Découvrez notre grand classique avec l'expérience du TGV chinois.",
+    "image": "images/les-couleurs-du-yunnan/jour-02.jpg",
+    "topic": "Guide de Destination",
+    "likes": "Nouveau",
+    "link": "article/blog-premier-voyage-chine-itineraire.html"
+  },
+  {
+    "id": "rizieres-terrasses-yuanyang",
+    "title": "Les rizières en terrasses de Yuanyang : Quand partir et que voir au Yunnan ?",
+    "desc": "Le guide ultime pour les amateurs de photographie et de randonnée. Découvrez le meilleur moment pour admirer ce chef-d'œuvre des Hani dans un Yunnan hors des sentiers battus.",
+    "image": "images/les-couleurs-du-yunnan/header.jpg",
+    "topic": "Nature & Photographie",
+    "likes": "Nouveau",
+    "link": "article/blog-rizieres-terrasses-yuanyang.html"
+  },
+  {
+    "id": "route-du-the-yunnan",
+    "title": "Sur la Route du Thé et du Cheval : Découvrir la Chine authentique et ses minorités",
+    "desc": "Partez en immersion à la rencontre des Tibétains et des minorités locales (Hani, Bai, Naxi). Explorez l'artisanat traditionnel, de Shaxi jusqu'au majestueux plateau de Shangri-La.",
+    "image": "images/les-couleurs-du-yunnan/jour-11.jpg",
+    "topic": "Culture & Immersion",
+    "likes": "Nouveau",
+    "link": "article/blog-route-du-the-yunnan.html"
+  },
+  {
+    "id": "temoignage-voyage-scolaire-chine",
+    "title": "Retour d'expérience : Un voyage scolaire inoubliable en Chine",
+    "desc": "Découvrez le témoignage du Collège Notre Dame suite à leur voyage scolaire en Chine organisé par Eurasia Tours : Grande Muraille, Pandas, Maglev et immersion culturelle.",
+    "image": "images/blog/school-trip.jpg",
+    "topic": "Témoignage Client",
+    "likes": "Nouveau",
+    "link": "article/blog-temoignage-voyage-scolaire-chine.html"
+  }
+]
