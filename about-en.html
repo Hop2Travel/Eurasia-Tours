@@ -14,6 +14,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Eurasia Tours</title>
     
+    <meta name="description" content="Eurasia Tours was established in 2000 in Paris. As a professional travel agency and GTT subsidiary, we offer bespoke journeys, business travel, and global services across Europe and Asia.">
+    <link rel="canonical" href="https://www.eurasia-tours.fr/about-en.html">
+    
+    <link rel="alternate" hreflang="zh-CN" href="https://www.eurasia-tours.fr/about-cn.html" />
+    <link rel="alternate" hreflang="en" href="https://www.eurasia-tours.fr/about-en.html" />
+    <link rel="alternate" hreflang="fr" href="https://www.eurasia-tours.fr/about-fr.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.eurasia-tours.fr/about-en.html" />
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us - Eurasia Tours">
+    <meta property="og:description" content="Eurasia Tours was established in 2000 in Paris. As a professional travel agency and GTT subsidiary, we offer bespoke journeys, business travel, and global services.">
+    <meta property="og:image" content="https://www.eurasia-tours.fr/assets/banner-B36M69Yx.jpg">
+    <meta property="og:url" content="https://www.eurasia-tours.fr/about-en.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Eurasia Tours",
+      "image": "https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg",
+      "description": "Since 2000, creating bespoke journeys that bridge cultures. Your trusted partner for authentic travel experiences across Europe and Asia.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30 Rue Ernest Renan",
+        "addressLocality": "Paris",
+        "postalCode": "75015",
+        "addressCountry": "FR"
+      },
+      "telephone": "+33 1 56 69 12 80",
+      "url": "https://www.eurasia-tours.fr/"
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,7 +81,6 @@
         .mobile-menu-enter-active, .mobile-menu-leave-active { transition: all 0.3s ease; }
         .mobile-menu-enter-from, .mobile-menu-leave-to { opacity: 0; transform: translateY(-10px); }
 
-        /* Specific styles for About page images */
         .img-container {
             display: flex;
             align-items: center;
@@ -128,12 +160,19 @@
                             <div v-if="isLangDropdownOpen" 
                                  class="absolute top-[80%] right-0 w-[160px] bg-white shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-sm border-t-2 border-brand p-1">
                                 <ul class="space-y-0.5">
-                                    <li v-for="lang in ['中文', 'English', 'Française']" :key="lang">
-                                        <a href="#" @click.prevent="switchLang(lang)" 
-                                           class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all"
-                                           :class="{'text-brand bg-red-50/50': currentLang === lang}">
-                                            {{ lang }}
-                                            <i v-if="currentLang === lang" class="fas fa-check text-[10px]"></i>
+                                    <li>
+                                        <a href="about-cn.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === '中文'}">
+                                            中文 <i v-if="currentLang === '中文'" class="fas fa-check text-[10px]"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="about-en.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === 'English'}">
+                                            English <i v-if="currentLang === 'English'" class="fas fa-check text-[10px]"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="about-fr.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === 'Française'}">
+                                            Française <i v-if="currentLang === 'Française'" class="fas fa-check text-[10px]"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -158,11 +197,13 @@
                     <div class="flex flex-col items-center gap-4 w-full">
                         <span class="text-xs text-gray-400 uppercase tracking-widest">Select Language</span>
                         <div class="flex gap-3">
-                            <button @click="switchLang('中文')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === '中文' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">中文</button>
-                            <button @click="switchLang('English')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'English' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">EN</button>
-                            <button @click="switchLang('Française')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'Française' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">FR</button>
+                            <a href="about-cn.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === '中文' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">中文</a>
+                            <a href="about-en.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'English' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">EN</a>
+                            <a href="about-fr.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'Française' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">FR</a>
                         </div>
                     </div>
+                    
+                    <a href="contact-en.html" class="bg-brand text-white px-10 py-3 rounded-full font-bold shadow-lg mt-4" @click="isMobileMenuOpen = false">CONSULT NOW</a>
                 </div>
             </nav>
         </transition>
@@ -240,7 +281,7 @@
                         <div class="aspect-video img-container rounded-lg shadow-md cover-img overflow-hidden">
                             <img src="https://www.eurasia-tours.fr/static/aboutus2/images/3.jpg" class="group-hover:scale-110 transition duration-700">
                         </div>
-                        <h4 class="font-serif font-bold text-lg text-gray-900">Diverse Services</h4>
+                        <h3 class="font-serif font-bold text-lg text-gray-900">Diverse Services</h3>
                         <p class="text-sm text-gray-500 leading-relaxed font-light">We organize regular and special group tours for French tourists to Asian destinations like Japan, Vietnam, Cambodia, and Uzbekistan. We focus on culture, business, cycling, hiking, and student exchange programs. Our China routes include icons like Beijing and Shanghai, as well as in-depth tours of Yunnan and the Silk Road.</p>
                     </div>
                     
@@ -248,7 +289,7 @@
                         <div class="aspect-video img-container rounded-lg shadow-md cover-img overflow-hidden">
                             <img src="https://www.eurasia-tours.fr/static/aboutus2/images/4.jpg" class="group-hover:scale-110 transition duration-700">
                         </div>
-                        <h4 class="font-serif font-bold text-lg text-gray-900">Strategic Expansion</h4>
+                        <h3 class="font-serif font-bold text-lg text-gray-900">Strategic Expansion</h3>
                         <p class="text-sm text-gray-500 leading-relaxed font-light">In 2024, Eurasia Tours received strategic investment from GTT International Travel Group, becoming its first European subsidiary. Founded in 1984 in Dallas, Texas, GTT operates over 45 branches in major US cities with 600+ professionals. As North America's largest wholesale consolidator, GTT holds 35% market share with annual sales exceeding $2 billion.</p>
                     </div>
 
@@ -256,7 +297,7 @@
                         <div class="aspect-video img-container rounded-lg shadow-md cover-img overflow-hidden">
                             <img src="https://www.eurasia-tours.fr/static/aboutus2/images/5.jpg" class="group-hover:scale-110 transition duration-700">
                         </div>
-                        <h4 class="font-serif font-bold text-lg text-gray-900">US Market Growth</h4>
+                        <h3 class="font-serif font-bold text-lg text-gray-900">US Market Growth</h3>
                         <p class="text-sm text-gray-500 leading-relaxed font-light">With our strategic partnership with GTT International, Eurasia Tours is well-positioned for expansion in the US market. Leveraging GTT's extensive network, we aim to offer exceptional travel services to a broader North American audience, connecting more travelers with our unique experiences and enhancing our global influence.</p>
                     </div>
 
@@ -264,7 +305,7 @@
                         <div class="aspect-video img-container rounded-lg shadow-md cover-img overflow-hidden">
                             <img src="https://www.eurasia-tours.fr/static/aboutus2/images/6.jpg" class="group-hover:scale-110 transition duration-700">
                         </div>
-                        <h4 class="font-serif font-bold text-lg text-gray-900">Global Services</h4>
+                        <h3 class="font-serif font-bold text-lg text-gray-900">Global Services</h3>
                         <p class="text-sm text-gray-500 leading-relaxed font-light">We provide comprehensive services for both outbound and inbound tourists. Explore destinations across Asia, North America, Europe, and North Africa through our bespoke sightseeing and business tours. Starting late 2024, we will launch online booking for flights and cruises, further enhancing our seamless global travel solutions.</p>
                     </div>
 
@@ -272,7 +313,7 @@
                         <div class="aspect-video img-container rounded-lg shadow-md cover-img overflow-hidden">
                             <img src="https://www.eurasia-tours.fr/static/aboutus2/images/7.jpg" class="group-hover:scale-110 transition duration-700">
                         </div>
-                        <h4 class="font-serif font-bold text-lg text-gray-900">Trusted Partners</h4>
+                        <h3 class="font-serif font-bold text-lg text-gray-900">Trusted Partners</h3>
                         <p class="text-sm text-gray-500 leading-relaxed font-light">Since inception, Eurasia Tours has built a network of partners across hotels, ticketing, cruises, and transportation. These partnerships allow us to offer high-quality accommodation, reliable ticketing, excellent cruise lines, and convenient car rentals, ensuring every traveler's journey is seamless and enjoyable.</p>
                     </div>
                 </div>
@@ -281,14 +322,14 @@
 
         <section class="py-24 bg-white border-t border-gray-100">
             <div class="container mx-auto px-6 lg:px-12 max-w-7xl text-center">
-                <h2 class="text-2xl font-serif font-bold italic tracking-wider text-gray-400 mb-12">Our Global Partners</h2>
+                <h2 class="text-2xl font-serif font-bold italic tracking-wider text-gray-400 mb-12 uppercase">Our Global Partners</h2>
                 <div class="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-10 gap-4 mb-8">
-                    <div v-for="img in partnerRow1" class="aspect-video img-container p-3 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                    <div v-for="img in partnerRow1" :key="img" class="aspect-video img-container p-3 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
                         <img :src="img">
                     </div>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-10 gap-4">
-                    <div v-for="img in partnerRow2" class="aspect-video img-container p-3 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
+                    <div v-for="img in partnerRow2" :key="img" class="aspect-video img-container p-3 border border-gray-100 rounded-lg hover:shadow-lg transition duration-300">
                         <img :src="img">
                     </div>
                 </div>
@@ -403,7 +444,7 @@
                 },
                 { name: 'Tailor-made', url: 'custom-en.html' },
                 { name: 'Flight Services', url: 'flight-tickets-en.html' },
-                { name: 'About Us', url: 'about-en.html' },
+                { name: 'About Us', url: 'about-en.html', current: true },
                 { name: 'Contact Us', url: 'contact-en.html' },
                 { name: 'Blog', url: 'blog-en.html' }
             ];
@@ -434,25 +475,32 @@
                 'https://www.eurasia-tours.fr/static/aboutus2/images/china-eastern.png'
             ];
 
-            const switchLang = (lang) => {
-                const urlMap = {
-                    '中文': 'about-cn.html',
-                    'English': 'about-en.html',
-                    'Française': 'about-fr.html'
-                };
-                const targetUrl = urlMap[lang];
-                if (targetUrl) {
-                    window.location.href = targetUrl;
-                }
-            };
-
             return { 
                 isMobileMenuOpen,
                 isDestDropdownOpen, isLangDropdownOpen, isWechatQR, isFacebookQR, isInstagramQR,
-                currentLang, navLinks, partnerRow1, partnerRow2, switchLang
+                currentLang, navLinks, partnerRow1, partnerRow2
             }
         }
     }).mount('#app');
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://www.eurasia-tours.fr/index-en.html"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "About Us",
+    "item": "https://www.eurasia-tours.fr/about-en.html"
+  }]
+}
+</script>
+
 </body>
 </html>

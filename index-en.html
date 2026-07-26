@@ -12,7 +12,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eurasia Tours - Official Website</title>
+    <title>Eurasia Tours - Timeless Journeys to Europe & Asia</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -115,12 +115,19 @@
                             <div v-if="isLangDropdownOpen" 
                                  class="absolute top-[80%] right-0 w-[160px] bg-white shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-sm border-t-2 border-brand p-1">
                                 <ul class="space-y-0.5">
-                                    <li v-for="lang in ['中文', 'English', 'Française']" :key="lang">
-                                        <a href="#" @click.prevent="switchLang(lang)" 
-                                           class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all"
-                                           :class="{'text-brand bg-red-50/50': currentLang === lang}">
-                                            {{ lang }}
-                                            <i v-if="currentLang === lang" class="fas fa-check text-[10px]"></i>
+                                    <li>
+                                        <a href="index-cn.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === '中文'}">
+                                            中文 <i v-if="currentLang === '中文'" class="fas fa-check text-[10px]"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-en.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === 'English'}">
+                                            English <i v-if="currentLang === 'English'" class="fas fa-check text-[10px]"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="index-fr.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === 'Française'}">
+                                            Française <i v-if="currentLang === 'Française'" class="fas fa-check text-[10px]"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -145,9 +152,9 @@
                     <div class="flex flex-col items-center gap-4 w-full">
                         <span class="text-xs text-gray-400 uppercase tracking-widest">Select Language</span>
                         <div class="flex gap-3">
-                            <button @click="switchLang('中文')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === '中文' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">中文</button>
-                            <button @click="switchLang('English')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'English' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">EN</button>
-                            <button @click="switchLang('Française')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'Française' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">FR</button>
+                            <a href="index-cn.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === '中文' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">中文</a>
+                            <a href="index-en.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'English' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">EN</a>
+                            <a href="index-fr.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'Française' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">FR</a>
                         </div>
                     </div>
                 </div>
@@ -224,14 +231,16 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div v-for="tour in tours" :key="tour.title" class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col overflow-hidden">
-                        <div class="relative aspect-[4/3] overflow-hidden cursor-pointer" @click="goToProduct(tour.url)">
+                        <a :href="tour.url" class="relative block aspect-[4/3] overflow-hidden cursor-pointer">
                             <img :src="tour.image" :alt="tour.title" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 ease-out">
                             <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition"></div>
                             <div class="absolute top-4 right-4 bg-white/95 backdrop-blur text-gray-900 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-sm shadow-sm">{{ tour.days }} Days</div>
-                        </div>
+                        </a>
                         <div class="p-8 flex-1 flex flex-col">
                             <div class="mb-6">
-                                <h3 class="text-xl font-serif font-bold mb-3 text-gray-900 group-hover:text-brand transition-colors cursor-pointer leading-snug" @click="goToProduct(tour.url)">{{ tour.title }}</h3>
+                                <a :href="tour.url" class="block">
+                                    <h3 class="text-xl font-serif font-bold mb-3 text-gray-900 group-hover:text-brand transition-colors cursor-pointer leading-snug">{{ tour.title }}</h3>
+                                </a>
                                 <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">{{ tour.desc }}</p>
                             </div>
                             <div class="mt-auto flex items-end justify-between border-t border-gray-100 pt-6">
@@ -496,28 +505,12 @@
                 }
             };
 
-            const goToProduct = (url) => {
-                window.location.href = url;
-            };
-
-            const switchLang = (lang) => {
-                const urlMap = {
-                    '中文': 'index-cn.html',
-                    'English': 'index-en.html',
-                    'Française': 'index-fr.html'
-                };
-                const targetUrl = urlMap[lang];
-                if (targetUrl) {
-                    window.location.href = targetUrl;
-                }
-            };
-
             return { 
                 isMobileMenuOpen,
                 isDestDropdownOpen, isLangDropdownOpen, isWechatQR, isFacebookQR, isInstagramQR, isBrochureModalOpen, 
                 activePdfUrl, activeTitle, currentLang,
                 currentHeroIndex, heroImages, nextHero, prevHero, navLinks, tours, values, 
-                openBrochure, goToProduct, switchLang
+                openBrochure
             }
         }
     }).mount('#app');
