@@ -14,6 +14,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>At the Heart of Eternal Korea 14 Days - Eurasia Tours</title>
     
+    <meta name="description" content="Discover the Heart of Eternal Korea on this 14-day tour. From Seoul to Busan, explore cultural treasures, sacred mountains, and traditional Hanok villages.">
+    <link rel="canonical" href="https://www.eurasia-tours.fr/at-the-heart-of-eternal-korea-14-days-en.html">
+
+    <link rel="alternate" hreflang="zh-CN" href="https://www.eurasia-tours.fr/destination-main-cn.html" />
+    <link rel="alternate" hreflang="en" href="https://www.eurasia-tours.fr/at-the-heart-of-eternal-korea-14-days-en.html" />
+    <link rel="alternate" hreflang="fr" href="https://www.eurasia-tours.fr/au-coeur-de-la-coree-eternelle.html" />
+    <link rel="alternate" hreflang="x-default" href="https://www.eurasia-tours.fr/at-the-heart-of-eternal-korea-14-days-en.html" />
+
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="At the Heart of Eternal Korea 14 Days - Eurasia Tours">
+    <meta property="og:description" content="Discover the Heart of Eternal Korea on this 14-day tour. From Seoul to Busan, explore cultural treasures, sacred mountains, and traditional Hanok villages.">
+    <meta property="og:image" content="https://www.eurasia-tours.fr/images/au-coeur-de-la-coree-eternelle/header.jpg">
+    <meta property="og:url" content="https://www.eurasia-tours.fr/at-the-heart-of-eternal-korea-14-days-en.html">
+    <meta property="og:site_name" content="Eurasia Tours">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "At the Heart of Eternal Korea 14 Days",
+      "description": "From the bustle of Seoul to the millennial temples of Gyeongju, passing through traditional Hanok villages and the coastal landscapes of Busan.",
+      "image": "https://www.eurasia-tours.fr/images/au-coeur-de-la-coree-eternelle/header.jpg",
+      "touristType": "Leisure",
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Seoul" },
+          { "@type": "ListItem", "position": 2, "name": "Gongju & Daejeon" },
+          { "@type": "ListItem", "position": 3, "name": "Jeonju" },
+          { "@type": "ListItem", "position": 4, "name": "Suncheon" },
+          { "@type": "ListItem", "position": 5, "name": "Busan" },
+          { "@type": "ListItem", "position": 6, "name": "Gyeongju" },
+          { "@type": "ListItem", "position": 7, "name": "Sokcho & Mt. Seorak" }
+        ]
+      },
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Eurasia Tours",
+        "url": "https://www.eurasia-tours.fr/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "2860",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.eurasia-tours.fr/at-the-heart-of-eternal-korea-14-days-en.html"
+      }
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -160,12 +210,19 @@
                             <div v-if="isLangDropdownOpen" 
                                  class="absolute top-[80%] right-0 w-[160px] bg-white shadow-[0_10px_40px_rgba(0,0,0,0.1)] rounded-sm border-t-2 border-brand p-1">
                                 <ul class="space-y-0.5">
-                                    <li v-for="lang in ['中文', 'English', 'Française']" :key="lang">
-                                        <a href="#" @click.prevent="switchLang(lang)" 
-                                           class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all"
-                                           :class="{'text-brand bg-red-50/50': currentLang === lang}">
-                                            {{ lang }}
-                                            <i v-if="currentLang === lang" class="fas fa-check text-[10px]"></i>
+                                    <li>
+                                        <a href="destination-main-cn.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === '中文'}">
+                                            中文 <i v-if="currentLang === '中文'" class="fas fa-check text-[10px]"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="at-the-heart-of-eternal-korea-14-days-en.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === 'English'}">
+                                            English <i v-if="currentLang === 'English'" class="fas fa-check text-[10px]"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="au-coeur-de-la-coree-eternelle.html" class="flex items-center justify-between px-4 py-2.5 text-xs font-medium text-gray-600 hover:bg-gray-50 hover:text-brand transition-all" :class="{'text-brand bg-red-50/50': currentLang === 'Française'}">
+                                            Française <i v-if="currentLang === 'Française'" class="fas fa-check text-[10px]"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -190,9 +247,9 @@
                     <div class="flex flex-col items-center gap-4 w-full">
                         <span class="text-xs text-gray-400 uppercase tracking-widest">Select Language</span>
                         <div class="flex gap-3">
-                            <button @click="switchLang('中文')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === '中文' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">中文</button>
-                            <button @click="switchLang('English')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'English' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">EN</button>
-                            <button @click="switchLang('Française')" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'Française' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">FR</button>
+                            <a href="destination-main-cn.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === '中文' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">中文</a>
+                            <a href="at-the-heart-of-eternal-korea-14-days-en.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'English' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">EN</a>
+                            <a href="au-coeur-de-la-coree-eternelle.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'Française' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">FR</a>
                         </div>
                     </div>
                 </div>
@@ -653,7 +710,7 @@
 
     createApp({
         setup() {
-            // Header Logic (From destination-austria-en)
+            // Header Logic
             const isMobileMenuOpen = ref(false);
             const isDestDropdownOpen = ref(false);
             const isLangDropdownOpen = ref(false);
@@ -661,16 +718,6 @@
             const isFacebookQR = ref(false);
             const isInstagramQR = ref(false);
             const currentLang = ref('English');
-
-            const switchLang = (lang) => {
-                const urlMap = {
-                    '中文': 'destination-main-cn.html',
-                    'English': 'at-the-heart-of-eternal-korea-14-days-en.html',
-                    'Française': 'au-coeur-de-la-coree-eternelle.html'
-                };
-                const targetUrl = urlMap[lang];
-                if (targetUrl) window.location.href = targetUrl;
-            };
             
             const navLinks = [
                 { name: 'Home', url: 'index-en.html' },
@@ -1048,7 +1095,7 @@
             });
 
             return {
-                isMobileMenuOpen, isDestDropdownOpen, isLangDropdownOpen, currentLang, switchLang,
+                isMobileMenuOpen, isDestDropdownOpen, isLangDropdownOpen, currentLang,
                 isWechatQR, isFacebookQR, isInstagramQR,
                 navLinks, subMenu, activeSection, 
                 heroImages, currentHeroIndex, nextSlide,

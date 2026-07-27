@@ -30,8 +30,27 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="关于我们 - 欧美亚旅游 Eurasia Tours">
     <meta property="og:description" content="20年专注欧洲旅游，法国旅游局官方授权，为您提供最专业的欧洲出行解决方案。">
-    <meta property="og:image" content="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg">
+    <meta property="og:image" content="https://www.eurasia-tours.fr/assets/banner-B36M69Yx.jpg">
     <meta property="og:url" content="https://www.eurasia-tours.fr/about-cn.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Eurasia Tours 欧美亚旅游",
+      "image": "https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg",
+      "description": "自2000年起，致力为全球旅客提供最纯正的欧洲深度旅行体验。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "30 Rue Ernest Renan",
+        "addressLocality": "Paris",
+        "postalCode": "75015",
+        "addressCountry": "FR"
+      },
+      "telephone": "+33 1 56 69 12 80",
+      "url": "https://www.eurasia-tours.fr/"
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
@@ -86,11 +105,11 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center justify-between py-2 lg:h-24">
                 <div class="flex items-center justify-between w-full lg:w-auto">
-                    <a href="index-cn.html" class="flex items-center group">
+                    <a href="index-cn.html" class="flex items-center group" title="返回首页">
                         <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" 
-                             alt="欧美亚旅游 Eurasia Tours Logo" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
+                             alt="Eurasia Tours 欧美亚旅游 - 巴黎旅行社 Logo" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
                     </a>
-                    <button class="lg:hidden relative z-50 text-2xl p-2 text-gray-700 focus:outline-none cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen">
+                    <button class="lg:hidden relative z-50 text-2xl p-2 text-gray-700 focus:outline-none cursor-pointer" @click="isMobileMenuOpen = !isMobileMenuOpen" aria-label="切换菜单">
                         <i class="fas" :class="isMobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
                     </button>
                 </div>
@@ -130,15 +149,27 @@
 
                     <div class="relative group py-8 pl-8 ml-2" @mouseenter="isLangDropdownOpen = true" @mouseleave="isLangDropdownOpen = false">
                         <span class="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-px bg-gray-200"></span>
-                        <a href="#" class="nav-link-spacing relative py-3 px-1 text-sm xl:text-[15px] font-bold uppercase text-gray-700 hover:text-brand transition-all flex items-center gap-2">
+                        <a href="#" class="nav-link-spacing relative py-3 px-1 text-sm xl:text-[15px] font-bold uppercase text-gray-700 hover:text-brand transition-all flex items-center gap-2" aria-label="选择语言">
                             <i class="fas fa-globe text-lg"></i> {{ currentLang }} <i class="fas fa-angle-down text-xs transition-transform duration-300" :class="{'rotate-180': isLangDropdownOpen}"></i>
                         </a>
                         <transition name="dropdown">
                             <div v-if="isLangDropdownOpen" class="absolute top-full right-0 w-[140px] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-xl border border-gray-100 p-2 overflow-hidden mt-[-5px]">
                                 <ul class="space-y-1">
-                                    <li><a href="#" @click.prevent="switchLang('中文')" class="flex items-center justify-between px-4 py-2 text-sm font-medium transition-all rounded-lg" :class="currentLang === '中文' ? 'bg-red-50 text-brand' : 'text-gray-700 hover:bg-red-50 hover:text-brand'">中文 <i v-if="currentLang === '中文'" class="fas fa-check text-xs"></i></a></li>
-                                    <li><a href="#" @click.prevent="switchLang('English')" class="flex items-center justify-between px-4 py-2 text-sm font-medium transition-all rounded-lg" :class="currentLang === 'English' ? 'bg-red-50 text-brand' : 'text-gray-700 hover:bg-red-50 hover:text-brand'">English <i v-if="currentLang === 'English'" class="fas fa-check text-xs"></i></a></li>
-                                    <li><a href="#" @click.prevent="switchLang('Française')" class="flex items-center justify-between px-4 py-2 text-sm font-medium transition-all rounded-lg" :class="currentLang === 'Française' ? 'bg-red-50 text-brand' : 'text-gray-700 hover:bg-red-50 hover:text-brand'">Française <i v-if="currentLang === 'Française'" class="fas fa-check text-xs"></i></a></li>
+                                    <li>
+                                        <a href="about-cn.html" class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all" :class="{'bg-red-50 text-brand': currentLang === '中文'}">
+                                            中文 <i v-if="currentLang === '中文'" class="fas fa-check text-xs"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="about-en.html" class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all" :class="{'bg-red-50 text-brand': currentLang === 'English'}">
+                                            English <i v-if="currentLang === 'English'" class="fas fa-check text-xs"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="about-fr.html" class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all" :class="{'bg-red-50 text-brand': currentLang === 'Française'}">
+                                            Française <i v-if="currentLang === 'Française'" class="fas fa-check text-xs"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </transition>
@@ -156,12 +187,14 @@
                        @click="isMobileMenuOpen = false">
                        {{ link.name }}
                     </a>
+                    
                     <div class="flex items-center gap-4 mt-2 border-t border-gray-100 pt-6 w-full justify-center flex-wrap px-4">
-                        <button @click="switchLang('中文')" class="px-4 py-1 rounded-full text-sm font-bold transition" :class="currentLang === '中文' ? 'bg-brand text-white' : 'bg-gray-100 text-gray-600'">中文</button>
-                        <button @click="switchLang('English')" class="px-4 py-1 rounded-full text-sm font-bold transition" :class="currentLang === 'English' ? 'bg-brand text-white' : 'bg-gray-100 text-gray-600'">English</button>
-                        <button @click="switchLang('Française')" class="px-4 py-1 rounded-full text-sm font-bold transition" :class="currentLang === 'Française' ? 'bg-brand text-white' : 'bg-gray-100 text-gray-600'">Française</button>
+                        <a href="about-cn.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === '中文' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">中文</a>
+                        <a href="about-en.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'English' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">EN</a>
+                        <a href="about-fr.html" class="px-5 py-2 rounded-full text-xs font-bold transition border" :class="currentLang === 'Française' ? 'bg-brand text-white border-brand' : 'bg-white text-gray-600 border-gray-200'">FR</a>
                     </div>
-                    <a href="contact.html" class="bg-brand text-white px-10 py-3 rounded-full font-bold shadow-lg mt-4" @click="isMobileMenuOpen = false">立即咨询</a>
+
+                    <a href="contact-cn.html" class="bg-brand text-white px-10 py-3 rounded-full font-bold shadow-lg mt-4" @click="isMobileMenuOpen = false">立即咨询</a>
                 </div>
             </nav>
         </transition>
@@ -253,27 +286,27 @@
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
                     <div class="space-y-4">
                         <div class="aspect-video img-container rounded-xl shadow-sm cover-img"><img src="https://www.eurasia-tours.fr/static/aboutus2/images/3.jpg" alt="亚洲文化旅游" loading="lazy"></div>
-                        <h4 class="font-bold text-brand border-b border-red-100 pb-2">多样化的旅游服务</h4>
+                        <h3 class="font-bold text-brand border-b border-red-100 pb-2">多样化的旅游服务</h3>
                         <p class="text-[13px] text-gray-500 leading-relaxed desc-box">我们为法国游客组织定期和特别的团体旅游，目的地涵盖日本、越南、柬埔寨和乌兹别克斯坦等多个亚洲国家。我们专注于文化、商务、骑行、徒步旅行和学生交流活动。</p>
                     </div>
                     <div class="space-y-4">
                         <div class="aspect-video img-container rounded-xl shadow-sm cover-img"><img src="https://www.eurasia-tours.fr/static/aboutus2/images/4.jpg" alt="GTT国际旅行集团战略合作" loading="lazy"></div>
-                        <h4 class="font-bold text-brand border-b border-red-100 pb-2">战略扩展</h4>
+                        <h3 class="font-bold text-brand border-b border-red-100 pb-2">战略扩展</h3>
                         <p class="text-[13px] text-gray-500 leading-relaxed desc-box">在2024年，欧美亚旅游公司获得了GTT国际旅行集团的战略投资，成为其首个欧洲子公司。GTT国际旅行集团是北美最大的批发整合商，年销售额超过20亿美元。</p>
                     </div>
                     <div class="space-y-4">
                         <div class="aspect-video img-container rounded-xl shadow-sm cover-img"><img src="https://www.eurasia-tours.fr/static/aboutus2/images/5.jpg" alt="欧美亚旅游美国市场扩展" loading="lazy"></div>
-                        <h4 class="font-bold text-brand border-b border-red-100 pb-2">在美国市场的增长</h4>
+                        <h3 class="font-bold text-brand border-b border-red-100 pb-2">在美国市场的增长</h3>
                         <p class="text-[13px] text-gray-500 leading-relaxed desc-box">凭借与GTT国际旅行集团的战略合作，欧美亚旅游公司在美国市场的扩展已具备良好基础。旨在为北美更广泛的受众提供卓越的旅游服务。</p>
                     </div>
                     <div class="space-y-4">
                         <div class="aspect-video img-container rounded-xl shadow-sm cover-img"><img src="https://www.eurasia-tours.fr/static/aboutus2/images/6.jpg" alt="全球机票与邮轮服务" loading="lazy"></div>
-                        <h4 class="font-bold text-brand border-b border-red-100 pb-2">全球旅游服务</h4>
+                        <h3 class="font-bold text-brand border-b border-red-100 pb-2">全球旅游服务</h3>
                         <p class="text-[13px] text-gray-500 leading-relaxed desc-box">我们机构为出境和入境游客提供全面服务。从2024年底开始，我们还将提供机票和邮轮的在线预订，进一步提升我们的无缝全球旅游解决方案。</p>
                     </div>
                     <div class="space-y-4">
                         <div class="aspect-video img-container rounded-xl shadow-sm cover-img"><img src="https://www.eurasia-tours.fr/static/aboutus2/images/7.jpg" alt="高端酒店与邮轮合作伙伴" loading="lazy"></div>
-                        <h4 class="font-bold text-brand border-b border-red-100 pb-2">长期稳定的合作伙伴</h4>
+                        <h3 class="font-bold text-brand border-b border-red-100 pb-2">长期稳定的合作伙伴</h3>
                         <p class="text-[13px] text-gray-500 leading-relaxed desc-box">自成立以来，欧美亚旅游公司与酒店、票务、邮轮和交通领域的知名企业建立了合作伙伴网络。确保每位旅行者的旅程无缝愉快。</p>
                     </div>
                 </div>
@@ -301,8 +334,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
                 <div class="space-y-6">
-                    <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" alt="Eurasia Tours Logo" class="h-10 w-auto object-contain opacity-90">
-                    <p class="text-sm leading-relaxed">自2000年起，欧美亚旅游致力为全球旅客提供最纯正的亚洲深度旅行体验。我们不仅是旅行社，更是您探索东方的文化向导。</p>
+                    <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" alt="Eurasia Tours 欧美亚旅游 Logo" class="h-10 w-auto object-contain opacity-90">
+                    <p class="text-sm leading-relaxed">自2000年起，欧美亚旅游致力为全球旅客提供最纯正的欧洲深度旅行体验。我们不仅是旅行社，更是您探索东方的文化向导。</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span class="w-1 h-5 bg-brand"></span> 资质保障</h4>
@@ -316,15 +349,15 @@
                     <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span class="w-1 h-5 bg-brand"></span> 联系我们</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-brand mt-1"></i> 30 Rue Ernest Renan, 75015 Paris</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-brand"></i> 01 56 69 12 80</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-brand"></i> reservation@eurasiatours.fr</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-brand"></i> <a href="tel:0156691280" class="hover:text-white">01 56 69 12 80</a></li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-brand"></i> <a href="mailto:reservation@eurasiatours.fr" class="hover:text-white">reservation@eurasiatours.fr</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span class="w-1 h-5 bg-brand"></span> 关注 & 支付</h4>
                     <div class="flex gap-4 mb-8">
                         <div class="relative group" @mouseenter="isWechatQR = true" @mouseleave="isWechatQR = false">
-                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#07C160] transition"><i class="fab fa-weixin text-white"></i></a>
+                            <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#07C160] transition" aria-label="微信公众号"><i class="fab fa-weixin text-white"></i></a>
                             <transition name="qr-fade">
                                 <div v-if="isWechatQR" class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-white p-2 rounded-lg shadow-2xl z-50 w-32 border border-gray-100">
                                     <img src="https://www.eurasia-tours.fr/assets/wechat-account-VZcww6ek.jpg" alt="WeChat QR" class="w-full h-auto">
@@ -358,9 +391,9 @@
                         </div>
                     </div>
                     <div class="flex gap-4 text-3xl opacity-30">
-                        <i class="fab fa-cc-visa"></i>
-                        <i class="fab fa-cc-mastercard"></i>
-                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-visa" aria-label="Visa"></i>
+                        <i class="fab fa-cc-mastercard" aria-label="Mastercard"></i>
+                        <i class="fab fa-cc-amex" aria-label="Amex"></i>
                     </div>
                 </div>
             </div>
@@ -383,18 +416,6 @@
             const isLangDropdownOpen = ref(false);
             const isMobileMenuOpen = ref(false);
             const currentLang = ref('中文');
-
-            const switchLang = (lang) => {
-                const urlMap = {
-                    '中文': 'about-cn.html',
-                    'English': 'about-en.html',
-                    'Française': 'about-fr.html'
-                };
-                const targetUrl = urlMap[lang];
-                if (targetUrl) {
-                    window.location.href = targetUrl;
-                }
-            };
             
             // Footer Logic
             const isWechatQR = ref(false);
@@ -430,7 +451,7 @@
                 { src: 'atout.jfif', alt: 'Atout France 法国旅游局认证' }
             ];
 
-            // 合作伙伴数据 - 第1行 (转换为对象结构以支持Alt标签)
+            // 合作伙伴数据 - 第1行
             const partnerRow1 = [
                 { url: 'https://www.eurasia-tours.fr/static/aboutus2/images/Four-Seasons-Logo.png', name: '四季酒店 Four Seasons' },
                 { url: 'https://www.eurasia-tours.fr/static/aboutus2/images/Marriott-logo.png', name: '万豪酒店 Marriott' },
@@ -459,8 +480,8 @@
             ];
 
             return { 
-                isDestDropdownOpen, isLangDropdownOpen, isMobileMenuOpen, currentLang, switchLang, navLinks,
-                isWechatQR, isFacebookQR, isInstragramQR,
+                isDestDropdownOpen, isLangDropdownOpen, isMobileMenuOpen, currentLang, navLinks,
+                isWechatQR, isFacebookQR, isInstagramQR,
                 awardsImages, partnerRow1, partnerRow2
             }
         }
