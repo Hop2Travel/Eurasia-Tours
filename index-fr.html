@@ -36,17 +36,17 @@
         .brand { display:block; padding:7px 12px; border-radius:8px; background:rgba(255,253,250,.18); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); box-shadow:0 2px 12px rgba(12,28,29,.08); transition:padding .35s,background .35s,box-shadow .35s,border-radius .35s,backdrop-filter .35s; }
         .brand img { display:block; height:43px; width:auto; }
         .header.scrolled .brand { padding:0; border-radius:0; background:transparent; backdrop-filter:none; -webkit-backdrop-filter:none; box-shadow:none; }
-        .nav { display:flex; align-items:center; gap:27px; }
-        .nav-item { position:relative; padding:36px 0; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; white-space:nowrap; opacity:.82; transition:opacity .25s; }
+        .nav { display:flex; align-self:stretch; align-items:stretch; gap:27px; }
+        .nav-item { position:relative; display:flex; align-items:center; padding:0; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; white-space:nowrap; opacity:.82; transition:opacity .25s; }
         .nav-item:hover { opacity:1; }
-        .nav-item:after { content:''; position:absolute; left:0; bottom:27px; width:0; height:1px; background:currentColor; transition:width .25s; }
+        .nav-item:after { content:''; position:absolute; left:0; bottom:18px; width:0; height:1px; background:currentColor; transition:width .25s; }
         .nav-item:hover:after { width:100%; }
-        .nav-group { position:relative; }
-        .drop { position:absolute; top:82px; left:50%; width:250px; padding:14px; color:var(--ink); background:var(--paper); border:1px solid var(--line); box-shadow:0 22px 50px rgba(15,32,34,.16); transform:translateX(-50%); }
+        .nav-group { position:relative; display:flex; align-items:center; }
+        .drop { position:absolute; top:100%; left:50%; width:250px; padding:14px; color:var(--ink); background:var(--paper); border:1px solid var(--line); box-shadow:0 22px 50px rgba(15,32,34,.16); transform:translateX(-50%); }
         .drop-label { padding:5px 10px 10px; color:var(--warm); font-size:10px; letter-spacing:.16em; text-transform:uppercase; }
         .drop a { display:block; padding:9px 10px; font-size:13px; transition:background .2s,color .2s; }
         .drop a:hover { background:#f0ede5; color:var(--sage); }
-        .language { position:relative; margin-left:3px; padding-left:22px; border-left:1px solid currentColor; }
+        .language { position:relative; display:flex; align-items:center; margin-left:3px; padding-left:22px; border-left:1px solid currentColor; }
         .language-toggle { padding:10px 0; border:0; color:inherit; background:transparent; cursor:pointer; font-size:11px; font-weight:600; letter-spacing:.1em; }
         .language .drop { left:auto; right:-12px; transform:none; width:150px; top:100%; }
         .mobile-toggle { display:none; padding:8px; border:0; color:inherit; background:none; font-size:22px; cursor:pointer; }
@@ -142,11 +142,11 @@
         <div class="container header-inner">
             <a class="brand" href="index-fr.html"><img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" alt="Eurasia Tours"></a>
             <nav class="nav">
-                <div v-for="link in navLinks" :key="link.name" class="nav-group" @mouseenter="link.subLinks && (isDestOpen=true)" @mouseleave="link.subLinks && (isDestOpen=false)">
+                <div v-for="link in navLinks" :key="link.name" class="nav-group" @mouseenter="link.subLinks && openDest()" @mouseleave="link.subLinks && closeDest()">
                     <a class="nav-item" :href="link.url">{{ link.name }} <i v-if="link.subLinks" class="fas fa-angle-down"></i></a>
                     <div v-if="link.subLinks && isDestOpen" class="drop"><p class="drop-label">Destinations</p><a v-for="sub in link.subLinks" :key="sub.name" :href="sub.url">{{ sub.name }}</a><a href="destination-main-fr.html"><strong>Toutes les destinations →</strong></a></div>
                 </div>
-                <div class="language" @mouseenter="isLangOpen=true" @mouseleave="isLangOpen=false"><button class="language-toggle"><i class="fas fa-globe"></i> Français <i class="fas fa-angle-down"></i></button><div v-if="isLangOpen" class="drop"><a href="index-cn.html">中文</a><a href="index-en.html">English</a><a href="index-fr.html"><strong>Français</strong></a></div></div>
+                <div class="language" @mouseenter="openLang()" @mouseleave="closeLang()"><button class="language-toggle"><i class="fas fa-globe"></i> Français <i class="fas fa-angle-down"></i></button><div v-if="isLangOpen" class="drop"><a href="index-cn.html">中文</a><a href="index-en.html">English</a><a href="index-fr.html"><strong>Français</strong></a></div></div>
             </nav>
             <button class="mobile-toggle" @click="isMobileOpen=!isMobileOpen" :aria-label="isMobileOpen ? 'Fermer le menu' : 'Ouvrir le menu'"><i class="fas" :class="isMobileOpen ? 'fa-times' : 'fa-bars'"></i></button>
         </div>
@@ -222,10 +222,15 @@ J'ai apprécié l'ensemble du voyage. Je recommande sans problème votre agence.
         const onScroll = () => { isScrolled.value = window.scrollY > 36; };
         onMounted(() => window.addEventListener('scroll', onScroll, { passive:true }));
         onUnmounted(() => window.removeEventListener('scroll', onScroll));
+        let destTimer = null, langTimer = null;
+        const openDest = () => { clearTimeout(destTimer); isDestOpen.value = true; };
+        const closeDest = () => { clearTimeout(destTimer); destTimer = setTimeout(() => { isDestOpen.value = false; }, 120); };
+        const openLang = () => { clearTimeout(langTimer); isLangOpen.value = true; };
+        const closeLang = () => { clearTimeout(langTimer); langTimer = setTimeout(() => { isLangOpen.value = false; }, 120); };
         const openBrochure = () => { isBrochureOpen.value = true; };
         const scrollReviews = direction => { const el=document.getElementById('reviews-scroller'); if(el) el.scrollBy({left:direction*Math.min(el.clientWidth*.82,460),behavior:'smooth'}); };
         const openReview = review => { activeReview.value=review; isReviewOpen.value=true; };
-        return { isScrolled,isMobileOpen,isDestOpen,isLangOpen,activeQR,isBrochureOpen,isReviewOpen,activeReview,navLinks,values,tours,reviews,openBrochure,scrollReviews,openReview };
+        return { isScrolled,isMobileOpen,isDestOpen,isLangOpen,activeQR,isBrochureOpen,isReviewOpen,activeReview,navLinks,values,tours,reviews,openDest,closeDest,openLang,closeLang,openBrochure,scrollReviews,openReview };
     }
 }).mount('#app');
 </script>
