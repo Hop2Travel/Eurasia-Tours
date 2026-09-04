@@ -58,7 +58,6 @@
         rel="stylesheet">
 
     <style>
-        /* 字体调整以适应法语阅读习惯，与 index FR 保持一致 */
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
@@ -132,7 +131,6 @@
             object-fit: cover;
         }
 
-        /* 博客网格布局：已修复为从左到右、从上到下的标准阅读顺序 */
         .masonry-grid {
             display: grid;
             grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -175,7 +173,6 @@
             justify-content: space-between;
         }
 
-        /* 详情页弹窗动画 - 保留原有样式类 */
         .modal-enter-active,
         .modal-leave-active {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -187,7 +184,6 @@
             transform: translateY(100px);
         }
 
-        /* 手机端菜单动画 */
         .mobile-menu-enter-active,
         .mobile-menu-leave-active {
             transition: all 0.3s ease;
@@ -198,8 +194,6 @@
             opacity: 0;
             transform: translateY(-10px);
         }
-
-
 
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
@@ -365,6 +359,47 @@
             <section class="py-12 px-4 md:px-8 xl:px-12 w-full max-w-[1920px] mx-auto">
 
                 <div class="masonry-grid">
+
+                    <!-- 第一篇：精准匹配 article/voyager-en-chine-sans-parler-chinois.html -->
+                    <div class="masonry-item">
+                        <a href="article/voyager-en-chine-sans-parler-chinois.html"
+                            class="block group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 text-left h-full flex flex-col">
+                            <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
+                                <img src="images/blog/voyager-en-chine-sans-parler-chinois/1.png"
+                                    alt="Voyager en Chine sans parler chinois : 10 conseils pour éviter les galères"
+                                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                                <div
+                                    class="absolute top-4 left-4 bg-black/20 backdrop-blur-md text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">
+                                    # Conseils Pratiques </div>
+                            </div>
+                            <div class="p-6 flex flex-col justify-between">
+                                <div>
+                                    <h2
+                                        class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand transition-colors leading-tight">
+                                        Voyager en Chine sans parler chinois : 10 conseils pour éviter les galères</h2>
+                                    <p class="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3 text-justify">
+                                        Peut-on voyager en Chine sans parler chinois ? Oui ! Découvrez nos conseils
+                                        pratiques pour communiquer, vous déplacer et voyager sereinement.
+                                    </p>
+                                </div>
+                                <div class="flex items-center justify-between pt-4 border-t border-gray-50 mt-auto">
+                                    <div class="flex items-center gap-2 text-gray-500">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center overflow-hidden">
+                                            <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg"
+                                                alt="Logo Eurasia Tours"
+                                                class="w-full h-full object-contain mix-blend-multiply">
+                                        </div>
+                                        <span class="text-[11px] font-bold">Eurasia Tours</span>
+                                    </div>
+                                    <div class="flex items-center gap-4 text-gray-400">
+                                        <span class="text-[10px] font-bold text-brand uppercase">Lire la suite <i
+                                                class="fas fa-arrow-right ml-1"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
                     <div class="masonry-item">
                         <a href="article/blog-voyage-chine-sans-visa-2026.html"
@@ -568,7 +603,7 @@
                         </a>
                     </div>
 
-                    <!-- 新增博客：日本 Matsuri -->
+                    <!-- 博客：日本 Matsuri -->
                     <div class="masonry-item">
                         <a href="article/blog-festivals-traditionnels-japonais-tout-savoir-sur-les-matsuri.html"
                             class="block group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 text-left h-full flex flex-col">
@@ -609,7 +644,7 @@
                         </a>
                     </div>
 
-                    <!-- 新增博客：韩国行前准备 -->
+                    <!-- 博客：韩国行前准备 -->
                     <div class="masonry-item">
                         <a href="article/blog-les-indispensables-pour-partir-en-coree-du-sud.html"
                             class="block group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 text-left h-full flex flex-col">
@@ -761,7 +796,6 @@
                     const isWechatQR = ref(false);
                     const isFacebookQR = ref(false);
 
-                    // 严格还原最初代码中的导航数据（包括原有拼写）
                     const navLinks = [
                         { name: 'Accueil', url: 'index-fr.html' },
                         {

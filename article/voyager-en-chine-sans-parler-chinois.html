@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SQ5YGXMS2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9SQ5YGXMS2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voyager en Chine sans parler chinois : nos conseils | Eurasia Tours</title>
+    <meta name="description"
+        content="Peut-on voyager en Chine sans parler chinois ? Oui ! Découvrez nos conseils pratiques pour communiquer, vous déplacer et voyager sereinement.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .text-brand {
+            color: #b91c1c;
+        }
+
+        .bg-brand {
+            background-color: #b91c1c;
+        }
+
+        .border-brand {
+            border-color: #b91c1c;
+        }
+
+        .hover-border-brand:hover {
+            border-color: #b91c1c;
+        }
+
+        .hover\:bg-brand:hover {
+            background-color: #991b1b;
+        }
+
+        .nav-link-spacing {
+            letter-spacing: 0.05em;
+        }
+
+        .mobile-menu-enter-active,
+        .mobile-menu-leave-active {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .mobile-menu-enter-from,
+        .mobile-menu-leave-to {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .dropdown-enter-active {
+            transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+        }
+
+        .dropdown-leave-active {
+            transition: opacity 0.15s ease-in, transform 0.15s ease-in;
+        }
+
+        .dropdown-enter-from,
+        .dropdown-leave-to {
+            opacity: 0;
+            transform: translateY(10px) scale(0.98);
+        }
+
+        .qr-fade-enter-active,
+        .qr-fade-leave-active {
+            transition: all 0.3s ease-out;
+        }
+
+        .qr-fade-enter-from,
+        .qr-fade-leave-to {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #d1d5db;
+            border-radius: 20px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background-color: #9ca3af;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <div id="app" v-cloak>
+        <header class="fixed w-full top-0 z-[100] bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center justify-between py-2 lg:h-24">
+                    <div class="flex items-center justify-between w-full lg:w-auto">
+                        <a href="../index-fr.html" class="flex items-center group">
+                            <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg"
+                                alt="Logo Eurasia Tours"
+                                class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply">
+                        </a>
+                        <button
+                            class="lg:hidden relative z-50 text-2xl p-2 text-gray-700 focus:outline-none cursor-pointer"
+                            @click="isMobileMenuOpen = !isMobileMenuOpen">
+                            <i class="fas" :class="isMobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+                        </button>
+                    </div>
+
+                    <nav class="hidden lg:flex flex-1 items-center justify-end ml-4 max-w-7xl gap-4 xl:gap-6">
+                        <div v-for="link in navLinks" :key="link.name" class="relative group py-8"
+                            @mouseenter="link.name === 'Nos destinations' ? isDestDropdownOpen = true : null"
+                            @mouseleave="isDestDropdownOpen = false">
+
+                            <a :href="link.url"
+                                class="nav-link-spacing relative py-3 px-1 text-xs xl:text-sm font-bold uppercase transition-all flex items-center gap-1 whitespace-nowrap"
+                                :class="link.current ? 'text-brand' : 'text-gray-700 hover:text-brand'">
+                                {{ link.name }}
+                                <i v-if="link.subLinks"
+                                    class="fas fa-angle-down text-xs transition-transform duration-300"
+                                    :class="{'rotate-180': link.name === 'Nos destinations' && isDestDropdownOpen}"></i>
+
+                                <span class="absolute bottom-1 left-0 h-0.5 bg-brand transition-all duration-300"
+                                    :class="link.current ? 'w-full' : 'w-0 group-hover:w-full'"></span>
+                            </a>
+
+                            <transition name="dropdown">
+                                <div v-if="link.name === 'Nos destinations' && isDestDropdownOpen"
+                                    class="absolute top-full left-1/2 -translate-x-1/2 w-[240px] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-xl border border-gray-100 p-3 overflow-hidden mt-[-5px]">
+                                    <div
+                                        class="px-4 pb-2 mb-2 border-b border-gray-50 text-[10px] uppercase tracking-[0.1em] text-gray-400 font-bold">
+                                        Pays Populaires</div>
+                                    <ul class="space-y-1">
+                                        <li v-for="sub in link.subLinks" :key="sub.name">
+                                            <a :href="sub.url"
+                                                class="flex items-center gap-3 px-4 py-3 text-base font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all group/item border-l-2 border-transparent hover:border-brand">
+                                                <i
+                                                    class="fas fa-map-pin text-[10px] text-brand opacity-0 group-hover/item:opacity-100 transition-opacity duration-300"></i>
+                                                {{ sub.name }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-3 pt-2 border-t border-gray-50">
+                                        <a href="../destination-main-fr.html"
+                                            class="flex items-center justify-center gap-2 px-4 py-2 text-[13px] font-bold text-brand hover:underline">Toutes
+                                            les destinations <i class="fas fa-arrow-right text-[10px]"></i></a>
+                                    </div>
+                                </div>
+                            </transition>
+                        </div>
+
+                        <div class="relative group py-8 pl-4 ml-2" @mouseenter="isLangDropdownOpen = true"
+                            @mouseleave="isLangDropdownOpen = false">
+
+                            <span class="absolute left-0 top-1/2 -translate-y-1/2 h-5 w-px bg-gray-200"></span>
+
+                            <a href="#"
+                                class="nav-link-spacing relative py-3 px-1 text-xs xl:text-sm font-bold uppercase text-gray-700 hover:text-brand transition-all flex items-center gap-2 whitespace-nowrap">
+                                <i class="fas fa-globe text-lg"></i>
+                                {{ currentLang }}
+                                <i class="fas fa-angle-down text-xs transition-transform duration-300"
+                                    :class="{'rotate-180': isLangDropdownOpen}"></i>
+                            </a>
+                            <transition name="dropdown">
+                                <div v-if="isLangDropdownOpen"
+                                    class="absolute top-full right-0 w-[140px] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-xl border border-gray-100 p-2 overflow-hidden mt-[-5px]">
+                                    <ul class="space-y-1">
+                                        <li>
+                                            <a href="../blog-cn.html"
+                                                class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all"
+                                                :class="{'bg-red-50 text-brand': currentLang === '中文'}">中文 <i
+                                                    v-if="currentLang === '中文'" class="fas fa-check text-xs"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="../blog-en.html"
+                                                class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all"
+                                                :class="{'bg-red-50 text-brand': currentLang === 'English'}">English <i
+                                                    v-if="currentLang === 'English'"
+                                                    class="fas fa-check text-xs"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="../blog-fr.html"
+                                                class="flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-700 hover:bg-red-50 hover:text-brand rounded-lg transition-all"
+                                                :class="{'bg-red-50 text-brand': currentLang === 'Français'}">Français
+                                                <i v-if="currentLang === 'Français'"
+                                                    class="fas fa-check text-xs"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </transition>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <transition name="mobile-menu">
+                <nav v-if="isMobileMenuOpen"
+                    class="lg:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 py-6 pb-10 shadow-xl overflow-y-auto max-h-[80vh]">
+                    <div class="flex flex-col items-center gap-6">
+                        <a v-for="link in navLinks" :key="link.name" :href="link.url"
+                            class="text-xl font-bold py-2 uppercase tracking-widest transition"
+                            :class="link.current ? 'text-brand' : 'text-gray-800 hover:text-brand'"
+                            @click="isMobileMenuOpen = false">{{ link.name }}</a>
+
+                        <div
+                            class="flex items-center gap-4 mt-2 border-t border-gray-100 pt-6 w-full justify-center flex-wrap px-4">
+                            <a href="../blog-cn.html" class="px-4 py-1 rounded-full text-sm font-bold transition"
+                                :class="currentLang === '中文' ? 'bg-brand text-white' : 'bg-gray-100 text-gray-600'">中文</a>
+                            <a href="../blog-en.html" class="px-4 py-1 rounded-full text-sm font-bold transition"
+                                :class="currentLang === 'English' ? 'bg-brand text-white' : 'bg-gray-100 text-gray-600'">English</a>
+                            <a href="../blog-fr.html" class="px-4 py-1 rounded-full text-sm font-bold transition"
+                                :class="currentLang === 'Français' ? 'bg-brand text-white' : 'bg-gray-100 text-gray-600'">Français</a>
+                        </div>
+
+                        <a href="../contact-fr.html"
+                            class="bg-brand text-white px-10 py-3 rounded-full font-bold shadow-lg mt-4"
+                            @click="isMobileMenuOpen = false">Demandez un devis</a>
+                    </div>
+                </nav>
+            </transition>
+        </header>
+
+        <main class="pt-32 pb-24 min-h-screen bg-gray-50/20">
+            <div class="container mx-auto px-4">
+                <div
+                    class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 bg-white rounded-[40px] shadow-sm border border-gray-100 p-8 md:p-12">
+
+                    <div class="flex-1">
+                        <div class="mb-10">
+                            <div
+                                class="flex items-center gap-4 text-brand font-bold text-xs uppercase tracking-[0.3em] mb-6">
+                                <span class="px-3 py-1 bg-red-50 rounded-full"># Chine</span>
+                                <span class="text-gray-400 font-normal">Conseils Pratiques</span>
+                            </div>
+                            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-[1.2] mb-8">
+                                Voyager en Chine sans parler chinois : 10 conseils pour éviter les galères
+                            </h1>
+
+                            <!-- Header Image -->
+                            <img src="../images/blog/voyager-en-chine-sans-parler-chinois/1.png"
+                                alt="Voyager en Chine sans parler chinois"
+                                class="w-full aspect-video rounded-3xl object-cover shadow-lg mb-12">
+
+                            <div
+                                class="prose prose-lg max-w-none text-gray-600 leading-[1.8] space-y-6 text-justify font-light">
+                                <p class="text-xl font-normal text-gray-800">Ni hao !</p>
+                                <p>Vous rêvez de découvrir la Chine, mais vous ne parlez pas chinois ? Rassurez-vous :
+                                    il est tout à fait possible de voyager en Chine sans maîtriser la langue. Avec un
+                                    peu de préparation, quelques outils de traduction et certaines bonnes habitudes, la
+                                    communication devient beaucoup plus simple sur place.</p>
+                                <p>Bien sûr, la situation peut être différente selon les villes et les régions. Dans les
+                                    grandes villes et les lieux touristiques, il est généralement plus facile de se
+                                    faire comprendre. Dans les endroits plus éloignés des circuits touristiques, la
+                                    barrière de la langue peut être davantage présente.</p>
+                                <p>Mais faut-il pour autant parler chinois pour profiter pleinement de son voyage ? Non.
+                                    Voici nos conseils pratiques pour voyager sereinement en Chine, même sans parler
+                                    chinois.</p>
+
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">Faut-il parler
+                                    chinois pour voyager en Chine ?</h2>
+                                <p>La réponse est simple : <strong>non, vous n'avez pas besoin de parler chinois pour
+                                        voyager en Chine.</strong></p>
+                                <p>Vous pouvez parfaitement visiter Pékin, Shanghai, Xi'an, Guilin, Chengdu ou d'autres
+                                    régions du pays sans connaître la langue.</p>
+                                <p>En revanche, il est important de ne pas partir sans préparation. La Chine est un pays
+                                    où l'anglais n'est pas systématiquement utilisé dans la vie quotidienne, notamment
+                                    avec les chauffeurs de taxi, dans certains restaurants, dans les petits commerces ou
+                                    dans les régions moins touristiques.</p>
+                                <p>La bonne nouvelle est que plusieurs solutions permettent aujourd'hui de communiquer
+                                    facilement : les applications de traduction, les adresses écrites en chinois, les
+                                    cartes sur téléphone et, lorsque vous voyagez avec une agence, l'assistance d'un
+                                    guide ou d'une équipe locale.</p>
+                                <p class="italic text-gray-700 bg-gray-50 p-4 border-l-4 border-brand rounded-r-lg">Le
+                                    plus important n'est donc pas de parler chinois, mais de savoir comment communiquer
+                                    autrement.</p>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. La traduction sera votre
+                                    meilleure alliée</h3>
+                                <p>Pour voyager en Chine sans parler chinois, un outil de traduction peut rapidement
+                                    devenir indispensable. Vous pouvez préparer à l'avance quelques phrases utiles et
+                                    utiliser votre téléphone pour traduire une question, une adresse ou une demande
+                                    particulière.</p>
+                                <p>La traduction peut notamment vous aider à :</p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Demander votre chemin ;</li>
+                                    <li>Communiquer avec un chauffeur ;</li>
+                                    <li>Comprendre certaines informations ;</li>
+                                    <li>Commander au restaurant ;</li>
+                                    <li>Expliquer une demande particulière à l'hôtel ;</li>
+                                    <li>Traduire certains menus ou panneaux.</li>
+                                </ul>
+                                <div class="bg-red-50/50 p-4 rounded-xl border border-red-100 mt-4">
+                                    <h4 class="text-base font-bold text-brand uppercase tracking-wider mb-2"><i
+                                            class="fas fa-lightbulb mr-2"></i>Notre conseil : préparez votre téléphone
+                                        avant le départ</h4>
+                                    <p class="text-sm text-gray-700">Ne comptez pas uniquement sur votre connexion
+                                        Internet une fois arrivé en Chine. Vérifiez avant votre départ que vos
+                                        applications de traduction fonctionnent correctement dans les conditions de
+                                        votre voyage et que vous savez les utiliser. Il est également très utile de
+                                        conserver certaines informations hors ligne, notamment les adresses de vos
+                                        hôtels, les informations concernant vos transports et les coordonnées de votre
+                                        agence ou de votre guide.</p>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Gardez toujours les adresses
+                                    en chinois</h3>
+                                <p>C'est probablement l'un des conseils les plus importants pour voyager en Chine sans
+                                    parler chinois.</p>
+                                <p>Lorsque vous réservez un hôtel, un restaurant ou une activité, essayez de conserver
+                                    le nom et l'adresse en caractères chinois. Pourquoi ? Parce qu'une adresse écrite
+                                    uniquement en alphabet latin peut être difficile à identifier pour une personne
+                                    locale, alors qu'une adresse en chinois pourra être facilement montrée à un
+                                    chauffeur ou à un passant.</p>
+                                <p>Nous vous conseillons donc de conserver sur votre téléphone :</p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Le nom de votre hôtel en chinois ;</li>
+                                    <li>Son adresse complète en chinois ;</li>
+                                    <li>Le numéro de téléphone de l'hôtel ;</li>
+                                    <li>Les adresses des principaux sites que vous souhaitez visiter ;</li>
+                                    <li>Les informations de vos transferts et transports.</li>
+                                </ul>
+                                <p><strong>Une astuce toute simple :</strong> faites des captures d'écran avant votre
+                                    départ. Ainsi, même si votre connexion Internet est momentanément indisponible, vous
+                                    pourrez simplement montrer l'information sur votre écran. Pour encore plus de
+                                    sécurité, vous pouvez également imprimer les informations essentielles.</p>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. À l'hôtel, la communication
+                                    est généralement plus facile</h3>
+                                <p>Les hôtels qui accueillent régulièrement des voyageurs internationaux sont habitués à
+                                    recevoir des clients qui ne parlent pas chinois. Dans les établissements
+                                    internationaux ou touristiques, il est souvent possible de communiquer en anglais,
+                                    au moins pour les principales demandes.</p>
+                                <p>Dans un hôtel plus local, la communication peut être plus limitée. Dans ce cas, votre
+                                    téléphone et votre application de traduction seront très utiles.</p>
+                                <p>Une autre astuce consiste à <strong>conserver la carte de visite de l'hôtel ou son
+                                        adresse en chinois avec vous</strong> lorsque vous sortez. Si vous vous perdez
+                                    ou souhaitez rentrer, vous pourrez simplement montrer cette information à un
+                                    chauffeur de taxi.</p>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Comment prendre un taxi en
+                                    Chine sans parler chinois ?</h3>
+                                <p>C'est une question que beaucoup de voyageurs se posent avant leur premier séjour. En
+                                    réalité, il n'est pas nécessaire de connaître le chinois pour prendre un taxi. Le
+                                    plus important est d'avoir l'adresse de destination écrite en caractères chinois.
+                                </p>
+                                <p>Vous pouvez simplement montrer au chauffeur : <strong>Le nom du lieu + l'adresse en
+                                        chinois</strong>. Évitez de compter uniquement sur la prononciation d'un nom
+                                    chinois, surtout lorsqu'il s'agit d'une adresse longue ou complexe.</p>
+                                <p>Si vous utilisez une application de transport (comme Didi), vérifiez également à
+                                    l'avance comment elle fonctionne avec votre téléphone et votre moyen de paiement
+                                    international.</p>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Et dans le métro et les
+                                    transports ?</h3>
+                                <p>Dans les grandes villes chinoises, les transports publics sont extrêmement modernes,
+                                    ponctuels et constituent une solution idéale pour se déplacer. Le métro peut
+                                    toutefois sembler impressionnant lors d'un premier contact, notamment face aux
+                                    panneaux en caractères.</p>
+                                <p>Pour vous faciliter la tâche, préparez votre trajet à l'avance :</p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Notez le nom de la station de départ et d'arrivée ;</li>
+                                    <li>Faites une capture d'écran de l'itinéraire sur plan bilingue ;</li>
+                                    <li>Vérifiez le numéro de ligne et la direction finale ;</li>
+                                    <li>Prévoyez un peu de temps supplémentaire pour votre premier trajet.</li>
+                                </ul>
+                                <p><strong>Pour les trains à grande vitesse (G-train) :</strong> soyez particulièrement
+                                    attentif aux noms des gares. Les métropoles possèdent souvent plusieurs gares très
+                                    éloignées les unes des autres (Gare du Nord, du Sud, de l'Ouest, etc.), dont les
+                                    dénominations pinyin sont proches. Vérifiez toujours précisément votre gare de
+                                    départ sur votre billet.</p>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Comment commander au
+                                    restaurant sans parler chinois ?</h3>
+                                <p>L'expérience culinaire fait partie intégrante d'un voyage en Chine. Et là encore, ne
+                                    pas parler chinois ne doit pas vous empêcher de découvrir l'extraordinaire
+                                    gastronomie locale.</p>
+                                <p>Dans de très nombreux restaurants, les menus sont illustrés de photos en couleur, ce
+                                    qui facilite grandement la commande au doigt levé. Vous pouvez également utiliser la
+                                    fonction traduction photo en direct de votre smartphone.</p>
+                                <p class="bg-amber-50 border-l-4 border-amber-500 p-4 text-amber-900 rounded-r-lg">
+                                    <strong>Attention aux allergies alimentaires :</strong> si vous avez des allergies
+                                    ou des restrictions alimentaires strictes, préparez une carte rédigée clairement en
+                                    chinois avant le départ. Ne comptez pas uniquement sur l'oral : une mention écrite
+                                    explicite est indispensable pour votre sécurité.</p>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Quelques mots chinois peuvent
+                                    faire la différence</h3>
+                                <p>Même sans parler couramment la langue, apprendre quelques expressions de politesse
+                                    élémentaires fera toujours plaisir à vos interlocuteurs locaux et rendra les
+                                    échanges plus chaleureux :</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
+                                    <div class="bg-gray-50 p-3 rounded-xl border border-gray-100"><strong>Nǐ hǎo
+                                            (你好)</strong> : Bonjour</div>
+                                    <div class="bg-gray-50 p-3 rounded-xl border border-gray-100"><strong>Xièxie
+                                            (谢谢)</strong> : Merci</div>
+                                    <div class="bg-gray-50 p-3 rounded-xl border border-gray-100"><strong>Qǐng
+                                            (请)</strong> : S'il vous plaît</div>
+                                    <div class="bg-gray-50 p-3 rounded-xl border border-gray-100"><strong>Duōshǎo qián ?
+                                            (多少钱?)</strong> : Combien ça coûte ?</div>
+                                    <div class="bg-gray-50 p-3 rounded-xl border border-gray-100"><strong>Wǒ bù dǒng
+                                            (我不懂)</strong> : Je ne comprends pas</div>
+                                    <div class="bg-gray-50 p-3 rounded-xl border border-gray-100"><strong>Cèsuǒ zài nǎlǐ
+                                            ? (厕所在哪里?)</strong> : Où sont les toilettes ?</div>
+                                </div>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Préparez votre téléphone avant
+                                    de partir</h3>
+                                <p>C'est un point technique crucial : l'écosystème numérique en Chine fonctionne
+                                    différemment de l'Occident. Avant de vous envoler, assurez-vous de configurer :</p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Votre solution de connexion internet (carte eSIM compatible, forfait data
+                                        international ou VPN adapté) ;</li>
+                                    <li>Vos applications de traduction hors ligne installées et testées ;</li>
+                                    <li>Vos moyens de paiement dématérialisés (Alipay / WeChat Pay liés à votre carte
+                                        bancaire internationale) ;</li>
+                                    <li>Les copies de vos passeports, visas, réservations de billets et d'hôtels.</li>
+                                </ul>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">9. Voyager avec une agence : une
+                                    solution pour voyager plus sereinement</h3>
+                                <p>Si vous partez en Chine pour la première fois et que la langue vous stresse, faire
+                                    appel à une agence de voyages spécialiste de l'Asie constitue le moyen le plus
+                                    simple et rassurant d'explorer l'Empire du Milieu.</p>
+                                <p>En optant pour un circuit guidé ou un itinéraire sur mesure préparé en amont :</p>
+                                <ul class="list-disc pl-6 space-y-1">
+                                    <li>Vos transferts gares/aéroports et hôtels sont déjà planifiés et encadrés ;</li>
+                                    <li>Vous disposez d'un guide francophone ou anglophone passionné qui gère la
+                                        logistique quotidienne ;</li>
+                                    <li>Vous bénéficiez d'une assistance joignable en continu en cas d'imprévu ;</li>
+                                    <li>Vous profitez à 100 % de votre séjour sans charge mentale liée aux transports.
+                                    </li>
+                                </ul>
+
+                                <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Récapitulatif : les 7
+                                    réflexes indispensables</h3>
+                                <ol class="list-decimal pl-6 space-y-2">
+                                    <li>Préparez une application de traduction fiable avant le départ.</li>
+                                    <li>Conservez toutes vos adresses essentielles en caractères chinois.</li>
+                                    <li>Faites des captures d'écran hors ligne de vos réservations et itinéraires.</li>
+                                    <li>Gardez toujours sur vous la carte de visite de votre hôtel.</li>
+                                    <li>Configurez votre téléphone et vos solutions de paiement avant d'embarquer.</li>
+                                    <li>Apprenez quelques mots de courtoisie de base.</li>
+                                    <li>N'hésitez pas à demander de l'aide à l'accueil de votre hôtel, votre guide ou
+                                        votre agence.</li>
+                                </ol>
+
+                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">Alors, peut-on
+                                    vraiment voyager en Chine sans parler chinois ?</h2>
+                                <p><strong>Oui, absolument.</strong></p>
+                                <p>La barrière de la langue peut impressionner vue de France, mais une fois arrivé, la
+                                    bienveillance des habitants et la technologie moderne facilitent grandement les
+                                    séjours. La langue n'est plus un obstacle infranchissable, mais simplement un aspect
+                                    pratique à anticiper.</p>
+
+                                <div class="mt-10 p-6 bg-red-50 border-l-4 border-brand rounded-r-xl">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2">Envie de découvrir la Chine ?</h3>
+                                    <p class="text-gray-700 mb-4">Laissez Eurasia Tours vous accompagner dans la
+                                        création d'un voyage inoubliable, des métropoles ultramodernes aux villages
+                                        ancestraux, avec guides privés et assistance francophone.</p>
+                                    <a href="../destination-chine.html"
+                                        class="inline-flex items-center gap-2 text-brand font-bold hover:underline">
+                                        👉 Découvrez nos voyages et commencez à préparer votre prochain voyage en Chine
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Desktop -->
+                    <div class="lg:w-80 hidden lg:block border-l border-gray-100 pl-12">
+                        <div class="sticky top-32">
+                            <h4
+                                class="text-xl font-bold border-b-4 border-brand inline-block pb-2 italic uppercase tracking-widest mb-8">
+                                Destination Chine</h4>
+                            <div class="bg-white rounded-[32px] overflow-hidden shadow-xl border border-red-50 group">
+                                <div class="relative h-48 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=800&q=80"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                                        alt="Voyages en Chine Eurasia Tours">
+                                </div>
+                                <div class="p-6 space-y-4 text-left">
+                                    <h5 class="text-xl font-bold text-gray-900 leading-tight">Nos circuits et séjours
+                                        sur mesure en Chine</h5>
+                                    <p class="text-xs text-gray-500">Pékin, Xi'an, Guilin, Shanghai et les trésors de
+                                        l'Asie à votre rythme.</p>
+                                    <div class="pt-6 border-t border-gray-100 flex items-center justify-between">
+                                        <span class="text-xl font-black text-brand">Voir l'offre</span>
+                                        <a href="../destination-chine.html"
+                                            class="w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center hover:scale-110 transition shadow-md"><i
+                                                class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Mobile -->
+                    <div class="lg:hidden pt-12 border-t border-gray-100 w-full">
+                        <h4 class="text-xl font-bold border-b-4 border-brand inline-block pb-1 italic mb-6">Destination
+                            Chine</h4>
+                        <div class="bg-white rounded-[32px] overflow-hidden shadow-lg border border-red-50 mb-8 group">
+                            <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=800&q=80"
+                                class="w-full h-48 object-cover" alt="Voyages en Chine">
+                            <div class="p-6 space-y-4">
+                                <h5 class="text-xl font-bold text-gray-900">Nos circuits et séjours sur mesure en Chine
+                                </h5>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xl font-black text-brand">Voir l'offre</span>
+                                    <a href="../destination-chine.html"
+                                        class="w-10 h-10 bg-brand text-white rounded-full flex items-center justify-center shadow-md"><i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-gray-900 text-gray-400 pt-20 pb-10 border-t-8 border-brand">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 text-left">
+                    <div class="space-y-6">
+                        <img src="https://www.eurasia-tours.fr/assets/logo-word-rNz8dsz6.jpg" alt="Eurasia Tours Logo"
+                            class="h-10 w-auto object-contain opacity-90 mix-blend-screen">
+                        <p class="text-sm leading-relaxed">Depuis 2000, Eurasia Tours s'engage à offrir aux voyageurs du
+                            monde entier une expérience de voyage authentique en Europe et en Asie. Nous ne sommes pas
+                            seulement une agence, mais votre guide culturel.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span
+                                class="w-1 h-5 bg-brand"></span> Garanties & Certifications</h4>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand"></i> Membre de
+                                l'APST</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-brand"></i>
+                                Accréditation IATA</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-shield-alt text-brand"></i> Assurance
+                                RCP incluse</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span
+                                class="w-1 h-5 bg-brand"></span> Contactez-nous</h4>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-brand mt-1"></i> 30
+                                Rue Ernest Renan, 75015 Paris</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-brand"></i> 01 56 69 12
+                                80</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-envelope text-brand"></i>
+                                inscription@eurasiatours.fr</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-8 flex items-center gap-3"><span
+                                class="w-1 h-5 bg-brand"></span> Suivez-nous & Paiement</h4>
+                        <div class="flex gap-4 mb-8">
+                            <div class="relative group" @mouseenter="isWechatQR = true"
+                                @mouseleave="isWechatQR = false">
+                                <a href="#"
+                                    class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#07C160] transition">
+                                    <i class="fab fa-weixin text-white"></i>
+                                </a>
+                                <transition name="qr-fade">
+                                    <div v-if="isWechatQR"
+                                        class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-white p-2 rounded-lg shadow-2xl z-50 w-32 border border-gray-100">
+                                        <img src="https://www.eurasia-tours.fr/assets/wechat-account-VZcww6ek.jpg"
+                                            alt="WeChat QR" class="w-full h-auto">
+                                        <p class="text-[10px] text-gray-500 text-center mt-1 font-sans">Compte WeChat
+                                        </p>
+                                    </div>
+                                </transition>
+                            </div>
+
+                            <div class="relative group" @mouseenter="isFacebookQR = true"
+                                @mouseleave="isFacebookQR = false">
+                                <a href="#"
+                                    class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#1877F2] transition">
+                                    <i class="fab fa-facebook-f text-white"></i>
+                                </a>
+                                <transition name="qr-fade">
+                                    <div v-if="isFacebookQR"
+                                        class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-white p-2 rounded-lg shadow-2xl z-50 w-32 border border-gray-100">
+                                        <img src="https://www.eurasia-tours.fr/assets/3-Bjf7LFHD.png" alt="Facebook QR"
+                                            class="w-full h-auto">
+                                        <p class="text-[10px] text-gray-500 text-center mt-1 font-sans">Notre Facebook
+                                        </p>
+                                    </div>
+                                </transition>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 text-3xl opacity-30">
+                            <i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i
+                                class="fab fa-cc-amex"></i>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-gray-800 pt-10 text-center text-xs tracking-widest uppercase flex flex-col items-center gap-2">
+                    <span>© 2026 EURASIA TOURS · TOUS DROITS RÉSERVÉS</span>
+                    <a href="https://beian.miit.gov.cn/" target="_blank"
+                        class="text-gray-500 hover:text-gray-300 transition-colors normal-case tracking-normal">
+                        京ICP备11043174号-2
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp, ref } = Vue;
+        createApp({
+            setup() {
+                const isMobileMenuOpen = ref(false);
+                const isDestDropdownOpen = ref(false);
+                const isLangDropdownOpen = ref(false);
+                const currentLang = ref('Français');
+                const isWechatQR = ref(false);
+                const isFacebookQR = ref(false);
+
+                const navLinks = [
+                    { name: 'Accueil', url: '../index-fr.html' },
+                    {
+                        name: 'Nos destinations',
+                        url: '../destination-main-fr.html',
+                        subLinks: [
+                            { name: 'Chine', url: '../destination-chine.html' },
+                            { name: 'Vietnam', url: '../destination-vietnam.html' },
+                            { name: 'Japon', url: '../destination-japon.html' },
+                            { name: 'Corée du Sud', url: '../destination-coree-du-sud.html' },
+                            { name: 'Cambodge', url: '../destination-cambodge.html' },
+                            { name: 'Laos', url: '../destination-laos.html' },
+                            { name: 'Népal', url: '../destination-nepal.html' },
+                            { name: 'Ouzbékistan', url: '../destination-ouzbekistan.html' },
+                            { name: 'Sri-Lanka', url: '../destination-sri-lanka.html' },
+                            { name: 'Thaïlande', url: '../destination-thailande.html' },
+                        ]
+                    },
+                    { name: 'Voyage sur mesure', url: '../custom-fr.html' },
+                    { name: 'Vols', url: '../flight-tickets-fr.html' },
+                    { name: 'Qui sommes-nous', url: '../about-fr.html' },
+                    { name: 'Contact', url: '../contact-fr.html' },
+                    { name: 'Blog', url: '../blog-fr.html', current: true }
+                ];
+
+                const switchLang = (lang) => {
+                    const urlMap = {
+                        '中文': '../blog-cn.html',
+                        'English': '../blog-en.html',
+                        'Français': '../blog-fr.html'
+                    };
+                    if (urlMap[lang]) window.location.href = urlMap[lang];
+                };
+
+                return {
+                    isMobileMenuOpen, isDestDropdownOpen, isLangDropdownOpen, currentLang, switchLang, navLinks,
+                    isWechatQR, isFacebookQR
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
