@@ -58,7 +58,6 @@
         rel="stylesheet">
 
     <style>
-        /* 字体调整以适应法语阅读习惯，与 index FR 保持一致 */
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
@@ -132,7 +131,6 @@
             object-fit: cover;
         }
 
-        /* 博客网格布局：已修复为从左到右、从上到下的标准阅读顺序 */
         .masonry-grid {
             display: grid;
             grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -175,7 +173,6 @@
             justify-content: space-between;
         }
 
-        /* 详情页弹窗动画 - 保留原有样式类 */
         .modal-enter-active,
         .modal-leave-active {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -187,7 +184,6 @@
             transform: translateY(100px);
         }
 
-        /* 手机端菜单动画 */
         .mobile-menu-enter-active,
         .mobile-menu-leave-active {
             transition: all 0.3s ease;
@@ -364,9 +360,9 @@
 
                 <div class="masonry-grid">
 
-                    <!-- 新增第一篇：Voyager en Chine sans parler chinois -->
+                    <!-- 第一篇：精准匹配 article/voyager-en-chine-sans-parler-chinois.html -->
                     <div class="masonry-item">
-                        <a href="article/blog-voyager-en-chine-sans-parler-chinois.html"
+                        <a href="article/voyager-en-chine-sans-parler-chinois.html"
                             class="block group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 text-left h-full flex flex-col">
                             <div class="relative overflow-hidden aspect-[4/3] bg-gray-100">
                                 <img src="images/blog/voyager-en-chine-sans-parler-chinois/1.png"
@@ -800,7 +796,6 @@
                     const isWechatQR = ref(false);
                     const isFacebookQR = ref(false);
 
-                    // 严格还原最初代码中的导航数据（包括原有拼写）
                     const navLinks = [
                         { name: 'Accueil', url: 'index-fr.html' },
                         {
